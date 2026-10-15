@@ -1,0 +1,715 @@
+[
+  {
+    "id": "D1-001",
+    "domain": 1,
+    "objective": "1.1",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Un analista de seguridad está documentando los controles de la organización. Clasifica cada control según su TIPO de control.",
+    "items": [
+      "Un firewall perimetral que bloquea las conexiones entrantes no autorizadas",
+      "Un letrero en la cerca que advierte: \"Propiedad vigilada. Los intrusos serán procesados\"",
+      "Restaurar un servidor desde un backup limpio después de una infección de ransomware",
+      "Una regla de correlación del SIEM que genera una alerta ante múltiples inicios de sesión fallidos",
+      "Una política que indica a los empleados que deben cifrar los archivos antes de enviarlos a terceros",
+      "Colocar un WAF delante de una aplicación web vulnerable que no podrá corregirse hasta la próxima versión"
+    ],
+    "choices": [
+      "Preventive",
+      "Deterrent",
+      "Detective",
+      "Corrective",
+      "Compensating",
+      "Directive"
+    ],
+    "answer": [
+      0,
+      1,
+      3,
+      2,
+      5,
+      4
+    ],
+    "explanation": "El firewall impide el acceso (preventive); el letrero desalienta al atacante sin impedirlo físicamente (deterrent); la restauración desde backup recupera el sistema tras el incidente (corrective); la alerta del SIEM identifica la actividad (detective). La política orienta el comportamiento de las personas (directive) y el WAF es una medida alternativa mientras no puede aplicarse el control principal, que es corregir el código (compensating)."
+  },
+  {
+    "id": "D1-002",
+    "domain": 1,
+    "objective": "1.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empresa implementa un programa trimestral de concienciación en seguridad en el que los empleados practican cómo identificar y reportar correos de phishing. ¿En qué CATEGORÍA de control se clasifica MEJOR este programa?",
+    "options": [
+      "Technical",
+      "Managerial",
+      "Operational",
+      "Physical"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Los controles operational los ejecutan principalmente personas en el día a día, como la capacitación y concienciación o los guardias de seguridad. Los managerial se enfocan en la gestión y gobierno (políticas, evaluaciones de riesgo), los technical se implementan con sistemas (firewalls, EDR) y los physical protegen instalaciones (cercas, cerraduras)."
+  },
+  {
+    "id": "D1-003",
+    "domain": 1,
+    "objective": "1.1",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un sistema SCADA legacy no admite los parches de seguridad más recientes del fabricante. Mientras se aprueba el presupuesto para reemplazarlo, el equipo de seguridad lo coloca en una VLAN aislada con ACLs estrictas. ¿Qué tipo de control se implementó?",
+    "options": [
+      "Corrective",
+      "Compensating",
+      "Deterrent",
+      "Directive"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Un control compensating es una medida alternativa que reduce el riesgo cuando el control principal (en este caso, el parcheo) no puede aplicarse. No es corrective porque no repara un incidente, no es deterrent porque no busca desalentar al atacante y no es directive porque no es una instrucción o política."
+  },
+  {
+    "id": "D1-004",
+    "domain": 1,
+    "objective": "1.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Cada lunes, un administrador revisa los logs de acceso del sistema de nómina para identificar inicios de sesión realizados fuera del horario laboral. ¿Qué tipo de control describe MEJOR esta actividad?",
+    "options": [
+      "Preventive",
+      "Corrective",
+      "Directive",
+      "Detective"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "La revisión de logs identifica actividad sospechosa después de que ocurre, por lo que es un control detective. No evita el acceso (preventive), no restaura el sistema (corrective) y no es una instrucción documentada para guiar el comportamiento (directive)."
+  },
+  {
+    "id": "D1-005",
+    "domain": 1,
+    "objective": "1.1",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Un equipo de seguridad instala un IPS en línea que inspecciona el tráfico y descarta automáticamente los paquetes que coinciden con firmas de exploits conocidos. ¿Qué DOS términos describen MEJOR este control? (Elige DOS.)",
+    "options": [
+      "Managerial",
+      "Technical",
+      "Deterrent",
+      "Physical",
+      "Preventive",
+      "Directive"
+    ],
+    "answer": [
+      1,
+      4
+    ],
+    "explanation": "El IPS es un control technical porque lo implementa un sistema, y es preventive porque bloquea el ataque antes de que tenga efecto. No es managerial ni physical por su naturaleza, no es deterrent porque no busca desalentar al atacante y no es directive porque no es una instrucción a personas."
+  },
+  {
+    "id": "D1-006",
+    "domain": 1,
+    "objective": "1.1",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Durante una auditoría, se descubre que la organización aprobó una política que exige cifrar todos los portátiles corporativos, pero la herramienta de cifrado aún no se ha desplegado. ¿Qué combinación de categoría y tipo describe MEJOR el control que existe actualmente?",
+    "options": [
+      "Managerial / Directive",
+      "Technical / Preventive",
+      "Operational / Corrective",
+      "Managerial / Detective"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Lo único que existe es la política: un documento de gobierno (categoría managerial) que indica qué se debe hacer (tipo directive). Technical / Preventive describiría el cifrado ya desplegado, que todavía no existe; la política no corrige incidentes ni detecta eventos."
+  },
+  {
+    "id": "D1-007",
+    "domain": 1,
+    "objective": "1.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un banco necesita asegurar que un cliente no pueda negar posteriormente que autorizó una transferencia electrónica. ¿Qué concepto de seguridad cubre MEJOR este requisito?",
+    "options": [
+      "Confidentiality",
+      "Availability",
+      "Non-repudiation",
+      "Authorization"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Non-repudiation (no repudio) brinda prueba del origen y la integridad de una acción, normalmente mediante firmas digitales, de modo que el autor no pueda negarla. Confidentiality protege contra la divulgación, availability garantiza el acceso a los recursos y authorization define qué puede hacer un usuario autenticado."
+  },
+  {
+    "id": "D1-008",
+    "domain": 1,
+    "objective": "1.2",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "En una arquitectura Zero Trust, un usuario remoto solicita acceso a una aplicación interna. ¿Qué componente, ubicado en el data plane, intercepta la solicitud y permite, monitorea o termina la conexión según las instrucciones que recibe del control plane?",
+    "options": [
+      "Policy Engine",
+      "Policy Enforcement Point (PEP)",
+      "Policy Administrator",
+      "Implicit trust zone"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "El PEP está en el data plane y es el punto que hace cumplir la decisión: abre, supervisa o cierra la sesión entre el sujeto y el recurso. El Policy Engine toma la decisión y el Policy Administrator la comunica al PEP; ambos forman el Policy Decision Point en el control plane. La implicit trust zone es el área que queda detrás del PEP."
+  },
+  {
+    "id": "D1-009",
+    "domain": 1,
+    "objective": "1.2",
+    "type": "multi",
+    "difficulty": 3,
+    "stem": "Un arquitecto está diseñando una solución Zero Trust y debe separar los componentes del control plane y del data plane. ¿Qué DOS componentes pertenecen al control plane? (Elige DOS.)",
+    "options": [
+      "Policy Engine",
+      "Policy Enforcement Point (PEP)",
+      "Implicit trust zones",
+      "Policy Administrator",
+      "Subject/System"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explanation": "El control plane incluye al Policy Engine (decide si se concede el acceso) y al Policy Administrator (establece o cierra la ruta de comunicación), además de adaptive identity, threat scope reduction y policy-driven access control. El PEP, las implicit trust zones y el subject/system pertenecen al data plane."
+  },
+  {
+    "id": "D1-010",
+    "domain": 1,
+    "objective": "1.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un empleado normalmente inicia sesión desde Guadalajara en horario laboral. Un día, su cuenta intenta autenticarse a las 3:00 a. m. desde otro país con un dispositivo no registrado, y el sistema, en función de ese contexto de riesgo, le exige un factor de autenticación adicional antes de permitirle continuar. ¿Qué concepto de Zero Trust se aplica?",
+    "options": [
+      "Adaptive identity",
+      "Threat scope reduction",
+      "Implicit trust zones",
+      "Gap analysis"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Adaptive identity ajusta los requisitos de autenticación según el contexto y el riesgo (ubicación, hora, dispositivo, comportamiento). Threat scope reduction busca limitar el alcance de una posible brecha (por ejemplo, con least privilege), las implicit trust zones son áreas detrás del PEP y gap analysis compara el estado actual contra uno deseado."
+  },
+  {
+    "id": "D1-011",
+    "domain": 1,
+    "objective": "1.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una organización planea certificarse en ISO/IEC 27001 y quiere identificar qué requisitos de la norma aún no cumple su programa de seguridad actual. ¿Qué debe realizar PRIMERO?",
+    "options": [
+      "Penetration test",
+      "Business impact analysis (BIA)",
+      "Gap analysis",
+      "Tabletop exercise"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Un gap analysis compara la situación actual contra un marco o estándar de referencia para identificar las brechas que deben cerrarse. El penetration test evalúa la explotabilidad técnica, el BIA mide el impacto de interrupciones en procesos del negocio y el tabletop exercise prueba planes de respuesta mediante discusión."
+  },
+  {
+    "id": "D1-012",
+    "domain": 1,
+    "objective": "1.2",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "El equipo de seguridad está desplegando tecnologías de deception (engaño). Relaciona cada implementación con el término correcto.",
+    "items": [
+      "Un documento llamado \"Nomina_Directivos.xlsx\" colocado en un recurso compartido, que genera una alerta cuando alguien lo abre",
+      "Un servidor configurado intencionalmente con un servicio SSH vulnerable para atraer y estudiar a los atacantes",
+      "Una clave de API falsa insertada en un repositorio de código que dispara una alerta si alguien intenta usarla",
+      "Un conjunto de servidores, estaciones de trabajo y switches señuelo interconectados que simulan un segmento de producción",
+      "Un registro de cliente ficticio en la base de datos del CRM; si su dirección de correo recibe mensajes, indica que hubo exfiltración"
+    ],
+    "choices": [
+      "Honeypot",
+      "Honeynet",
+      "Honeyfile",
+      "Honeytoken"
+    ],
+    "answer": [
+      2,
+      0,
+      3,
+      1,
+      3
+    ],
+    "explanation": "Un honeypot es un sistema individual señuelo y un honeynet es una red de varios honeypots. Un honeyfile es un archivo atractivo pero falso que alerta cuando se accede a él. Un honeytoken es un dato falso rastreable (credenciales, claves de API, registros) que revela el uso o la exfiltración de información."
+  },
+  {
+    "id": "D1-013",
+    "domain": 1,
+    "objective": "1.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un centro de datos detecta que personas no autorizadas entran caminando detrás de empleados que abren la puerta con su tarjeta (tailgating). ¿Qué control físico es la MEJOR solución?",
+    "options": [
+      "Bollards",
+      "Sensores de microondas",
+      "Cámaras de video (CCTV)",
+      "Access control vestibule"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Un access control vestibule (antes llamado mantrap) usa dos puertas en las que solo una puede abrirse a la vez, lo que obliga a autenticar a cada persona y evita el tailgating. Los bollards protegen contra vehículos, los sensores de microondas detectan movimiento y el CCTV registra el evento, pero no lo impide."
+  },
+  {
+    "id": "D1-014",
+    "domain": 1,
+    "objective": "1.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Después de que un usuario se autentica correctamente en la VPN, el servidor RADIUS registra la hora de conexión, la duración de la sesión y la cantidad de datos transferidos. ¿Qué componente de AAA representa este registro?",
+    "options": [
+      "Authentication",
+      "Accounting",
+      "Authorization",
+      "Non-repudiation"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Accounting registra lo que hace el usuario y los recursos que consume (tiempos, datos, acciones) con fines de auditoría. Authentication verifica la identidad, authorization determina a qué recursos se tiene acceso y non-repudiation no forma parte del marco AAA."
+  },
+  {
+    "id": "D1-015",
+    "domain": 1,
+    "objective": "1.3",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Durante una maintenance window, una actualización del ERP falla y la aplicación ya no inicia. El equipo necesita devolver el sistema a su estado anterior lo más rápido posible. ¿Qué elemento del proceso de change management debe consultar PRIMERO?",
+    "options": [
+      "Backout plan",
+      "Impact analysis",
+      "Test results",
+      "Lista de stakeholders"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "El backout plan documenta los pasos para revertir un cambio fallido y restaurar el estado anterior. El impact analysis y los test results se elaboran antes de aprobar el cambio, y la lista de stakeholders sirve para comunicar, no para recuperar el sistema."
+  },
+  {
+    "id": "D1-016",
+    "domain": 1,
+    "objective": "1.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "El gerente de Finanzas, cuyo equipo utiliza la aplicación que será modificada, debe ser consultado sobre el horario del cambio y notificado del resultado, aunque no ejecuta ni es responsable del cambio. ¿Qué rol desempeña en el proceso de change management?",
+    "options": [
+      "Owner del cambio",
+      "Change Advisory Board (CAB)",
+      "Administrador que implementa el cambio",
+      "Stakeholder"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Los stakeholders son las personas o áreas afectadas por el cambio, cuyas necesidades deben considerarse y a quienes se debe informar. El owner es el responsable del cambio o del proceso que se modifica, el CAB evalúa y aprueba los cambios y el administrador es quien los ejecuta."
+  },
+  {
+    "id": "D1-017",
+    "domain": 1,
+    "objective": "1.3",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Un equipo planea actualizar la versión de Java en un servidor que aloja varias aplicaciones antiguas desarrolladas internamente; además, algunos servicios necesitan que otros arranquen antes que ellos. ¿Qué DOS implicaciones técnicas debe evaluar PRINCIPALMENTE el análisis de impacto? (Elige DOS.)",
+    "options": [
+      "Key escrow",
+      "Data masking",
+      "Legacy applications",
+      "Honeytokens",
+      "Dependencies"
+    ],
+    "answer": [
+      2,
+      4
+    ],
+    "explanation": "Las aplicaciones legacy pueden no ser compatibles con la nueva versión de Java, y las dependencies entre servicios pueden provocar fallas en cascada o requerir un orden específico de reinicio. Key escrow, data masking y honeytokens son conceptos reales del temario, pero no se relacionan con este cambio."
+  },
+  {
+    "id": "D1-018",
+    "domain": 1,
+    "objective": "1.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Tras instalar un nuevo agente de backup en todos los servidores, el agente no se ejecuta porque la solución de application control lo bloquea. ¿Qué debió considerarse en el plan del cambio para evitar este problema?",
+    "options": [
+      "Programar un restart adicional del servicio",
+      "Ampliar la maintenance window",
+      "Actualizar la allow list de aplicaciones",
+      "Actualizar los diagramas de red"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Cuando el control de aplicaciones funciona con allow list, cualquier software nuevo debe agregarse a la lista como parte del cambio; de lo contrario, se bloquea. Reiniciar el servicio o ampliar la ventana no cambia la política de bloqueo, y actualizar los diagramas es buena práctica de documentación, pero no resuelve la ejecución."
+  },
+  {
+    "id": "D1-019",
+    "domain": 1,
+    "objective": "1.3",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "El CAB aprueba un cambio para renovar el certificado TLS de un balanceador de carga durante la maintenance window del sábado. Durante la implementación, el técnico nota que también hay un parche pendiente del sistema operativo del balanceador. ¿Qué debe hacer el técnico?",
+    "options": [
+      "Aplicar el parche, ya que la maintenance window sigue abierta",
+      "Implementar solo el cambio aprobado y registrar una nueva solicitud de cambio para el parche",
+      "Aplicar el parche y documentarlo después en el ticket original",
+      "Aplicar el parche solo si existe un backout plan para el certificado"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "El alcance de un cambio aprobado está limitado a lo autorizado (restricted activities); cualquier actividad adicional requiere su propio análisis de impacto, pruebas y aprobación. Aprovechar la ventana o documentar después evade el proceso, y el backout plan del certificado no cubre los riesgos del parche."
+  },
+  {
+    "id": "D1-020",
+    "domain": 1,
+    "objective": "1.3",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Relaciona cada descripción con el elemento del proceso de change management que le corresponde.",
+    "items": [
+      "Evaluación de los riesgos y efectos que el cambio tendrá en sistemas, usuarios y procesos",
+      "Pasos documentados para revertir el sistema a su estado anterior si el cambio falla",
+      "Instrucciones paso a paso estandarizadas para realizar de forma consistente un tipo de cambio recurrente",
+      "Periodo programado, de baja actividad del negocio, en el que se permite implementar cambios",
+      "Registro de cada modificación a los archivos de configuración, con autor y fecha, que permite regresar a versiones anteriores",
+      "Evidencia de que el cambio funcionó correctamente en un entorno de staging antes de llevarlo a producción"
+    ],
+    "choices": [
+      "Backout plan",
+      "Maintenance window",
+      "Test results",
+      "Impact analysis",
+      "Version control",
+      "Standard operating procedure (SOP)"
+    ],
+    "answer": [
+      3,
+      0,
+      5,
+      1,
+      4,
+      2
+    ],
+    "explanation": "El impact analysis evalúa riesgos y efectos; el backout plan define cómo revertir; el SOP estandariza la ejecución de tareas recurrentes; la maintenance window fija cuándo se puede implementar; el version control rastrea las modificaciones y permite regresar a versiones anteriores, y los test results demuestran que el cambio se validó antes de producción."
+  },
+  {
+    "id": "D1-021",
+    "domain": 1,
+    "objective": "1.3",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Se completó con éxito un cambio que agregó un nuevo segmento de red y modificó las reglas del firewall. El ticket de cambio ya se cerró. ¿Qué debe hacer el equipo a continuación para cumplir con las buenas prácticas de change management?",
+    "options": [
+      "Programar un penetration test externo",
+      "Ejecutar el backout plan para validar que funciona",
+      "Actualizar los diagramas de red y la documentación de políticas y procedimientos afectados",
+      "Reiniciar todos los servidores del nuevo segmento"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Después de un cambio, la documentación (diagramas, políticas, procedimientos) debe actualizarse para reflejar el estado real del entorno; de lo contrario, las siguientes decisiones se basarán en información obsoleta. Ejecutar el backout plan revertiría un cambio exitoso, y ni el penetration test ni los reinicios forman parte del cierre del cambio."
+  },
+  {
+    "id": "D1-022",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una empresa necesita cifrar varios terabytes de backups cada noche con el menor impacto posible en el rendimiento. ¿Qué algoritmo es la MEJOR opción?",
+    "options": [
+      "RSA-4096",
+      "SHA-512",
+      "ECDSA",
+      "AES-256"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "AES es un algoritmo simétrico, mucho más rápido que el cifrado asimétrico y adecuado para grandes volúmenes de datos (bulk encryption). RSA es asimétrico y lento para grandes volúmenes, SHA-512 es un hash (no cifra ni permite recuperar los datos) y ECDSA es un algoritmo de firma digital."
+  },
+  {
+    "id": "D1-023",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Un auditor revisa el inventario criptográfico de una aplicación. Clasifica cada algoritmo en la categoría correcta.",
+    "items": [
+      "RSA",
+      "AES-256",
+      "SHA-256",
+      "3DES",
+      "ECC",
+      "MD5"
+    ],
+    "choices": [
+      "Cifrado simétrico",
+      "Cifrado asimétrico",
+      "Hashing"
+    ],
+    "answer": [
+      1,
+      0,
+      2,
+      0,
+      1,
+      2
+    ],
+    "explanation": "AES y 3DES son simétricos: usan la misma clave para cifrar y descifrar. RSA y ECC son asimétricos: usan un par de claves pública/privada. SHA-256 y MD5 son funciones de hashing de un solo sentido; MD5 se considera obsoleto por sus colisiones."
+  },
+  {
+    "id": "D1-024",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "multi",
+    "difficulty": 3,
+    "stem": "Un usuario envía un correo con S/MIME que va firmado digitalmente y cifrado para que solo el destinatario pueda leerlo. ¿Qué DOS claves utiliza el REMITENTE en este proceso? (Elige DOS.)",
+    "options": [
+      "Clave pública del remitente",
+      "Clave privada del remitente",
+      "Clave privada del destinatario",
+      "Clave pública del destinatario",
+      "Clave privada de la CA"
+    ],
+    "answer": [
+      1,
+      3
+    ],
+    "explanation": "El remitente firma con su clave privada (autenticidad, integridad y non-repudiation) y cifra con la clave pública del destinatario (en la práctica, cifra con ella la clave de sesión simétrica), de modo que solo la clave privada del destinatario permita descifrar. El remitente nunca tiene la clave privada del destinatario, y la clave privada de la CA solo se usa para firmar certificados."
+  },
+  {
+    "id": "D1-025",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un arquitecto configura TLS en un servidor web y exige que, si la clave privada del servidor se ve comprometida en el futuro, el tráfico de sesiones previas que haya sido capturado no pueda descifrarse. ¿Qué debe priorizar en la configuración de las cipher suites?",
+    "options": [
+      "Aumentar el algoritmo de hashing a SHA-512",
+      "Intercambio de claves con RSA (key transport)",
+      "Intercambio de claves con Diffie-Hellman efímero (ECDHE)",
+      "Un certificado wildcard emitido por una CA third-party"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "El intercambio de claves con Diffie-Hellman efímero (DHE/ECDHE) genera claves de sesión únicas que no dependen de la clave privada del servidor, lo que proporciona perfect forward secrecy. Con RSA key transport, quien obtenga la clave privada puede descifrar las sesiones capturadas; el hash y el tipo de certificado no influyen en esto."
+  },
+  {
+    "id": "D1-026",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un atacante obtuvo una copia de la base de datos de hashes de contraseñas de una aplicación web y planea usar rainbow tables precalculadas. ¿Qué medida habría sido la MEJOR para inutilizar este tipo de ataque?",
+    "options": [
+      "Key escrow",
+      "Salting",
+      "Tokenization",
+      "Aumentar la longitud de la clave AES de 128 a 256 bits"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "El salting agrega un valor aleatorio único a cada contraseña antes del hashing, por lo que contraseñas iguales producen hashes distintos y las rainbow tables precalculadas dejan de servir. Key escrow almacena claves con un tercero, tokenization sustituye datos sensibles y la longitud de la clave AES no se relaciona con hashes de contraseñas."
+  },
+  {
+    "id": "D1-027",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Un desarrollador necesita almacenar las contraseñas de los usuarios de manera que los ataques de fuerza bruta offline sean computacionalmente costosos, mediante múltiples iteraciones de hashing. ¿Qué DOS algoritmos implementan key stretching? (Elige DOS.)",
+    "options": [
+      "PBKDF2",
+      "SHA-256",
+      "bcrypt",
+      "AES-128",
+      "MD5",
+      "RSA"
+    ],
+    "answer": [
+      0,
+      2
+    ],
+    "explanation": "PBKDF2 y bcrypt son funciones de key stretching: aplican el hash miles de veces con salt para que cada intento de adivinanza sea lento. SHA-256 y MD5 son hashes rápidos de una sola pasada (MD5 además es inseguro), AES-128 es cifrado simétrico y RSA es cifrado asimétrico."
+  },
+  {
+    "id": "D1-028",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un comercio en línea quiere reducir su alcance de PCI DSS reemplazando el número de tarjeta (PAN) en sus sistemas por un valor aleatorio sin relación matemática con el original. El PAN real se almacenará en un vault separado y protegido. ¿Qué técnica cumple MEJOR este requisito?",
+    "options": [
+      "Data masking",
+      "Hashing",
+      "Steganography",
+      "Tokenization"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Tokenization sustituye el dato sensible por un token sin relación matemática con el original y guarda el mapeo en un token vault, lo que permite recuperar el valor real cuando se necesita. Data masking oculta parte del dato (por ejemplo, los últimos 4 dígitos), el hashing no permite recuperar el PAN y la steganography oculta datos dentro de otros archivos."
+  },
+  {
+    "id": "D1-029",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una herramienta DLP detecta que un empleado envía por correo personal fotografías de paisajes cuyo tamaño de archivo es inusualmente grande. El análisis forense revela que dentro de las imágenes hay documentos confidenciales ocultos. ¿Qué técnica utilizó el empleado?",
+    "options": [
+      "Steganography",
+      "Tokenization",
+      "Data masking",
+      "Key stretching"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "La steganography oculta información dentro de otro archivo portador, como imágenes, audio o video, para que su existencia pase desapercibida. Tokenization y data masking protegen datos sensibles dentro de sistemas legítimos, y key stretching fortalece contraseñas."
+  },
+  {
+    "id": "D1-030",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una organización implementa una CA raíz on-premises y necesita un dispositivo de hardware dedicado, resistente a manipulación (tamper-resistant), con certificación FIPS 140-2 nivel 3 y aceleración criptográfica, para generar y almacenar la clave privada de la CA y realizar las operaciones de firma. ¿Qué solución es la MEJOR?",
+    "options": [
+      "TPM",
+      "Secure enclave",
+      "HSM",
+      "KMS del proveedor de nube"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Un HSM (Hardware Security Module) es un dispositivo dedicado, tamper-resistant y de alto rendimiento para generar, almacenar y usar claves críticas, como las de una CA. El TPM y el secure enclave están integrados en un equipo o procesador específico para proteger claves locales, y un KMS en la nube no cumple el requisito de hardware dedicado on-premises."
+  },
+  {
+    "id": "D1-031",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una empresa despliega full-disk encryption en sus portátiles y quiere que la clave de cifrado quede ligada al hardware del equipo y solo se libere si las mediciones del proceso de arranque (measured boot) no han cambiado. ¿Qué componente proporciona MEJOR esta capacidad?",
+    "options": [
+      "HSM",
+      "TPM",
+      "KMS",
+      "Key escrow"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "El TPM es un chip en la placa base que almacena claves de forma segura y guarda mediciones del arranque en registros PCR; libera la clave de cifrado (por ejemplo, para BitLocker) solo si la integridad del arranque se mantiene. Un HSM es un dispositivo dedicado para servidores o CA, un KMS gestiona claves de forma centralizada y key escrow es un acuerdo de custodia de claves, no un componente de hardware."
+  },
+  {
+    "id": "D1-032",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un navegador necesita comprobar en tiempo real si el certificado de un sitio web fue revocado, sin descargar la lista completa de certificados revocados de la CA. ¿Qué mecanismo debe utilizar?",
+    "options": [
+      "CRL",
+      "Root of trust",
+      "CSR",
+      "OCSP"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "OCSP (Online Certificate Status Protocol) consulta el estado de un certificado individual en tiempo real; con OCSP stapling, el propio servidor entrega la respuesta firmada. Una CRL obliga a descargar toda la lista de revocados, el root of trust es el ancla de confianza de la cadena y el CSR es la solicitud para obtener un certificado."
+  },
+  {
+    "id": "D1-033",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una empresa aloja decenas de subdominios de example.com (portal.example.com, api.example.com, tienda.example.com) y crea nuevos subdominios cada mes. Quiere que los navegadores públicos confíen en todos ellos y minimizar la administración de certificados. ¿Qué opción es la MEJOR?",
+    "options": [
+      "Un certificado wildcard (*.example.com) emitido por una CA third-party",
+      "Un certificado con SAN que liste los subdominios actuales",
+      "Certificados self-signed para cada subdominio",
+      "Un certificado emitido directamente por la root CA interna para cada servidor"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Un certificado wildcard de una CA third-party de confianza cubre todos los subdominios de un nivel, incluidos los que se creen en el futuro, sin necesidad de reemitirlo. Un certificado con SAN tendría que reemitirse cada vez que se agregue un subdominio, y los certificados self-signed o de una CA interna no son de confianza para los navegadores públicos."
+  },
+  {
+    "id": "D1-034",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "A un ejecutivo le robaron su portátil en un aeropuerto. La empresa quiere asegurar que, en futuros incidentes similares, ningún dato del equipo (incluidos el sistema operativo, los archivos temporales y el archivo de paginación) pueda leerse al extraer el disco. ¿Qué nivel de cifrado debe implementar?",
+    "options": [
+      "File-level encryption",
+      "Full-disk encryption",
+      "Database encryption",
+      "Transport encryption (TLS)"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Full-disk encryption cifra todo el contenido del disco, incluidos el sistema operativo, los archivos temporales y el swap, lo que protege los datos en reposo si se pierde el equipo. File-level solo protege los archivos seleccionados, database encryption solo protege la base de datos y TLS protege datos en tránsito, no en reposo."
+  },
+  {
+    "id": "D1-035",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una dependencia de gobierno usa full-disk encryption en sus portátiles y necesita poder recuperar la información si un empleado olvida su contraseña o deja la organización. Para ello, las claves de cifrado se almacenarán con un tercero de confianza. ¿Qué concepto describe MEJOR este arreglo?",
+    "options": [
+      "Key stretching",
+      "Tokenization",
+      "OCSP stapling",
+      "Key escrow"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Key escrow consiste en que un tercero de confianza custodie copias de las claves de cifrado para recuperarlas bajo condiciones definidas. Key stretching fortalece contraseñas débiles, tokenization sustituye datos sensibles por tokens y OCSP stapling sirve para verificar la revocación de certificados."
+  },
+  {
+    "id": "D1-036",
+    "domain": 1,
+    "objective": "1.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un consorcio de empresas de logística necesita un registro de transacciones distribuido entre todos los participantes, donde cualquiera pueda verificar el historial y cada bloque incluya el hash del bloque anterior, de modo que cualquier alteración sea evidente. ¿Qué tecnología cumple MEJOR este requisito?",
+    "options": [
+      "Blockchain",
+      "Certificate Revocation List (CRL)",
+      "Key escrow",
+      "Tokenization"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Blockchain es un registro (ledger) distribuido entre los participantes —CompTIA lo describe como open public ledger— en el que cada bloque se encadena al anterior mediante su hash, lo que hace evidente cualquier manipulación. La CRL lista certificados revocados, key escrow custodia claves y tokenization sustituye datos sensibles; ninguno ofrece un registro distribuido y verificable."
+  }
+]

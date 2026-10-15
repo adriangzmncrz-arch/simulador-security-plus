@@ -1,0 +1,1100 @@
+[
+  {
+    "id": "D5-001",
+    "domain": 5,
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un documento corporativo establece que todas las laptops deben usar cifrado de disco completo AES-256 y que los datos en tránsito deben protegerse con TLS 1.2 o superior. ¿Qué tipo de documento de gobierno es este?",
+    "options": [
+      "Un procedimiento (procedure)",
+      "Una política (policy)",
+      "Una guía (guideline)",
+      "Un estándar (standard)"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Un estándar define requisitos obligatorios y específicos (algoritmos, versiones, parámetros) que apoyan el cumplimiento de una política. La política expresa la intención de alto nivel sin detalles técnicos, el procedimiento describe pasos secuenciales y la guía contiene recomendaciones no obligatorias."
+  },
+  {
+    "id": "D5-002",
+    "domain": 5,
+    "objective": "5.1",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Relaciona cada extracto con el tipo de documento de gobierno al que corresponde.",
+    "items": [
+      "\"La organización protegerá la información conforme a su clasificación; este documento está aprobado por la alta dirección.\"",
+      "\"Las contraseñas deben tener al menos 14 caracteres y no pueden reutilizar ninguna de las últimas 24.\"",
+      "\"1) Abrir ticket; 2) verificar identidad del solicitante; 3) deshabilitar la cuenta en el directorio; 4) recuperar el equipo.\"",
+      "\"Se recomienda usar un gestor de contraseñas y frases de contraseña fáciles de recordar.\"",
+      "\"Los lectores de tarjeta del centro de datos deben registrar cada acceso y los registros se conservan 90 días.\""
+    ],
+    "choices": [
+      "Policy",
+      "Standard",
+      "Procedure",
+      "Guideline"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3,
+      1
+    ],
+    "explanation": "La política expresa la intención y dirección de la gerencia; los estándares fijan requisitos obligatorios y medibles (contraseñas, seguridad física); los procedimientos son pasos ordenados (por ejemplo, offboarding); las guías son recomendaciones opcionales."
+  },
+  {
+    "id": "D5-003",
+    "domain": 5,
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Durante una auditoría interna se pregunta quién debe decidir la clasificación de la base de datos de clientes de la división de ventas y aprobar qué grupos pueden acceder a ella. ¿Quién tiene esta responsabilidad?",
+    "options": [
+      "El data custodian que administra el servidor de base de datos",
+      "El data processor externo que aloja la aplicación de CRM",
+      "El data owner, normalmente el ejecutivo de negocio responsable de esos datos",
+      "El analista del SOC que monitorea los accesos a la base de datos"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "El data owner es el responsable final (accountable) de los datos: los clasifica y aprueba el acceso. El custodian implementa los controles día a día, el processor trata datos por cuenta del controller y el SOC monitorea, pero ninguno decide la clasificación."
+  },
+  {
+    "id": "D5-004",
+    "domain": 5,
+    "objective": "5.1",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Relaciona cada descripción con el rol de sistemas y datos que le corresponde.",
+    "items": [
+      "Vicepresidente que es responsable final de los datos de ventas y aprueba quién puede acceder a ellos.",
+      "Organización que determina los fines y los medios del tratamiento de datos personales de sus clientes.",
+      "Proveedor externo de nómina que trata datos personales de empleados siguiendo las instrucciones de su cliente.",
+      "Administrador que aplica permisos, ejecuta respaldos y mantiene la integridad de los datos en el día a día.",
+      "Persona que vela por la calidad, el etiquetado y los metadatos de los datos conforme a la política."
+    ],
+    "choices": [
+      "Owner",
+      "Controller",
+      "Processor",
+      "Custodian/steward"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3,
+      3
+    ],
+    "explanation": "El owner es accountable y clasifica/autoriza; el controller decide el porqué y el cómo del tratamiento de datos personales; el processor trata datos en nombre del controller; el custodian/steward implementa la protección operativa y cuida la calidad y el etiquetado de los datos."
+  },
+  {
+    "id": "D5-005",
+    "domain": 5,
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una empresa multinacional permite que cada subsidiaria regional defina, apruebe y haga cumplir sus propias políticas de seguridad con mínima supervisión del corporativo. ¿Qué estructura de gobierno describe MEJOR esta situación?",
+    "options": [
+      "Descentralizada",
+      "Comité de auditoría",
+      "Centralizada",
+      "Entidad gubernamental"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "En una estructura descentralizada la autoridad para decidir sobre seguridad se distribuye entre unidades de negocio o regiones. En una centralizada, un solo grupo corporativo define y controla las políticas; un comité de auditoría y una entidad gubernamental son órganos de supervisión, no modelos de distribución de autoridad."
+  },
+  {
+    "id": "D5-006",
+    "domain": 5,
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "El SOC quiere documentar las acciones exactas, paso a paso, que deben ejecutar los analistas cuando se dispara una alerta de ransomware específica, de modo que puedan automatizarse parcialmente en la plataforma SOAR. ¿Qué documento debe crear?",
+    "options": [
+      "Un acuerdo de nivel de servicio (SLA)",
+      "Una política de respuesta a incidentes",
+      "Una guía (guideline) de concientización",
+      "Un playbook"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Un playbook es un procedimiento detallado para un tipo específico de incidente y se integra bien con SOAR. La política de respuesta a incidentes define roles y alcance a alto nivel, una guía es opcional y un SLA es un acuerdo contractual con un proveedor."
+  },
+  {
+    "id": "D5-007",
+    "domain": 5,
+    "objective": "5.1",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "El responsable del SGSI revisa cuándo debe actualizarse la política de seguridad de la información fuera de su ciclo anual. ¿Cuáles de los siguientes eventos son los MÁS probables para disparar una revisión de la política? (Elige DOS.)",
+    "options": [
+      "Un usuario solicita cambiar el fondo de pantalla de su equipo",
+      "La organización se fusiona con otra empresa y adopta un nuevo modelo de negocio",
+      "Un empleado olvida su contraseña y solicita un restablecimiento",
+      "Entra en vigor una nueva regulación nacional de protección de datos que aplica a la empresa",
+      "El proveedor del sistema operativo publica los parches mensuales habituales"
+    ],
+    "answer": [
+      1,
+      3
+    ],
+    "explanation": "Las consideraciones externas (regulatorias, legales) y los cambios organizacionales significativos son disparadores típicos del monitoreo y revisión de políticas. Restablecer contraseñas, parches rutinarios o cambios cosméticos se manejan con procedimientos existentes y no alteran la dirección de la política."
+  },
+  {
+    "id": "D5-008",
+    "domain": 5,
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Como parte del onboarding, todo empleado nuevo debe firmar un documento que describe los usos permitidos y prohibidos del correo, internet y los equipos de la empresa. ¿Qué documento es?",
+    "options": [
+      "Non-disclosure agreement (NDA)",
+      "Memorandum of understanding (MOU)",
+      "Acceptable use policy (AUP)",
+      "Política de continuidad del negocio"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "La AUP define cómo pueden y no pueden usarse los activos tecnológicos de la organización y suele firmarse durante el onboarding. El NDA protege información confidencial, el MOU expresa intención entre partes y la política de continuidad trata la operación ante interrupciones."
+  },
+  {
+    "id": "D5-009",
+    "domain": 5,
+    "objective": "5.1",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un administrador aplicó un cambio aprobado en el balanceador de carga durante la ventana de mantenimiento. El cambio provocó una caída y el equipo tardó tres horas en restablecer el servicio porque nadie sabía cómo regresar a la configuración anterior. ¿Qué elemento del procedimiento de change management habría reducido MÁS la duración de la caída?",
+    "options": [
+      "Un plan de reversión (backout plan) documentado",
+      "Una actualización de la acceptable use policy",
+      "La aprobación del change advisory board (CAB)",
+      "Una ventana de mantenimiento más amplia"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "El backout plan define cómo revertir un cambio fallido y reduce directamente el tiempo de recuperación. El cambio ya estaba aprobado por el CAB y dentro de la ventana, por lo que esos elementos no habrían acortado la caída; la AUP no aplica a la gestión de cambios."
+  },
+  {
+    "id": "D5-010",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "El equipo de un cuarto de servidores tiene un valor de activo (AV) de $250,000. Se estima que un incendio dañaría el 40% del equipo. ¿Cuál es la single loss expectancy (SLE)?",
+    "options": [
+      "$10,000",
+      "$100,000",
+      "$150,000",
+      "$250,000"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "SLE = AV × EF = $250,000 × 0.40 = $100,000. $150,000 es el valor que no se perdería, $250,000 es el valor total del activo y $10,000 no corresponde a ninguna fórmula válida."
+  },
+  {
+    "id": "D5-011",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un centro de datos tiene un valor de $2,000,000. Una inundación dañaría el 30% de sus activos y, según datos históricos, ocurre una vez cada 20 años. ¿Cuál es la annualized loss expectancy (ALE)?",
+    "options": [
+      "$30,000",
+      "$100,000",
+      "$600,000",
+      "$12,000,000"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "SLE = $2,000,000 × 0.30 = $600,000; ARO = 1/20 = 0.05; ALE = SLE × ARO = $600,000 × 0.05 = $30,000. $600,000 es solo la SLE, $100,000 omite el exposure factor ($2,000,000 × 0.05) y $12,000,000 multiplica por 20 en lugar de dividir."
+  },
+  {
+    "id": "D5-012",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Los registros muestran que la empresa pierde $45,000 al año por robo de laptops. Cada incidente cuesta en promedio $15,000 entre reemplazo de hardware y respuesta a la posible fuga de datos. ¿Cuál es la annualized rate of occurrence (ARO)?",
+    "options": [
+      "0.33",
+      "3",
+      "4.5",
+      "30"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "ARO = ALE / SLE = $45,000 / $15,000 = 3 incidentes por año. 0.33 invierte la división (SLE/ALE); 4.5 y 30 no resultan de la relación ALE = SLE × ARO."
+  },
+  {
+    "id": "D5-013",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un riesgo tiene una SLE de $40,000 y una ARO de 3. Un control propuesto cuesta $50,000 al año y reduciría la ARO a 0.5. ¿Cuál es el beneficio neto anual de implementar el control?",
+    "options": [
+      "$20,000",
+      "$50,000",
+      "$70,000",
+      "$100,000"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "ALE actual = $40,000 × 3 = $120,000; ALE con el control = $40,000 × 0.5 = $20,000. Beneficio neto = $120,000 − $20,000 − $50,000 = $50,000. $100,000 ignora el costo del control, $70,000 resta el costo a la ALE original sin considerar la ALE residual y $20,000 es la ALE residual."
+  },
+  {
+    "id": "D5-014",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un servidor de aplicaciones tiene un valor de $240,000. El análisis de riesgos estima una ALE de $36,000 para un evento cuya ARO es 0.5. ¿Cuál es el exposure factor (EF) de ese evento?",
+    "options": [
+      "15%",
+      "30%",
+      "50%",
+      "70%"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "SLE = ALE / ARO = $36,000 / 0.5 = $72,000; EF = SLE / AV = $72,000 / $240,000 = 0.30 (30%). 15% resulta de dividir la ALE entre el AV sin calcular la SLE, 50% confunde la ARO con el EF y 70% es el complemento del valor correcto."
+  },
+  {
+    "id": "D5-015",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un analista califica cada riesgo con valores de probabilidad (likelihood) e impacto como bajo, medio o alto y los presenta en un mapa de calor para la dirección. ¿Qué tipo de análisis de riesgo está realizando?",
+    "options": [
+      "Business impact analysis (BIA)",
+      "Supply chain analysis",
+      "Análisis cuantitativo",
+      "Análisis cualitativo"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "El análisis cualitativo usa escalas relativas (bajo/medio/alto) y matrices de probabilidad e impacto. El cuantitativo asigna valores monetarios (SLE, ALE, ARO); la BIA determina el impacto de interrupciones en procesos (RTO, RPO) y el análisis de cadena de suministro evalúa proveedores."
+  },
+  {
+    "id": "D5-016",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una startup en fase de crecimiento acelerado decide aceptar niveles de riesgo más altos para lanzar productos rápidamente y entrar a nuevos mercados. ¿Qué tipo de risk appetite refleja esta decisión?",
+    "options": [
+      "Neutral",
+      "Risk avoidance",
+      "Expansionary",
+      "Conservative"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Un apetito expansionary está dispuesto a asumir más riesgo a cambio de mayores oportunidades de crecimiento. El conservative prioriza minimizar el riesgo, el neutral equilibra ambos extremos y risk avoidance es una estrategia de tratamiento, no un tipo de apetito."
+  },
+  {
+    "id": "D5-017",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un sistema SCADA heredado no puede actualizarse para cumplir el estándar de parches de la empresa. El risk owner firma una exception formal por 12 meses, documentada en el risk register. ¿Qué estrategia de gestión de riesgos representa esta decisión?",
+    "options": [
+      "Evitar (avoid)",
+      "Mitigar (mitigate)",
+      "Transferir (transfer)",
+      "Aceptar (accept)"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Otorgar una exception o exemption documentada es una forma de aceptar el riesgo: se reconoce y se asume sin eliminarlo. Transferir lo traslada a un tercero (por ejemplo, un seguro), evitar elimina la actividad que lo genera y mitigar aplica controles para reducirlo."
+  },
+  {
+    "id": "D5-018",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "match",
+    "difficulty": 3,
+    "stem": "Relaciona cada acción con la estrategia de gestión de riesgos que representa.",
+    "items": [
+      "Contratar una póliza de ciberseguro que cubra los costos de una brecha.",
+      "Retirar un servidor FTP heredado y dejar de ofrecer esa funcionalidad a los clientes.",
+      "Implementar MFA para reducir la probabilidad de compromiso de cuentas.",
+      "El risk owner firma que el costo del control supera el impacto y deja el riesgo como está.",
+      "Otorgar una exemption formal a un sistema que no puede cumplir un estándar."
+    ],
+    "choices": [
+      "Transfer",
+      "Accept",
+      "Avoid",
+      "Mitigate"
+    ],
+    "answer": [
+      0,
+      2,
+      3,
+      1,
+      1
+    ],
+    "explanation": "El seguro transfiere el impacto financiero; eliminar la actividad evita el riesgo; un control como MFA lo mitiga; documentar la aceptación o conceder una exemption/exception son formas de aceptarlo."
+  },
+  {
+    "id": "D5-019",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "La base de datos de pedidos se respalda cada 4 horas. El dueño del proceso indicó que el negocio puede tolerar perder como máximo 4 horas de transacciones. ¿Qué métrica de la BIA describe este requisito?",
+    "options": [
+      "Recovery point objective (RPO)",
+      "Recovery time objective (RTO)",
+      "Mean time between failures (MTBF)",
+      "Mean time to repair (MTTR)"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "El RPO es la cantidad máxima aceptable de pérdida de datos medida en tiempo y determina la frecuencia de respaldo. El RTO es el tiempo máximo para restaurar el servicio, el MTTR es el tiempo promedio de reparación y el MTBF mide la confiabilidad entre fallas."
+  },
+  {
+    "id": "D5-020",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "El área de infraestructura compara dos modelos de arreglos de almacenamiento y quiere elegir el que, en promedio, opera más tiempo sin fallar. ¿Qué métrica debe comparar?",
+    "options": [
+      "Annualized rate of occurrence (ARO)",
+      "Mean time to repair (MTTR)",
+      "Mean time between failures (MTBF)",
+      "Recovery point objective (RPO)"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "El MTBF mide el tiempo promedio de operación entre fallas de un componente reparable; un MTBF mayor indica mayor confiabilidad. El MTTR mide cuánto se tarda en reparar, el RPO la pérdida de datos tolerable y la ARO la frecuencia anual de un evento de riesgo."
+  },
+  {
+    "id": "D5-021",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "La BIA establece un RTO de 4 horas para la aplicación de facturación. El servidor de base de datos no tiene redundancia y el contrato con el fabricante indica un MTTR de 8 horas para reemplazar componentes. ¿Cuál es la conclusión MÁS adecuada?",
+    "options": [
+      "El RPO debe aumentarse a 8 horas para alinearlo con el MTTR",
+      "La arquitectura actual no puede cumplir el RTO; se requiere alta disponibilidad o un reemplazo más rápido",
+      "Un MTBF alto garantiza que la falla no ocurrirá, por lo que el RTO es irrelevante",
+      "El RTO se cumple porque el MTTR solo mide el tiempo entre fallas"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Si el tiempo promedio de reparación (8 h) excede el tiempo máximo de recuperación permitido (4 h), el RTO no puede cumplirse sin alta disponibilidad (redundancia) u otro arreglo. El RPO trata la pérdida de datos, no el tiempo de restauración; el MTTR mide tiempo de reparación, no entre fallas, y un MTBF alto no elimina la posibilidad de falla."
+  },
+  {
+    "id": "D5-022",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Un analista está construyendo el risk register de la organización. ¿Cuáles de los siguientes elementos se registran comúnmente en él? (Elige TRES.)",
+    "options": [
+      "Las capturas de paquetes (PCAP) que evidencian cada riesgo",
+      "Key risk indicators (KRI) asociados a cada riesgo",
+      "El risk threshold que dispara la escalación",
+      "El risk owner responsable de cada riesgo",
+      "Los hashes de contraseñas de las cuentas de alto riesgo",
+      "El código fuente de las aplicaciones de mayor riesgo"
+    ],
+    "answer": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "El risk register documenta cada riesgo con su propietario, indicadores clave (KRI) que alertan sobre cambios en la exposición y umbrales que indican cuándo escalar. Hashes de contraseñas, PCAP y código fuente son datos técnicos sensibles que no forman parte de un registro de riesgos."
+  },
+  {
+    "id": "D5-023",
+    "domain": 5,
+    "objective": "5.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un fabricante de VPN publica un aviso sobre una vulnerabilidad zero-day explotada activamente. El equipo de riesgos realiza de inmediato una evaluación fuera de su calendario trimestral para determinar la exposición de la empresa. ¿Qué tipo de risk assessment es este?",
+    "options": [
+      "Continuous",
+      "One-time",
+      "Ad hoc",
+      "Recurring"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Una evaluación ad hoc se realiza según se necesita, en respuesta a un evento no planificado. La recurring sigue un calendario fijo (como la trimestral), la continuous se ejecuta de forma permanente, normalmente automatizada, y la one-time se hace una sola vez para un propósito específico, como un proyecto o una adquisición."
+  },
+  {
+    "id": "D5-024",
+    "domain": 5,
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una empresa quiere asegurarse de que su contrato con un proveedor de servicios en la nube le permita inspeccionar los controles y registros del proveedor cuando lo considere necesario. ¿Qué debe incluir en el contrato?",
+    "options": [
+      "Una right-to-audit clause",
+      "Rules of engagement",
+      "Un non-disclosure agreement (NDA)",
+      "Un service-level agreement (SLA)"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "La cláusula de derecho a auditar otorga contractualmente al cliente la capacidad de auditar al proveedor. El NDA protege información confidencial, el SLA define niveles de servicio medibles y las rules of engagement delimitan una prueba de penetración."
+  },
+  {
+    "id": "D5-025",
+    "domain": 5,
+    "objective": "5.3",
+    "type": "match",
+    "difficulty": 3,
+    "stem": "Relaciona cada descripción con el tipo de acuerdo correspondiente.",
+    "items": [
+      "Garantiza 99.9% de disponibilidad mensual y define créditos de servicio si no se cumple.",
+      "Declaración no vinculante de la intención de dos dependencias de colaborar en un proyecto.",
+      "Prohíbe divulgar la información técnica compartida durante las negociaciones.",
+      "Detalla entregables, cronograma y costo de un proyecto específico bajo un contrato marco existente.",
+      "Establece los términos generales que regirán todos los proyectos futuros entre cliente y proveedor.",
+      "Define las responsabilidades y la distribución de utilidades entre socios comerciales."
+    ],
+    "choices": [
+      "SLA",
+      "MOU",
+      "NDA",
+      "WO/SOW",
+      "MSA",
+      "BPA"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "explanation": "El SLA fija métricas de servicio y penalizaciones; el MOU expresa intención sin obligación legal; el NDA protege la confidencialidad; el WO/SOW detalla el trabajo puntual; el MSA establece los términos marco; el BPA regula la relación entre socios de negocio."
+  },
+  {
+    "id": "D5-026",
+    "domain": 5,
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Dos dependencias de gobierno ya firmaron un MOU para operar un SOC compartido. Ahora necesitan un documento más formal que especifique las responsabilidades, recursos y condiciones de cada parte, sin que se trate de un contrato comercial de compraventa de servicios. ¿Qué documento es el MÁS apropiado?",
+    "options": [
+      "Business partners agreement (BPA)",
+      "Master service agreement (MSA)",
+      "Service-level agreement (SLA)",
+      "Memorandum of agreement (MOA)"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "El MOA es más formal y detallado que un MOU y define las responsabilidades y condiciones específicas de cada parte en un esfuerzo conjunto. El MSA es un contrato marco comercial entre cliente y proveedor, el BPA regula a socios de negocio con fines de lucro y el SLA mide niveles de servicio."
+  },
+  {
+    "id": "D5-027",
+    "domain": 5,
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Informes de la industria indican que switches falsificados con firmware alterado están entrando al mercado a través de distribuidores de tercer nivel. ¿Qué evaluación aborda MEJOR este riesgo antes de comprar nuevo equipo de red?",
+    "options": [
+      "La revisión del NDA con el distribuidor",
+      "Un análisis cualitativo de la ARO",
+      "Supply chain analysis",
+      "Una prueba de penetración al portal web del fabricante"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "El análisis de la cadena de suministro evalúa el origen y la trazabilidad de componentes y proveedores, incluidos subproveedores, para detectar hardware falsificado o manipulado. Probar el portal web, revisar un NDA o estimar una ARO no verifican la integridad del hardware a lo largo de la cadena."
+  },
+  {
+    "id": "D5-028",
+    "domain": 5,
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Durante la selección de un proveedor de MSSP, una integrante del comité evaluador revela que su esposo es ejecutivo de ventas de uno de los licitantes. ¿Cuál es la MEJOR acción?",
+    "options": [
+      "Permitir que continúe si firma un NDA con el licitante",
+      "Descalificar automáticamente al licitante relacionado",
+      "Pedir al licitante un descuento a cambio de la relación",
+      "Documentar la declaración y excluirla de la evaluación de ese proceso"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Ante un conflict of interest, la práctica recomendada es divulgarlo, documentarlo y apartar (recusar) a la persona involucrada para preservar la imparcialidad. Descalificar al proveedor es desproporcionado, un NDA no elimina el conflicto y pedir un descuento lo agravaría."
+  },
+  {
+    "id": "D5-029",
+    "domain": 5,
+    "objective": "5.3",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Un proveedor SaaS no permite que sus clientes ejecuten pruebas de penetración contra su plataforma. ¿Cuáles de los siguientes elementos puede solicitar el cliente para obtener garantía sobre los controles del proveedor? (Elige DOS.)",
+    "options": [
+      "Un memorandum of understanding (MOU) firmado",
+      "La acceptable use policy del propio cliente",
+      "Un reporte SOC 2 Type II emitido por un auditor independiente",
+      "El whitepaper de marketing del proveedor",
+      "Evidencia de las auditorías internas del proveedor y sus planes de remediación"
+    ],
+    "answer": [
+      2,
+      4
+    ],
+    "explanation": "Las evaluaciones independientes (como un SOC 2 Type II) y la evidencia de auditorías internas son métodos de vendor assessment que demuestran la operación de los controles. Un MOU solo expresa intención, el material de marketing no es evidencia verificable y la AUP del cliente no describe los controles del proveedor."
+  },
+  {
+    "id": "D5-030",
+    "domain": 5,
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "El equipo de seguridad quiere realizar una prueba de penetración contra una aplicación alojada por un proveedor que se integra con la red interna de la empresa. ¿Qué debe hacer PRIMERO?",
+    "options": [
+      "Obtener autorización por escrito del proveedor y acordar las rules of engagement",
+      "Ejecutar un escaneo no autenticado para delimitar el alcance",
+      "Notificar a los clientes del proveedor sobre la prueba",
+      "Realizar reconocimiento pasivo y después reconocimiento activo"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Probar sistemas de un tercero sin permiso puede ser ilegal; antes de cualquier actividad se requiere autorización escrita y rules of engagement que definan alcance, horarios, técnicas permitidas y contactos. Escanear o hacer reconocimiento activo sin autorización ya es parte de la prueba, y notificar a los clientes del proveedor no corresponde a la empresa."
+  },
+  {
+    "id": "D5-031",
+    "domain": 5,
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "En el tercer año de un contrato, la empresa descubre que su proveedor de nómina cambió de proveedor de hosting sin avisar. ¿Qué práctica habría detectado este cambio con MAYOR probabilidad?",
+    "options": [
+      "La due diligence realizada durante la selección del proveedor",
+      "Vendor monitoring continuo, incluidos cuestionarios y revisiones periódicas",
+      "El NDA firmado al inicio de la relación",
+      "El statement of work (SOW) del proyecto de implementación"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "El monitoreo de proveedores verifica de forma continua que el proveedor siga cumpliendo los requisitos durante toda la relación, por ejemplo con cuestionarios periódicos. La due diligence ocurre antes de contratar, el NDA protege información confidencial y el SOW describe un trabajo puntual."
+  },
+  {
+    "id": "D5-032",
+    "domain": 5,
+    "objective": "5.3",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una empresa necesita recopilar de forma estandarizada información sobre los controles de seguridad de sus 40 proveedores críticos. ¿Qué herramienta es la MÁS adecuada?",
+    "options": [
+      "Rules of engagement",
+      "Un questionnaire (cuestionario) de evaluación",
+      "Un business partners agreement (BPA)",
+      "Un work order (WO)"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Los cuestionarios permiten obtener respuestas comparables sobre los controles de muchos proveedores a escala. Las rules of engagement delimitan una prueba de penetración, un WO autoriza un trabajo específico y un BPA regula la relación entre socios de negocio."
+  },
+  {
+    "id": "D5-033",
+    "domain": 5,
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una empresa contrata a un proveedor externo para calcular la nómina de sus empleados. La empresa decide qué datos se recopilan y para qué; el proveedor solo los trata según sus instrucciones. ¿Qué rol tiene el proveedor?",
+    "options": [
+      "Data subject",
+      "Data owner",
+      "Controller",
+      "Processor"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "El processor trata datos personales en nombre y bajo las instrucciones del controller. La empresa es el controller porque determina fines y medios; el data owner es un rol interno de responsabilidad sobre los datos y los data subjects son los empleados cuyos datos se tratan."
+  },
+  {
+    "id": "D5-034",
+    "domain": 5,
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una clienta residente en la Unión Europea solicita a una tienda en línea que elimine todos sus datos personales porque ya no desea ser clienta. ¿Qué derecho de privacidad está ejerciendo?",
+    "options": [
+      "La política de retención de datos de la tienda",
+      "El derecho a la portabilidad de datos",
+      "El right to be forgotten (derecho de supresión)",
+      "El principio de due care"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "El right to be forgotten, reconocido por el GDPR, permite al data subject solicitar la eliminación de sus datos personales cuando ya no hay base legal para conservarlos. La portabilidad implica entregar los datos en formato reutilizable, la retención define plazos internos de conservación y due care es una obligación de la organización."
+  },
+  {
+    "id": "D5-035",
+    "domain": 5,
+    "objective": "5.4",
+    "type": "multi",
+    "difficulty": 3,
+    "stem": "Un hospital no corrige los hallazgos graves de privacidad señalados en varias inspecciones regulatorias. ¿Cuáles de las siguientes consecuencias de non-compliance son impuestas DIRECTAMENTE por el regulador? (Elige TRES.)",
+    "options": [
+      "Pérdida de la licencia de operación",
+      "Daño reputacional",
+      "Rescisión de contratos por parte de aseguradoras",
+      "Disminución del MTBF de los servidores",
+      "Sanciones",
+      "Multas (fines)"
+    ],
+    "answer": [
+      0,
+      4,
+      5
+    ],
+    "explanation": "Las multas, sanciones y la revocación de licencias son medidas que el regulador puede imponer directamente. El daño reputacional proviene de la percepción pública, la rescisión de contratos es un impacto contractual decidido por terceros y el MTBF es una métrica de confiabilidad sin relación con el cumplimiento."
+  },
+  {
+    "id": "D5-036",
+    "domain": 5,
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Después de evaluar sus riesgos, una empresa aplica parches de forma constante, mantiene operando los controles seleccionados y capacita al personal, tal como lo haría una organización razonable de su sector. ¿Qué concepto demuestra principalmente?",
+    "options": [
+      "Due care",
+      "Due diligence",
+      "Exemption",
+      "Attestation"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Due care es actuar de forma continua y razonable para proteger los activos, implementando y manteniendo los controles. Due diligence es la investigación y evaluación (por ejemplo, el análisis de riesgos que la empresa ya hizo) para entender los riesgos; attestation es una declaración formal de cumplimiento y exemption es una excepción a un requisito."
+  },
+  {
+    "id": "D5-037",
+    "domain": 5,
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Cada año, todos los empleados deben confirmar electrónicamente que leyeron y entendieron la política de seguridad vigente. ¿Qué práctica de compliance monitoring es esta?",
+    "options": [
+      "Due diligence de terceros",
+      "Examination regulatoria",
+      "Automatización del cumplimiento",
+      "Attestation and acknowledgement"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Attestation and acknowledgement consiste en que las personas confirmen formalmente que conocen y aceptan cumplir políticas o requisitos. La due diligence evalúa riesgos o terceros, una examination la realiza un regulador y la automatización usa herramientas para verificar controles."
+  },
+  {
+    "id": "D5-038",
+    "domain": 5,
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empresa con más de 2,000 recursos en la nube necesita verificar de forma continua que sus configuraciones cumplan con los CIS Benchmarks y generar evidencia para los auditores con el mínimo esfuerzo manual. ¿Cuál es el MEJOR enfoque?",
+    "options": [
+      "Esperar la examination externa del regulador",
+      "Implementar compliance monitoring automatizado",
+      "Solicitar a cada administrador una attestation trimestral",
+      "Realizar una autoevaluación manual anual con hojas de cálculo"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "La automatización permite monitorear grandes volúmenes de recursos de manera continua y producir evidencia consistente. Las autoevaluaciones anuales y las attestations no detectan desviaciones en tiempo casi real, y depender del regulador es reactivo."
+  },
+  {
+    "id": "D5-039",
+    "domain": 5,
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una nueva ley de protección de datos obliga a la empresa a responder solicitudes de acceso de los data subjects en un plazo de 30 días. La empresa no sabe en qué sistemas almacena datos personales. ¿Qué debe hacer PRIMERO?",
+    "options": [
+      "Elaborar un data inventory que identifique qué datos personales existen y dónde se almacenan",
+      "Reducir los plazos de la política de retención de datos",
+      "Comprar una solución de DLP y bloquear la salida de datos personales",
+      "Cifrar todas las bases de datos de la organización"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Sin un inventario de datos la organización no puede localizar ni entregar la información solicitada, ni aplicar adecuadamente controles o retención. DLP, cifrado y retención son útiles, pero dependen de saber primero qué datos existen y dónde residen."
+  },
+  {
+    "id": "D5-040",
+    "domain": 5,
+    "objective": "5.4",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "¿Cuáles de las siguientes actividades son ejemplos de compliance reporting EXTERNO? (Elige DOS.)",
+    "options": [
+      "Presentar al regulador financiero el informe anual de incidentes de ciberseguridad",
+      "Enviar el Report on Compliance (ROC) de PCI DSS al banco adquirente",
+      "Presentar al comité de auditoría el estado de los hallazgos internos",
+      "Entregar a la dirección los resultados de una autoevaluación",
+      "Publicar un tablero de métricas de cumplimiento para el CISO"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "El reporte externo se dirige a partes ajenas a la organización, como reguladores, bancos adquirentes o clientes. Los informes al comité de auditoría, al CISO o a la dirección son reportes internos que apoyan la supervisión."
+  },
+  {
+    "id": "D5-041",
+    "domain": 5,
+    "objective": "5.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una empresa domiciliada en México vende en línea a residentes de la Unión Europea y almacena sus datos en servidores ubicados en México. ¿Cuál afirmación es la MÁS precisa?",
+    "options": [
+      "El GDPR solo aplica si la empresa tiene una oficina física en la UE",
+      "Solo aplica la ley mexicana porque la empresa y sus servidores están en México",
+      "Debe cumplir tanto el GDPR como la legislación mexicana aplicable",
+      "Basta con que los clientes acepten la acceptable use policy del sitio"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Las implicaciones legales de la privacidad pueden ser locales, nacionales y globales; el GDPR tiene alcance extraterritorial cuando se ofrecen bienes o servicios a personas en la UE. La ubicación de los servidores o de la oficina no elimina esa obligación y una AUP no sustituye los requisitos legales."
+  },
+  {
+    "id": "D5-042",
+    "domain": 5,
+    "objective": "5.5",
+    "type": "multi",
+    "difficulty": 1,
+    "stem": "Un pentester inicia la fase de reconocimiento y no debe interactuar directamente con los sistemas del objetivo. ¿Cuáles de las siguientes actividades son reconocimiento PASIVO? (Elige DOS.)",
+    "options": [
+      "Revisar ofertas de empleo y redes sociales de la empresa",
+      "Hacer un ping sweep del rango de IP público",
+      "Realizar banner grabbing en los servidores web",
+      "Ejecutar un escaneo de puertos con Nmap",
+      "Consultar registros WHOIS y DNS públicos del dominio"
+    ],
+    "answer": [
+      0,
+      4
+    ],
+    "explanation": "El reconocimiento pasivo obtiene información de fuentes públicas (OSINT) sin enviar tráfico al objetivo. Escaneos de puertos, banner grabbing y ping sweeps interactúan directamente con los sistemas y son reconocimiento activo."
+  },
+  {
+    "id": "D5-043",
+    "domain": 5,
+    "objective": "5.5",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una organización realiza un ejercicio en el que el equipo atacante y el equipo de detección trabajan de forma coordinada, combinando tácticas ofensivas y defensivas y compartiendo hallazgos en tiempo real para mejorar los controles. ¿Qué tipo de prueba de penetración describe MEJOR este ejercicio?",
+    "options": [
+      "Unknown environment",
+      "Defensive",
+      "Offensive",
+      "Integrated"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Una prueba integrated combina las perspectivas ofensiva (red team) y defensiva (blue team) para mejorar la detección y respuesta. Una prueba offensive se enfoca solo en atacar, una defensive solo en detectar y responder, y unknown environment describe el nivel de información previa del tester."
+  },
+  {
+    "id": "D5-044",
+    "domain": 5,
+    "objective": "5.5",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Como parte de una evaluación autorizada, un consultor intenta entrar al edificio siguiendo de cerca a un empleado (tailgating) y clonar tarjetas de acceso de proximidad. ¿Qué tipo de prueba de penetración está realizando?",
+    "options": [
+      "Reconocimiento pasivo",
+      "Física",
+      "Partially known environment",
+      "Defensive"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Las pruebas de penetración físicas evalúan controles como puertas, tarjetas, guardias y vestíbulos mediante técnicas como tailgating o clonación de credenciales. Defensive se refiere al equipo de detección, partially known al nivel de información previa y el reconocimiento pasivo no implica intentar acceder."
+  },
+  {
+    "id": "D5-045",
+    "domain": 5,
+    "objective": "5.5",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una firma de contadores públicos independiente emite una opinión formal por escrito sobre si los controles descritos por un proveedor de servicios están diseñados y operan eficazmente. ¿Cómo se llama este tipo de resultado?",
+    "options": [
+      "Attestation",
+      "Self-assessment",
+      "Escaneo de vulnerabilidades",
+      "Rules of engagement"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Una attestation es una declaración formal de un tercero calificado sobre la exactitud o eficacia de los controles, como en un reporte SOC 2. Una self-assessment la realiza la propia organización, un escaneo de vulnerabilidades es una prueba técnica y las rules of engagement delimitan una prueba de penetración."
+  },
+  {
+    "id": "D5-046",
+    "domain": 5,
+    "objective": "5.5",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Para asegurar la independencia y objetividad de la función de auditoría interna, ¿a quién debería reportar funcionalmente el director de auditoría interna?",
+    "options": [
+      "Al CIO, responsable de la estrategia tecnológica",
+      "Al gerente de operaciones de TI",
+      "Al comité de auditoría del consejo de administración",
+      "Al CISO, responsable del programa de seguridad"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "El comité de auditoría supervisa la auditoría interna precisamente para garantizar su independencia respecto de la gerencia que es auditada. El CIO, el gerente de operaciones de TI y el CISO son responsables de áreas que la auditoría interna evalúa, lo que crearía un conflicto de interés."
+  },
+  {
+    "id": "D5-047",
+    "domain": 5,
+    "objective": "5.5",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un cliente corporativo importante exige que una parte sin relación con la empresa verifique sus controles de seguridad; no acepta evaluaciones realizadas por el personal propio. ¿Qué debe contratar la empresa?",
+    "options": [
+      "Una auditoría interna de cumplimiento",
+      "Una auditoría independiente de terceros (independent third-party audit)",
+      "Un acknowledgement firmado por el director general",
+      "Una self-assessment del área de seguridad"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Una auditoría independiente de terceros proporciona una opinión objetiva de una organización externa sin conflicto de interés. La autoevaluación y la auditoría interna son realizadas por personal propio y un acknowledgement solo confirma que alguien conoce una política."
+  },
+  {
+    "id": "D5-048",
+    "domain": 5,
+    "objective": "5.5",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Personal de la autoridad supervisora bancaria realiza una revisión en sitio de los controles de TI de un banco y tiene facultades para ordenar acciones correctivas. ¿Cómo se clasifica MEJOR esta actividad?",
+    "options": [
+      "Una examination regulatoria externa",
+      "Una revisión del comité de auditoría",
+      "Una prueba de penetración de entorno desconocido",
+      "Una self-assessment interna"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Las examinations son evaluaciones externas realizadas por reguladores con autoridad legal para exigir correcciones. La self-assessment y la revisión del comité de auditoría son internas, y una prueba de penetración evalúa técnicamente la seguridad sin facultades regulatorias."
+  },
+  {
+    "id": "D5-049",
+    "domain": 5,
+    "objective": "5.5",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Relaciona cada descripción de una prueba de penetración con el tipo de entorno correspondiente.",
+    "items": [
+      "Al equipo se le entregan diagramas de red, credenciales administrativas y código fuente.",
+      "El tester solo recibe el nombre de la empresa y debe descubrir todo por su cuenta.",
+      "Se proporcionan los rangos de IP en alcance y una cuenta de usuario estándar, sin documentación interna.",
+      "Se busca simular fielmente a un atacante externo sin conocimiento previo del entorno.",
+      "Se otorga acceso completo para maximizar la cobertura en el menor tiempo posible."
+    ],
+    "choices": [
+      "Known environment",
+      "Partially known environment",
+      "Unknown environment"
+    ],
+    "answer": [
+      0,
+      2,
+      1,
+      2,
+      0
+    ],
+    "explanation": "En un known environment (white box) el tester tiene información completa, lo que maximiza la cobertura; en un partially known (gray box) recibe información limitada; en un unknown (black box) no recibe información y simula a un atacante externo."
+  },
+  {
+    "id": "D5-050",
+    "domain": 5,
+    "objective": "5.6",
+    "type": "multi",
+    "difficulty": 1,
+    "stem": "Un usuario recibe un correo de soporte@micros0ft-help.com que dice: \"Su cuenta será suspendida en 1 hora. Haga clic aquí para verificar su contraseña\". ¿Cuáles son los indicadores de phishing MÁS claros en este mensaje? (Elige DOS.)",
+    "options": [
+      "El pie de página incluye una dirección postal",
+      "La urgencia y la amenaza de suspender la cuenta",
+      "El dominio del remitente imita a uno legítimo con un carácter sustituido",
+      "El mensaje se recibió un martes por la mañana",
+      "El correo usa formato HTML"
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explanation": "Los dominios parecidos (typosquatting, como un cero en lugar de la letra o) y la presión de tiempo para actuar son indicadores clásicos de phishing. El día de envío, un pie de página con dirección o el formato HTML aparecen en correos legítimos y no indican fraude por sí solos."
+  },
+  {
+    "id": "D5-051",
+    "domain": 5,
+    "objective": "5.6",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Varios usuarios reportaron el mismo correo sospechoso con el botón de reporte. El analista del SOC confirma que el enlace descarga malware. ¿Qué debe hacer a continuación para limitar MÁS el impacto?",
+    "options": [
+      "Programar una capacitación sobre phishing para el próximo trimestre",
+      "Eliminar el mensaje solo de los buzones de quienes lo reportaron",
+      "Buscar y eliminar todas las copias del mensaje de los buzones y bloquear el remitente y la URL",
+      "Responder a cada usuario agradeciendo el reporte y cerrar el ticket"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Al confirmar un mensaje malicioso, la respuesta adecuada es purgarlo de todos los buzones y bloquear sus indicadores para proteger a quienes aún no lo han abierto. Limpiar solo los buzones de quienes reportaron deja expuestos a los demás; agradecer y capacitar son útiles, pero no contienen la amenaza inmediata."
+  },
+  {
+    "id": "D5-052",
+    "domain": 5,
+    "objective": "5.6",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Tras la campaña inicial de phishing simulado, la tasa de clics fue de 28%. Después de seis meses de campañas mensuales, la tasa de clics bajó a 9%, pero solo el 5% de los usuarios reporta los correos sospechosos. ¿En qué debe enfocarse el programa de concientización a continuación?",
+    "options": [
+      "En cambiar a una sola campaña anual para reducir la fatiga",
+      "En suspender las campañas porque la tasa de clics ya es aceptable",
+      "En sancionar a los usuarios que hicieron clic durante la campaña inicial",
+      "En capacitar e incentivar a los usuarios para que reporten los mensajes sospechosos"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "El monitoreo recurrente muestra mejora en clics, pero una tasa de reporte baja limita la detección temprana; el siguiente paso es reforzar el reporte. Suspender o espaciar las campañas pierde la medición continua, y un enfoque punitivo desalienta el reporte."
+  },
+  {
+    "id": "D5-053",
+    "domain": 5,
+    "objective": "5.6",
+    "type": "match",
+    "difficulty": 3,
+    "stem": "Relaciona cada comportamiento observado con la categoría de comportamiento anómalo que MEJOR lo describe.",
+    "items": [
+      "Un usuario sube archivos de la empresa a su almacenamiento personal en la nube para trabajar desde casa.",
+      "La cuenta de un contador inicia sesión a las 3:00 a. m. desde un país donde la empresa no opera.",
+      "Un empleado envía por error una hoja de cálculo con datos de clientes al destinatario equivocado.",
+      "Un usuario desactiva el antivirus porque considera que hace lenta su computadora.",
+      "Un empleado de recursos humanos accede de pronto a repositorios de código fuente que nunca había utilizado.",
+      "Un usuario presiona sin querer \"Responder a todos\" con un archivo confidencial adjunto."
+    ],
+    "choices": [
+      "Risky",
+      "Unexpected",
+      "Unintentional"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2
+    ],
+    "explanation": "El comportamiento risky es una acción deliberada que eleva el riesgo (shadow IT, desactivar controles); el unexpected se desvía del patrón normal de la cuenta (horarios, ubicación, recursos inusuales); el unintentional es un error sin intención maliciosa."
+  },
+  {
+    "id": "D5-054",
+    "domain": 5,
+    "objective": "5.6",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Se encontraron varias memorias USB etiquetadas como \"Nómina 2026\" en el estacionamiento y un empleado conectó una a su computadora. ¿Qué tema de capacitación aborda MÁS directamente esta situación?",
+    "options": [
+      "Insider threat",
+      "Removable media and cables",
+      "Password management",
+      "Hybrid/remote work environments"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "La capacitación sobre medios removibles y cables enseña a no conectar dispositivos desconocidos, que pueden contener malware o ser dispositivos maliciosos. La gestión de contraseñas, el trabajo remoto y la amenaza interna no tratan directamente este vector de baiting."
+  },
+  {
+    "id": "D5-055",
+    "domain": 5,
+    "objective": "5.6",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Una empleada trabaja de forma remota desde una cafetería y maneja información confidencial de clientes. ¿Cuáles de las siguientes prácticas son las MEJORES para este escenario? (Elige DOS.)",
+    "options": [
+      "Desactivar el firewall del equipo para mejorar la conectividad",
+      "Conectarse mediante la VPN corporativa al usar la Wi-Fi pública",
+      "Usar la computadora compartida de la cafetería si su batería se agota",
+      "Guardar los archivos en una memoria USB personal como respaldo",
+      "Usar un filtro de privacidad y estar atenta a quién puede ver su pantalla"
+    ],
+    "answer": [
+      1,
+      4
+    ],
+    "explanation": "En entornos remotos o híbridos, la VPN protege el tráfico en redes no confiables y el filtro de privacidad junto con la conciencia situacional reduce el shoulder surfing. Desactivar el firewall, usar medios personales o equipos compartidos aumenta el riesgo de exposición."
+  },
+  {
+    "id": "D5-056",
+    "domain": 5,
+    "objective": "5.6",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un empleado publica en redes sociales una foto de la nueva oficina; al fondo se ve un pizarrón con la contraseña de la Wi-Fi y los nombres en clave de proyectos confidenciales. ¿Qué tema de capacitación aborda MEJOR este comportamiento?",
+    "options": [
+      "Insider threat",
+      "Políticas de retención de datos",
+      "Removable media and cables",
+      "Operational security (OPSEC)"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "La seguridad operacional enseña a evitar que información aparentemente inocua, como fotos o publicaciones, revele datos útiles para un atacante. No hay indicios de intención maliciosa (insider threat), no involucra medios removibles y la retención de datos trata los plazos de conservación."
+  }
+]

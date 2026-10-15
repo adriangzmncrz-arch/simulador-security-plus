@@ -1,0 +1,983 @@
+[
+  {
+    "id": "D3-001",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empresa migra sus servidores de aplicaciones a un proveedor de nube bajo un modelo IaaS. Según la matriz de responsabilidad compartida, ¿cuál de las siguientes tareas es responsabilidad del CLIENTE?",
+    "options": [
+      "Aplicar parches al sistema operativo de las máquinas virtuales",
+      "Mantener la seguridad física del centro de datos",
+      "Aplicar parches al hypervisor que aloja las instancias",
+      "Reemplazar los discos físicos defectuosos del proveedor"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "En IaaS el proveedor administra la infraestructura física, la red subyacente y el hypervisor; el cliente es responsable de todo lo que instala encima, incluido el sistema operativo invitado y sus parches. La seguridad física, el hypervisor y el hardware son responsabilidad del proveedor."
+  },
+  {
+    "id": "D3-002",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una cadena de 40 sucursales autentica a todos sus usuarios contra un único servidor ubicado en la oficina central. Durante una falla del enlace WAN, ninguna sucursal pudo iniciar sesión. ¿Qué característica de esta arquitectura quedó en evidencia?",
+    "options": [
+      "Un modelo descentralizado dificulta aplicar políticas consistentes",
+      "Un modelo centralizado aumenta la superficie de ataque en cada sucursal",
+      "Un modelo descentralizado depende de un solo enlace de comunicaciones",
+      "Un modelo centralizado introduce un single point of failure"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "La arquitectura centralizada simplifica la administración y la aplicación de políticas, pero concentra el servicio en un solo punto, cuya falla afecta a todos. La dificultad para mantener políticas consistentes es una desventaja del modelo descentralizado, no del caso descrito, y la superficie de ataque en sucursales disminuye, no aumenta, al centralizar."
+  },
+  {
+    "id": "D3-003",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una organización despliega toda su infraestructura en la nube con plantillas de Infrastructure as Code (IaC) ejecutadas desde un pipeline CI/CD. ¿Cuál es el riesgo de seguridad MÁS significativo que introduce este modelo?",
+    "options": [
+      "Aumenta el configuration drift porque cada servidor se configura manualmente",
+      "Un error o cambio malicioso en una plantilla se replica de forma idéntica en todos los entornos desplegados",
+      "Se pierde la capacidad de auditar quién modificó la configuración",
+      "Obliga a mantener los entornos en una red air-gapped"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "IaC produce despliegues consistentes y repetibles; por la misma razón, una plantilla mal configurada o manipulada propaga la falla a todo lo que se despliega con ella, por lo que el repositorio y el pipeline deben protegerse y revisarse. IaC reduce el configuration drift en lugar de aumentarlo y, al estar en control de versiones, mejora la auditoría. No requiere aislamiento físico."
+  },
+  {
+    "id": "D3-004",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un equipo de desarrollo reemplaza servidores dedicados por funciones serverless (FaaS) de un proveedor de nube. ¿Qué responsabilidad de seguridad CONSERVA la organización?",
+    "options": [
+      "La aplicación de parches al sistema operativo de los servidores de ejecución",
+      "El aprovisionamiento de capacidad física cuando aumenta la demanda",
+      "El mantenimiento del hypervisor y del runtime subyacente",
+      "La seguridad del código de las funciones y los permisos que se les asignan"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "En serverless el proveedor administra servidores, sistema operativo, runtime y escalamiento; el cliente sigue siendo responsable de su código, sus dependencias y de no otorgar permisos excesivos a las funciones. Las demás tareas se transfieren al proveedor en este modelo."
+  },
+  {
+    "id": "D3-005",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empresa divide una aplicación monolítica en decenas de microservicios que se comunican por API. ¿Cuál es la consideración de seguridad MÁS importante derivada de este cambio?",
+    "options": [
+      "Eliminar la autenticación entre componentes, porque todos pertenecen a la misma aplicación",
+      "Aceptar que el compromiso de un microservicio compromete siempre toda la aplicación",
+      "Usar una sola credencial compartida para que todos los servicios accedan a la base de datos",
+      "Proteger la comunicación entre servicios con autenticación y cifrado, ya que aumentan los endpoints expuestos"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Los microservicios aíslan fallas y permiten escalar por componente, pero multiplican las API y el tráfico entre servicios, lo que amplía la superficie de ataque; por ello se recomienda autenticar y cifrar cada llamada (por ejemplo, con mTLS). Confiar implícitamente entre servicios o compartir credenciales contradice el principio de mínimo privilegio, y el aislamiento entre servicios precisamente busca evitar que un compromiso afecte a todo."
+  },
+  {
+    "id": "D3-006",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una planta de tratamiento de agua opera un sistema SCADA que controla bombas y válvulas. Los controladores no pueden parchearse y la dirección exige el MAYOR nivel de aislamiento posible frente a amenazas provenientes de Internet. ¿Qué arquitectura cumple MEJOR este requisito?",
+    "options": [
+      "Una VLAN dedicada en el switch corporativo",
+      "Microsegmentación mediante SDN",
+      "Una red air-gapped físicamente separada",
+      "Firewalls basados en host en cada HMI"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "El aislamiento físico (air gap) elimina cualquier conexión de red con Internet o con la red corporativa, por lo que ofrece el mayor nivel de separación para sistemas ICS/SCADA críticos. Las VLAN y la SDN son segmentación lógica sobre infraestructura compartida y pueden fallar por errores de configuración, y los firewalls de host no protegen los controladores sin parches."
+  },
+  {
+    "id": "D3-007",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un proveedor de servicios administrados implementa Software-Defined Networking (SDN) para automatizar la segmentación de su red. ¿Cuál es el riesgo de seguridad MÁS significativo de esta arquitectura?",
+    "options": [
+      "La SDN impide aplicar segmentación lógica entre cargas de trabajo",
+      "El compromiso del controlador SDN centralizado podría permitir reconfigurar toda la red",
+      "Cada switch debe configurarse manualmente, lo que aumenta los errores",
+      "El data plane deja de reenviar tráfico cuando se aplican políticas"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "SDN separa el control plane del data plane y centraliza las decisiones en un controlador; ese controlador se convierte en un objetivo de alto valor, porque quien lo controle puede redirigir o abrir tráfico en toda la red. La SDN facilita la segmentación y elimina la configuración manual por dispositivo, y el data plane sigue reenviando tráfico conforme a las políticas."
+  },
+  {
+    "id": "D3-008",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un arquitecto compara containers con máquinas virtuales para alojar aplicaciones de varios clientes en el mismo host. ¿Cuál es la implicación de seguridad MÁS relevante de los containers?",
+    "options": [
+      "Cada container incluye su propio kernel, lo que lo hace más aislado que una VM",
+      "Comparten el kernel del sistema operativo host, por lo que una vulnerabilidad en el kernel puede afectar a todos",
+      "No pueden escanearse en busca de vulnerabilidades antes del despliegue",
+      "Requieren hardware físico dedicado para cada container"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Los containers virtualizan a nivel del sistema operativo y comparten el kernel del host, por lo que su aislamiento es menor que el de una VM, que ejecuta su propio sistema operativo completo sobre un hypervisor. Las imágenes de container sí pueden escanearse y muchos containers se ejecutan en un mismo host."
+  },
+  {
+    "id": "D3-009",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un hospital usa bombas de infusión con sistemas embebidos cuyo fabricante dejó de publicar actualizaciones de firmware. Reemplazarlas no es viable en el corto plazo. ¿Cuál es la MEJOR acción para reducir el riesgo?",
+    "options": [
+      "Instalar un agente EDR en cada bomba de infusión",
+      "Aislar las bombas en un segmento de red dedicado con ACL estrictas",
+      "Habilitar acceso remoto del fabricante a través de Internet",
+      "Aplicar parches de un sistema operativo de propósito general"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Cuando un dispositivo embebido no puede parchearse, el control compensatorio adecuado es reducir su exposición mediante segmentación y reglas de acceso restrictivas. Normalmente no es posible instalar agentes de terceros en firmware cerrado, abrir acceso desde Internet aumentaría el riesgo y los parches de otros sistemas operativos no aplican."
+  },
+  {
+    "id": "D3-010",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un brazo robótico de una línea de ensamble es controlado por un RTOS que se ejecuta en hardware embebido. El equipo de seguridad propone instalar un agente de monitoreo en el controlador y el fabricante lo rechaza. ¿Cuál es la razón MÁS probable?",
+    "options": [
+      "Un RTOS no puede conectarse a ninguna red, por lo que el agente no reportaría eventos",
+      "Un RTOS es inmune al malware por diseño, así que el agente es innecesario",
+      "El agente consumiría recursos de cómputo y podría afectar los tiempos de respuesta deterministas que el RTOS debe garantizar",
+      "Los agentes de monitoreo solo funcionan en cargas de trabajo serverless"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Un RTOS está diseñado para responder dentro de plazos estrictos y suele ejecutarse con poca capacidad de cómputo; agregar software puede introducir latencia impredecible y poner en riesgo la operación segura del equipo. Un RTOS sí puede estar conectado a una red y no es inmune al malware, y los agentes de monitoreo no se limitan a cargas serverless."
+  },
+  {
+    "id": "D3-011",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una empresa contrata un proveedor SaaS de nómina como parte de su estrategia de transferencia de riesgo. Meses después, una brecha en el proveedor expone datos de los empleados de la empresa. ¿Cuál afirmación es CORRECTA?",
+    "options": [
+      "La transferencia de riesgo eliminó por completo el riesgo, por lo que la empresa no tiene obligaciones",
+      "El proveedor asume toda la responsabilidad legal y la empresa no debe notificar a los afectados",
+      "En SaaS el cliente es responsable de aplicar parches a la aplicación del proveedor",
+      "La empresa sigue siendo responsable de sus datos ante los empleados y los reguladores, aunque haya transferido parte del impacto por contrato"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Contratar a un tercero o asegurar un riesgo puede transferir parte del impacto financiero, pero la responsabilidad (accountability) por los datos permanece en la organización; por eso se requieren evaluaciones de proveedores, cláusulas de seguridad y derecho de auditoría. El riesgo no desaparece, las obligaciones de notificación siguen aplicando y en SaaS el proveedor parcha su aplicación."
+  },
+  {
+    "id": "D3-012",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "multi",
+    "difficulty": 1,
+    "stem": "Un auditor revisa cámaras IP, termostatos inteligentes y otros dispositivos IoT conectados a la red de una oficina. ¿Cuáles son las DOS debilidades de seguridad MÁS comunes en este tipo de dispositivos? (Elige DOS.)",
+    "options": [
+      "Exceso de capacidad de cómputo dedicada al cifrado",
+      "Credenciales predeterminadas o codificadas en el firmware (hardcoded)",
+      "Disponibilidad limitada o nula de actualizaciones de firmware",
+      "Integración nativa con el SIEM y el EDR corporativos",
+      "Soporte obligatorio de 802.1X con certificados de cliente"
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explanation": "Los dispositivos IoT suelen venir con credenciales débiles o fijas y con poco o ningún soporte de parches del fabricante. Normalmente tienen recursos de cómputo limitados, rara vez se integran de forma nativa con herramientas de seguridad empresariales y muchas veces no soportan 802.1X."
+  },
+  {
+    "id": "D3-013",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Una organización adopta un modelo de hybrid cloud que combina su centro de datos on-premises con servicios de un proveedor de nube pública. ¿Cuáles son los DOS desafíos de seguridad MÁS comunes de este modelo? (Elige DOS.)",
+    "options": [
+      "Mantener políticas de seguridad y visibilidad consistentes entre ambos entornos",
+      "Desaparece la necesidad de una matriz de responsabilidad compartida",
+      "Integrar de forma segura la gestión de identidades y la conectividad entre on-premises y la nube",
+      "Los datos nunca transitan entre los entornos, por lo que no requieren cifrado",
+      "El proveedor de nube asume la seguridad de los servidores on-premises"
+    ],
+    "answer": [
+      0,
+      2
+    ],
+    "explanation": "En un entorno híbrido conviven herramientas, controles y responsabilidades distintos, lo que complica la consistencia de políticas y la visibilidad, y exige integrar identidades y enlaces seguros (VPN o enlaces dedicados) entre ambos lados. El proveedor no protege la infraestructura local, los datos sí viajan entre entornos y la matriz de responsabilidad sigue siendo necesaria para la parte en la nube."
+  },
+  {
+    "id": "D3-014",
+    "domain": 3,
+    "objective": "3.1",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Relaciona cada característica con el modelo de arquitectura que MEJOR la describe. No todas las opciones se usan.",
+    "items": [
+      "Comparte el kernel del sistema operativo host entre instancias aisladas",
+      "Ejecuta código bajo demanda sin que el cliente administre servidores",
+      "Separa el control plane del data plane y centraliza las decisiones de red",
+      "Garantiza tiempos de respuesta deterministas en controladores industriales",
+      "Cada invitado ejecuta su propio sistema operativo completo sobre un hypervisor"
+    ],
+    "choices": [
+      "Containerization",
+      "Serverless",
+      "SDN",
+      "RTOS",
+      "Virtualization",
+      "Microservices"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": "Los containers comparten el kernel del host; serverless abstrae por completo los servidores; SDN separa el control plane del data plane; un RTOS prioriza el determinismo temporal; y la virtualización ejecuta sistemas operativos completos sobre un hypervisor. Microservices describe una forma de diseñar aplicaciones como servicios independientes, no ninguna de estas características."
+  },
+  {
+    "id": "D3-015",
+    "domain": 3,
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Los administradores necesitan gestionar servidores ubicados en una zona de alta seguridad sin habilitar acceso directo desde sus estaciones de trabajo a cada servidor. ¿Qué solución es la MEJOR?",
+    "options": [
+      "Un jump server endurecido como único punto de acceso administrativo a la zona",
+      "Un forward proxy que almacene en caché las sesiones administrativas",
+      "Un load balancer que distribuya las conexiones RDP entre los servidores",
+      "Un IDS pasivo conectado al switch de la zona"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Un jump server (jump box) es un sistema endurecido y monitoreado que sirve como punto de entrada controlado a una zona segura, lo que reduce la superficie de ataque y centraliza la auditoría de las sesiones administrativas. Un proxy, un load balancer o un IDS no controlan el acceso administrativo a la zona."
+  },
+  {
+    "id": "D3-016",
+    "domain": 3,
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un hospital instala un IPS en línea frente a los sistemas clínicos. La dirección decide que, si el IPS falla, la atención a pacientes no debe interrumpirse, aunque eso implique dejar pasar tráfico sin inspección. ¿Qué configuración cumple este requisito?",
+    "options": [
+      "Fail-closed",
+      "Fail-open",
+      "Modo pasivo mediante TAP",
+      "Modo de bloqueo predeterminado"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Un dispositivo fail-open permite que el tráfico siga fluyendo si el dispositivo falla, priorizando la disponibilidad sobre la seguridad, que es lo que la dirección decidió. Fail-closed bloquearía todo el tráfico ante la falla; un TAP pasivo no estaría en línea y no permitiría bloquear ataques; y un modo de bloqueo predeterminado equivale a fallar cerrado."
+  },
+  {
+    "id": "D3-017",
+    "domain": 3,
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "El equipo de seguridad necesita visibilidad del tráfico del segmento de servidores para detectar ataques, pero no debe agregar latencia ni crear un punto de falla que pueda interrumpir la red. ¿Qué implementación es la MEJOR?",
+    "options": [
+      "Un IPS en línea configurado en modo fail-closed",
+      "Un IDS pasivo que recibe una copia del tráfico desde un network TAP",
+      "Un IPS en línea configurado en modo fail-open",
+      "Un proxy transparente colocado entre el switch y los servidores"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Un sensor pasivo conectado a un TAP o puerto SPAN analiza una copia del tráfico, por lo que no añade latencia ni interrumpe la red si falla; a cambio, solo puede detectar y alertar. Cualquier dispositivo en línea (IPS o proxy) añade latencia y forma parte de la ruta del tráfico, aunque falle abierto."
+  },
+  {
+    "id": "D3-018",
+    "domain": 3,
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empresa descubre que visitantes conectan laptops personales a los puertos Ethernet de las salas de juntas y obtienen acceso a la red interna. Se quiere que cada dispositivo presente un certificado válido y sea autenticado de forma centralizada antes de que el switch habilite el puerto. ¿Qué control debe implementarse?",
+    "options": [
+      "802.1X con un servidor RADIUS",
+      "Filtrado por dirección MAC en cada puerto",
+      "Port mirroring hacia un IDS",
+      "Asignar los puertos a una VLAN de datos estática"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "802.1X es el estándar de control de acceso por puerto: el switch (authenticator) mantiene el puerto bloqueado hasta que el dispositivo (supplicant) se autentica ante un servidor RADIUS usando un método EAP como EAP-TLS. El filtrado MAC no usa certificados y es fácil de evadir con MAC spoofing, el port mirroring solo copia tráfico y una VLAN estática no autentica a nadie."
+  },
+  {
+    "id": "D3-019",
+    "domain": 3,
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una aplicación web pública recibe intentos frecuentes de SQL injection y cross-site scripting (XSS). Los desarrolladores tardarán varias semanas en corregir el código. ¿Qué control ofrece la protección MÁS inmediata?",
+    "options": [
+      "Un firewall stateful de capa 4",
+      "Un NIDS pasivo conectado a un puerto SPAN",
+      "Un concentrador VPN para los usuarios",
+      "Un web application firewall (WAF)"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Un WAF inspecciona el tráfico HTTP/HTTPS a nivel de aplicación y puede bloquear patrones de inyección y XSS mientras se corrige el código. Un firewall de capa 4 solo evalúa direcciones y puertos, un NIDS pasivo solo alerta y una VPN no aplica a una aplicación pública."
+  },
+  {
+    "id": "D3-020",
+    "domain": 3,
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Los usuarios eluden el bloqueo de una aplicación de mensajería no autorizada, que ahora usa el puerto TCP 443. El firewall actual solo filtra por dirección IP y puerto. ¿Qué solución es la MEJOR?",
+    "options": [
+      "Un NGFW con inspección de aplicaciones de capa 7",
+      "Un firewall stateful de capa 4 con una regla adicional para TCP 443",
+      "Un load balancer delante del gateway de Internet",
+      "Un IDS pasivo conectado a un network TAP"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Un NGFW identifica las aplicaciones por su comportamiento y contenido (capa 7), no solo por el puerto, por lo que puede bloquear la aplicación aunque use 443. Bloquear TCP 443 en un firewall de capa 4 cortaría toda la navegación HTTPS, un load balancer no filtra aplicaciones y un IDS pasivo no bloquea."
+  },
+  {
+    "id": "D3-021",
+    "domain": 3,
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una empresa con personal mayoritariamente remoto y aplicaciones SaaS quiere dejar de enviar todo el tráfico a su centro de datos. Busca combinar la optimización de red de SD-WAN con servicios de seguridad como SWG, CASB, ZTNA y firewall-as-a-service, entregados desde la nube cerca de cada usuario. ¿Qué enfoque cumple MEJOR estos requisitos?",
+    "options": [
+      "SD-WAN por sí solo",
+      "Un concentrador VPN de acceso remoto en el centro de datos",
+      "Un UTM en la oficina central",
+      "SASE"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "SASE (Secure Access Service Edge) converge capacidades de red como SD-WAN con servicios de seguridad entregados desde la nube, de modo que la política se aplica cerca del usuario sin regresar el tráfico al centro de datos. SD-WAN por sí solo optimiza la conectividad pero no aporta esos servicios de seguridad, y un concentrador VPN o un UTM centralizados obligan a enviar el tráfico a la oficina central."
+  },
+  {
+    "id": "D3-022",
+    "domain": 3,
+    "objective": "3.2",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Dos oficinas se conectarán con un túnel site-to-site. El requisito es cifrar el paquete IP original completo, incluidos sus encabezados, y garantizar su integridad. ¿Qué configuración de IPSec cumple MEJOR el requisito?",
+    "options": [
+      "ESP en tunnel mode",
+      "ESP en transport mode",
+      "AH en tunnel mode",
+      "AH en transport mode"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "ESP aporta confidencialidad (cifrado), integridad y autenticación, y en tunnel mode encapsula y cifra el paquete original completo, que es el modo habitual en conexiones site-to-site. En transport mode el encabezado IP original no se cifra, y AH solo aporta integridad y autenticación sin cifrado, en cualquiera de los dos modos."
+  },
+  {
+    "id": "D3-023",
+    "domain": 3,
+    "objective": "3.2",
+    "type": "multi",
+    "difficulty": 1,
+    "stem": "Un servidor web recién desplegado en la DMZ tiene instalados servicios y componentes por defecto. ¿Cuáles DOS acciones reducen MEJOR su superficie de ataque? (Elige DOS.)",
+    "options": [
+      "Habilitar RDP desde Internet para facilitar la administración",
+      "Deshabilitar los servicios y cerrar los puertos que no se necesitan",
+      "Agregar una segunda NIC conectada directamente a la red interna",
+      "Instalar herramientas de desarrollo para depurar en producción",
+      "Eliminar cuentas predeterminadas y aplicaciones de ejemplo"
+    ],
+    "answer": [
+      1,
+      4
+    ],
+    "explanation": "Reducir la superficie de ataque implica eliminar todo lo que no es necesario: servicios, puertos, cuentas predeterminadas y contenido de ejemplo. Conectar el servidor a la red interna, exponer RDP o instalar herramientas adicionales agrega puntos de entrada y la aumenta."
+  },
+  {
+    "id": "D3-024",
+    "domain": 3,
+    "objective": "3.2",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Una organización implementa control de acceso a la red basado en 802.1X. ¿Cuáles son los TRES componentes que participan en el proceso de autenticación? (Elige TRES.)",
+    "options": [
+      "Supplicant (el dispositivo o software cliente)",
+      "Jump server",
+      "Puerto SPAN",
+      "Authentication server (por ejemplo, RADIUS)",
+      "Load balancer",
+      "Authenticator (el switch o access point)"
+    ],
+    "answer": [
+      0,
+      3,
+      5
+    ],
+    "explanation": "En 802.1X el supplicant solicita acceso, el authenticator (switch o AP) controla el puerto y transporta los mensajes EAP, y el authentication server, normalmente RADIUS, valida las credenciales. Un puerto SPAN, un jump server y un load balancer no forman parte del proceso."
+  },
+  {
+    "id": "D3-025",
+    "domain": 3,
+    "objective": "3.2",
+    "type": "match",
+    "difficulty": 3,
+    "stem": "Una empresa rediseña su red con cuatro zonas de seguridad. Asigna cada sistema a la zona MÁS adecuada.",
+    "items": [
+      "Servidor web público de la tienda en línea",
+      "Relay SMTP que recibe correo desde Internet",
+      "Servidor de base de datos con información de clientes",
+      "Router de borde con ACL hacia el ISP",
+      "Estaciones de trabajo de los empleados",
+      "Interfaces de administración out-of-band de switches y firewalls"
+    ],
+    "choices": [
+      "Screened subnet (DMZ)",
+      "Red interna",
+      "Perímetro",
+      "Red de administración (management)"
+    ],
+    "answer": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3
+    ],
+    "explanation": "Los servicios que deben aceptar conexiones desde Internet (web y relay SMTP) van en la screened subnet; los datos sensibles y los usuarios permanecen en la red interna, sin exposición directa. El router de borde forma el perímetro, y las interfaces de administración se aíslan en una red de gestión dedicada para que un compromiso en otra zona no permita reconfigurar la infraestructura."
+  },
+  {
+    "id": "D3-026",
+    "domain": 3,
+    "objective": "3.2",
+    "type": "match",
+    "difficulty": 1,
+    "stem": "Relaciona cada necesidad con el dispositivo de red que la cubre MEJOR.",
+    "items": [
+      "Inspeccionar el tráfico en línea y bloquear ataques en tiempo real",
+      "Generar alertas a partir de una copia del tráfico, sin bloquear",
+      "Distribuir solicitudes entre varios servidores web y retirar los que fallan los health checks",
+      "Filtrar y almacenar en caché la navegación de los usuarios hacia Internet",
+      "Ofrecer un punto de acceso endurecido para administrar una zona segura"
+    ],
+    "choices": [
+      "IPS",
+      "IDS",
+      "Load balancer",
+      "Proxy server",
+      "Jump server"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": "El IPS opera en línea y puede bloquear; el IDS es pasivo y solo detecta y alerta; el load balancer reparte la carga y verifica la salud de los servidores; el forward proxy intermedia, filtra y almacena en caché la navegación; y el jump server controla el acceso administrativo a zonas seguras."
+  },
+  {
+    "id": "D3-027",
+    "domain": 3,
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un comercio quiere reducir el alcance de su auditoría PCI DSS. Su plan es reemplazar los números de tarjeta en sus sistemas por valores aleatorios sin relación matemática con el original y almacenar la correspondencia en una bóveda protegida. ¿Qué método describe este plan?",
+    "options": [
+      "Encryption",
+      "Tokenization",
+      "Masking",
+      "Hashing"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "La tokenización sustituye el dato sensible por un token sin relación matemática con el original; solo la bóveda de tokens puede hacer la correspondencia, por lo que los sistemas que manejan únicamente tokens pueden quedar fuera del alcance. El cifrado es reversible con la clave, el masking oculta parte del dato al mostrarlo y el hashing produce un resumen no reversible que no se puede canjear por el dato original."
+  },
+  {
+    "id": "D3-028",
+    "domain": 3,
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "En un centro de atención telefónica, los agentes solo deben ver los últimos cuatro dígitos del número de tarjeta del cliente para validar su identidad. ¿Qué método de protección de datos cumple este requisito?",
+    "options": [
+      "Tokenization",
+      "Hashing",
+      "Geographic restrictions",
+      "Data masking"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "El data masking oculta parte del dato (por ejemplo, ************1234) para que el usuario vea solo lo necesario. La tokenización reemplaza todo el valor por un token, el hashing produce un valor ilegible y las restricciones geográficas limitan el acceso según la ubicación, no lo que se muestra."
+  },
+  {
+    "id": "D3-029",
+    "domain": 3,
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un desarrollador debe almacenar las contraseñas de los usuarios de modo que ni los administradores de la base de datos puedan recuperarlas y que se dificulten los ataques con rainbow tables. ¿Qué método es el MEJOR?",
+    "options": [
+      "Cifrado simétrico AES-256 con una clave central",
+      "Tokenization con una bóveda de tokens",
+      "Hashing con un salt único por contraseña",
+      "Data masking de la columna de contraseñas"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "El hashing es unidireccional, por lo que no se puede revertir para obtener la contraseña, y el salt único hace que dos contraseñas iguales produzcan hashes distintos, lo que inutiliza las rainbow tables. El cifrado y la tokenización son reversibles para quien tenga la clave o acceso a la bóveda, y el masking solo cambia cómo se muestra el dato."
+  },
+  {
+    "id": "D3-030",
+    "domain": 3,
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empresa europea evalúa un proveedor de nube. El área legal exige que los datos personales de sus clientes permanezcan sujetos a las leyes y regulaciones del país donde se recopilaron. ¿Qué concepto describe MEJOR este requisito?",
+    "options": [
+      "Data masking",
+      "Permission restrictions",
+      "Data sovereignty",
+      "Data in transit"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "La soberanía de datos establece que los datos están sujetos a las leyes del país o región donde se recopilan o almacenan, lo que influye en la elección de regiones del proveedor y en las transferencias internacionales. Masking y las restricciones de permisos son métodos de protección, y data in transit es un estado de los datos."
+  },
+  {
+    "id": "D3-031",
+    "domain": 3,
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un analista asigna un control a cada estado de los datos. ¿Cuál de las siguientes combinaciones es CORRECTA?",
+    "options": [
+      "Data in transit: full-disk encryption en los servidores de la base de datos",
+      "Data at rest: TLS 1.3 entre el navegador y el servidor web",
+      "Data in use: secure enclave que protege los datos en memoria mientras se procesan",
+      "Data in transit: tokenización de los registros almacenados en la base de datos"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Los datos en uso están en memoria o en la CPU mientras se procesan, y tecnologías como los secure enclaves los protegen en ese estado. El full-disk encryption y la tokenización de registros almacenados protegen datos en reposo, y TLS protege datos en tránsito, por lo que las demás combinaciones están invertidas."
+  },
+  {
+    "id": "D3-032",
+    "domain": 3,
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "El equipo de seguridad observa intentos de inicio de sesión en la aplicación de recursos humanos desde países donde la empresa no tiene operaciones ni empleados. ¿Qué control reduce MEJOR este riesgo?",
+    "options": [
+      "Data sovereignty",
+      "Geographic restrictions basadas en geolocalización de IP",
+      "Data masking",
+      "Hashing de las credenciales"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Las restricciones geográficas usan la geolocalización (por ejemplo, de la dirección IP) para permitir o bloquear el acceso según la ubicación del solicitante. La soberanía de datos es un concepto legal sobre dónde residen los datos, el masking oculta datos al mostrarlos y el hashing de credenciales no impide los intentos de inicio de sesión."
+  },
+  {
+    "id": "D3-033",
+    "domain": 3,
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empresa traslada los datos de tarjetahabientes a una base de datos separada, alojada en una subred independiente, detrás de su propio firewall y con controles de acceso más estrictos que el resto de los sistemas. ¿Qué método de protección está aplicando?",
+    "options": [
+      "Obfuscation",
+      "Masking",
+      "Hashing",
+      "Segmentation"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "La segmentación separa los datos sensibles en sistemas o redes distintos con controles propios, lo que limita quién puede llegar a ellos y reduce el impacto de un compromiso en otras áreas. La ofuscación dificulta entender los datos o el código, el masking oculta datos al mostrarlos y el hashing los transforma de forma irreversible."
+  },
+  {
+    "id": "D3-034",
+    "domain": 3,
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "El equipo de QA necesita una copia de la base de datos de producción con datos realistas para pruebas. Los datos deben conservar su formato (por ejemplo, un RFC sigue pareciendo un RFC), pero NO debe existir ninguna forma de recuperar los valores reales a partir de la copia. ¿Qué método es el MÁS adecuado?",
+    "options": [
+      "Static data masking que sustituya los valores sensibles de forma irreversible",
+      "Tokenization con una bóveda de tokens accesible para QA",
+      "Cifrado AES de las columnas sensibles con la clave entregada a QA",
+      "Hashing SHA-256 de las columnas sensibles"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "El enmascaramiento estático reemplaza los datos sensibles por valores ficticios con formato realista, sin vínculo recuperable con los originales, lo que es ideal para entornos de prueba. La tokenización y el cifrado son reversibles (vía la bóveda o la clave), y un hash SHA-256 no conserva el formato original del dato."
+  },
+  {
+    "id": "D3-035",
+    "domain": 3,
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Durante una revisión de arquitectura, un gerente pregunta por la diferencia entre tokenization y encryption. ¿Cuál afirmación es CORRECTA?",
+    "options": [
+      "Un token no tiene relación matemática con el dato original, por lo que no puede revertirse con un algoritmo ni una clave",
+      "La tokenización usa una clave simétrica para transformar el dato y puede revertirse con esa clave",
+      "El cifrado produce un resultado irreversible, al igual que el hashing",
+      "La tokenización y el cifrado son equivalentes, pero la tokenización requiere más cómputo"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "En la tokenización, la relación entre el token y el dato real solo existe en la bóveda de tokens; robar tokens no permite recuperar los datos mediante criptoanálisis. El cifrado sí es reversible con la clave correcta, a diferencia del hashing, y ambos métodos no son equivalentes."
+  },
+  {
+    "id": "D3-036",
+    "domain": 3,
+    "objective": "3.3",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Según el esquema de clasificación de una organización, ¿qué clasificación corresponde a un comunicado de prensa ya aprobado y publicado en el sitio web corporativo?",
+    "options": [
+      "Confidential",
+      "Restricted",
+      "Public",
+      "Private"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "La información pública está aprobada para su divulgación y su exposición no causa daño a la organización. Confidential, restricted y private se aplican a información cuyo acceso debe limitarse a personas autorizadas."
+  },
+  {
+    "id": "D3-037",
+    "domain": 3,
+    "objective": "3.3",
+    "type": "multi",
+    "difficulty": 1,
+    "stem": "Una aplicación envía registros de nómina desde un servidor de aplicaciones hacia una base de datos ubicada en otro centro de datos. ¿Cuáles DOS controles protegen esos datos MIENTRAS viajan por la red? (Elige DOS.)",
+    "options": [
+      "Full-disk encryption en el servidor de base de datos",
+      "Obfuscation del código fuente de la aplicación",
+      "Un túnel VPN IPSec entre ambos centros de datos",
+      "Data masking en los reportes de nómina",
+      "TLS entre la aplicación y la base de datos"
+    ],
+    "answer": [
+      2,
+      4
+    ],
+    "explanation": "TLS e IPSec cifran los datos en tránsito y protegen su confidencialidad e integridad mientras viajan por la red. El full-disk encryption protege datos en reposo, el masking controla lo que se muestra a los usuarios y la ofuscación del código no protege los datos transmitidos."
+  },
+  {
+    "id": "D3-038",
+    "domain": 3,
+    "objective": "3.3",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Relaciona cada conjunto de información con el tipo de dato que MEJOR lo describe.",
+    "items": [
+      "Expedientes médicos de pacientes sujetos a regulación de privacidad en salud",
+      "Fórmula de una bebida no patentada, cuyo valor depende de mantenerla en secreto",
+      "Código fuente de un producto, protegido por derechos de autor",
+      "Documentos de un litigio en curso con un exproveedor",
+      "Estados de resultados y registros contables de la empresa",
+      "Códigos QR que solo pueden interpretarse con un lector"
+    ],
+    "choices": [
+      "Regulated",
+      "Trade secret",
+      "Intellectual property",
+      "Legal",
+      "Financial",
+      "Non-human-readable"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "explanation": "Los datos de salud están sujetos a leyes y regulaciones específicas (regulated); un secreto comercial protege su valor manteniéndose confidencial sin registro; el software con derechos de autor es propiedad intelectual; los documentos de litigio son datos legales; la información contable es financiera; y un código QR es un formato legible por máquinas, no por personas."
+  },
+  {
+    "id": "D3-039",
+    "domain": 3,
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un banco determina que su plataforma de pagos tiene un RTO menor a una hora y cuenta con presupuesto suficiente para la recuperación. ¿Qué tipo de sitio de recuperación es el MÁS adecuado?",
+    "options": [
+      "Warm site",
+      "Hot site",
+      "Cold site",
+      "Respaldos en cinta almacenados offsite"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Un hot site tiene hardware, software, conectividad y datos actualizados listos para operar en minutos, lo que cumple un RTO muy corto aunque sea la opción más costosa. Un warm site requiere horas o días para restaurar datos y configurar sistemas, un cold site días o semanas, y las cintas offsite son solo un medio de respaldo, no un sitio."
+  },
+  {
+    "id": "D3-040",
+    "domain": 3,
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Dos servidores de base de datos comparten almacenamiento y se monitorean mediante un heartbeat. Si el nodo principal falla, el secundario asume su dirección IP virtual y continúa el servicio. ¿Qué solución de alta disponibilidad describe este escenario?",
+    "options": [
+      "Clustering en configuración active/passive",
+      "Load balancing con algoritmo round-robin",
+      "Geographic dispersion entre regiones",
+      "Snapshots programados del almacenamiento"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Un clúster agrupa nodos que se comportan como un solo sistema; en active/passive, el nodo en espera toma el control cuando detecta la falla del principal. El load balancing reparte solicitudes entre servidores independientes, la dispersión geográfica se refiere a la ubicación de los sitios y los snapshots son un mecanismo de respaldo, no de conmutación."
+  },
+  {
+    "id": "D3-041",
+    "domain": 3,
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "El comité de continuidad quiere validar su plan de continuity of operations (COOP) reuniendo a los responsables clave para que analicen un escenario de ransomware paso a paso, sin afectar ningún sistema y al menor costo. ¿Qué tipo de prueba debe realizar?",
+    "options": [
+      "Failover test",
+      "Parallel processing",
+      "Simulación con equipos técnicos en producción",
+      "Tabletop exercise"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Un tabletop exercise es una discusión guiada de un escenario en la que los participantes revisan roles y decisiones sin tocar los sistemas, por lo que es la prueba de menor costo e impacto. Las pruebas de failover, procesamiento paralelo y simulación técnica implican operar sistemas reales o de respaldo."
+  },
+  {
+    "id": "D3-042",
+    "domain": 3,
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Antes de declarar listo su sitio alterno, una empresa ejecuta los sistemas de recuperación al mismo tiempo que los de producción, procesando las mismas transacciones para comparar resultados sin interrumpir la operación. ¿Qué tipo de prueba se está realizando?",
+    "options": [
+      "Tabletop exercise",
+      "Failover test",
+      "Parallel processing",
+      "Simulación"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "En una prueba de procesamiento paralelo, los sistemas de respaldo procesan la misma carga que producción para verificar que producen resultados correctos sin afectar la operación. Un tabletop es solo una discusión, un failover test transfiere realmente la operación al sitio alterno y una simulación recrea un escenario sin procesar la carga real en paralelo."
+  },
+  {
+    "id": "D3-043",
+    "domain": 3,
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "A las 14:37 un error de aplicación corrompió varias tablas de una base de datos transaccional. El último respaldo completo es de las 02:00. El negocio requiere restaurar los datos al estado exacto previo al error. ¿Qué capacidad lo permite MEJOR?",
+    "options": [
+      "Journaling de las transacciones para aplicarlas sobre el último respaldo hasta antes del error",
+      "Restaurar el snapshot tomado a las 02:00",
+      "Activar la réplica síncrona del sitio secundario",
+      "Restaurar un respaldo completo almacenado offsite"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "El journaling registra cada cambio o transacción, lo que permite reaplicar los cambios sobre el último respaldo y recuperar hasta un punto en el tiempo justo antes del incidente. El snapshot o el respaldo completo perderían más de doce horas de transacciones, y una réplica síncrona ya contendría las tablas corruptas."
+  },
+  {
+    "id": "D3-044",
+    "domain": 3,
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una empresa replica en tiempo real sus servidores de archivos a un sitio secundario y considera que ya no necesita respaldos tradicionales. ¿Cuál es el problema PRINCIPAL de este enfoque ante un ataque de ransomware?",
+    "options": [
+      "La replicación copia también los archivos cifrados o corruptos al sitio secundario, por lo que se requieren copias versionadas u offline",
+      "La replicación solo protege datos en tránsito y no datos at rest",
+      "La replicación solo puede realizarse hacia un cold site",
+      "La replicación en tiempo real aumenta el RTO a varias semanas"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "La replicación mejora la disponibilidad, pero reproduce en el destino cualquier cambio, incluidos los archivos cifrados por ransomware o los borrados accidentales; por eso deben conservarse respaldos versionados, inmutables u offline. Las demás afirmaciones son falsas: la replicación mantiene copias at rest en el destino, suele dirigirse a sitios hot o warm y reduce el tiempo de recuperación."
+  },
+  {
+    "id": "D3-045",
+    "domain": 3,
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "El generador de un centro de datos tarda unos 30 segundos en arrancar y estabilizarse tras un corte de energía eléctrica. ¿Qué componente mantiene los servidores en operación durante ese intervalo?",
+    "options": [
+      "Un segundo generador idéntico",
+      "Un UPS",
+      "Un PDU con medición",
+      "Un load balancer"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Un UPS (sistema de alimentación ininterrumpida) entrega energía de baterías de inmediato y cubre el intervalo hasta que el generador asume la carga, o permite un apagado ordenado. Un segundo generador tendría el mismo tiempo de arranque, un PDU solo distribuye energía y un load balancer no tiene relación con el suministro eléctrico."
+  },
+  {
+    "id": "D3-046",
+    "domain": 3,
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una falla en el servicio de identidad global de un proveedor de nube dejó inaccesibles las cargas de trabajo de una empresa en TODAS las regiones de ese proveedor. El CIO quiere evitar que una falla similar detenga de nuevo la operación. ¿Qué estrategia aborda MEJOR este riesgo?",
+    "options": [
+      "Distribuir las cargas en más availability zones del mismo proveedor",
+      "Aumentar la frecuencia de los snapshots en el proveedor actual",
+      "Adoptar una estrategia multi-cloud con capacidad de operar en otro proveedor",
+      "Habilitar un cold site en otra región del mismo proveedor"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Cuando la falla afecta a todo el proveedor, la redundancia dentro del mismo proveedor (más zonas o regiones) no ayuda; multi-cloud elimina la dependencia de un solo proveedor. Los snapshots en el mismo proveedor seguirían inaccesibles, y un cold site en otra región del mismo proveedor también quedaría afectado y tardaría semanas en operar."
+  },
+  {
+    "id": "D3-047",
+    "domain": 3,
+    "objective": "3.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un equipo de infraestructura quiere comprobar que, al apagar deliberadamente el sitio primario, los servicios realmente conmutan al sitio secundario y siguen funcionando. ¿Qué tipo de prueba debe realizar?",
+    "options": [
+      "Tabletop exercise",
+      "Parallel processing",
+      "Failover test",
+      "Revisión documental del plan"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Una prueba de failover transfiere realmente la operación al sistema o sitio de respaldo para verificar que la conmutación funciona. El tabletop y la revisión documental no tocan los sistemas, y el procesamiento paralelo ejecuta ambos entornos a la vez sin apagar el primario."
+  },
+  {
+    "id": "D3-048",
+    "domain": 3,
+    "objective": "3.4",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Una auditoría encontró que todos los respaldos de una empresa se guardan sin cifrar en un NAS del mismo centro de datos y con las mismas credenciales del dominio. ¿Cuáles DOS acciones mejoran MÁS la protección de los respaldos contra robo y ransomware? (Elige DOS.)",
+    "options": [
+      "Mantener una copia offsite u offline/inmutable de los respaldos",
+      "Usar la cuenta de administrador del dominio para las tareas de respaldo",
+      "Reemplazar los respaldos por replicación en tiempo real hacia el mismo NAS",
+      "Cifrar los respaldos y gestionar las claves por separado",
+      "Aumentar la frecuencia de los snapshots en el mismo NAS"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explanation": "El cifrado protege la confidencialidad si los medios son robados, y una copia offsite u offline/inmutable sobrevive a desastres locales y a ransomware que alcance la red. Más snapshots en el mismo NAS, credenciales de dominio compartidas o replicación al mismo equipo mantienen el punto único de compromiso."
+  },
+  {
+    "id": "D3-049",
+    "domain": 3,
+    "objective": "3.4",
+    "type": "multi",
+    "difficulty": 1,
+    "stem": "Una empresa espera duplicar su número de clientes en los próximos dos años y revisa su capacity planning para mantener la resiliencia. ¿Cuáles son las TRES áreas que debe considerar? (Elige TRES.)",
+    "options": [
+      "Geolocalización",
+      "Clasificación de datos",
+      "Tokenization",
+      "Tecnología",
+      "Personas",
+      "Infraestructura"
+    ],
+    "answer": [
+      3,
+      4,
+      5
+    ],
+    "explanation": "La planificación de capacidad evalúa si habrá suficiente personal capacitado, si la tecnología (aplicaciones, licencias, servicios) soporta la demanda y si la infraestructura (cómputo, red, energía, espacio) puede escalar. Tokenization, clasificación de datos y geolocalización son conceptos de protección de datos."
+  },
+  {
+    "id": "D3-050",
+    "domain": 3,
+    "objective": "3.4",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Asigna el tipo de sitio de recuperación MÁS adecuado a cada requisito.",
+    "items": [
+      "Sistema de pagos con RTO de minutos y datos sincronizados continuamente",
+      "Archivo histórico que puede tolerar varias semanas sin servicio, con el menor costo posible",
+      "ERP con RTO de 2 días: hardware instalado, pero los datos deben restaurarse desde respaldos",
+      "Portal de comercio electrónico donde cada hora sin servicio implica pérdidas muy altas",
+      "Sistema interno de capacitación: basta con espacio, energía y climatización disponibles"
+    ],
+    "choices": [
+      "Hot site",
+      "Warm site",
+      "Cold site"
+    ],
+    "answer": [
+      0,
+      2,
+      1,
+      0,
+      2
+    ],
+    "explanation": "Un hot site está listo para operar casi de inmediato y se justifica en sistemas con RTO muy corto o alto costo por interrupción. Un warm site tiene equipo y conectividad, pero requiere restaurar datos y configurar, por lo que recupera en horas o días. Un cold site solo ofrece instalaciones básicas, es el más barato y el más lento en recuperar."
+  }
+]

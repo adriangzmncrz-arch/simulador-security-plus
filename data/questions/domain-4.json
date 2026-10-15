@@ -1,0 +1,1653 @@
+[
+  {
+    "id": "D4-001",
+    "domain": 4,
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Hace seis meses, una organización estableció una secure baseline basada en CIS Benchmarks para sus servidores Windows y la desplegó mediante GPO. Un auditor interno descubre que varios servidores tienen servicios habilitados que no forman parte de la baseline y que la baseline no refleja recomendaciones nuevas publicadas por el fabricante. ¿Qué actividad del ciclo de vida de la baseline se descuidó MÁS probablemente?",
+    "options": [
+      "Mantener la baseline (revisar periódicamente el cumplimiento y actualizarla)",
+      "Establecer la baseline (definir la configuración segura inicial)",
+      "Desplegar la baseline (aplicarla a los sistemas objetivo)",
+      "Adquirir la baseline (procurement del estándar de configuración)"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Una baseline segura se establece, se despliega y se mantiene; el mantenimiento incluye detectar el configuration drift y actualizar la baseline con nuevas recomendaciones. La baseline sí se estableció (con CIS) y sí se desplegó (vía GPO), por lo que el fallo está en su mantenimiento. 'Adquirir' no es una fase del ciclo de vida de una baseline."
+  },
+  {
+    "id": "D4-002",
+    "domain": 4,
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empresa de agua potable opera PLCs en una red SCADA. El fabricante advierte que aplicar parches del sistema operativo anula la certificación del equipo, y los PLCs no admiten software de terceros. ¿Cuál es la MEJOR forma de reducir el riesgo para estos dispositivos?",
+    "options": [
+      "Instalar un antivirus basado en firmas directamente en cada PLC",
+      "Habilitar actualizaciones automáticas del sistema operativo en los PLCs",
+      "Segmentar la red OT de la red corporativa con un firewall y permitir solo el tráfico estrictamente necesario",
+      "Reemplazar el RTOS de los PLCs por un sistema operativo de propósito general más fácil de parchear"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Cuando los sistemas ICS/SCADA no pueden parchearse ni ejecutar agentes, la segmentación/aislamiento de red es el control de hardening más efectivo. Instalar antivirus o habilitar actualizaciones contradice las restricciones del fabricante, y cambiar el RTOS por un SO general no es viable ni seguro en un entorno de control de procesos en tiempo real."
+  },
+  {
+    "id": "D4-003",
+    "domain": 4,
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Los empleados de una oficina recién inaugurada reportan zonas sin cobertura Wi-Fi, y el equipo de seguridad detectó que la señal llega con fuerza al estacionamiento público. ¿Qué debe realizar el administrador PRIMERO para corregir la ubicación y la potencia de los access points?",
+    "options": [
+      "Migrar todos los access points a WPA3-Enterprise",
+      "Un site survey para generar un heat map de cobertura",
+      "Configurar un servidor RADIUS para autenticación 802.1X",
+      "Implementar una solución MDM en los dispositivos de los empleados"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Un site survey con heat map muestra la intensidad de la señal por zona, lo que permite ajustar la ubicación de los APs y su potencia de transmisión para eliminar zonas muertas y reducir la fuga de señal. WPA3, RADIUS y MDM mejoran la autenticación o la gestión de dispositivos, pero no resuelven problemas de cobertura ni de alcance de la señal."
+  },
+  {
+    "id": "D4-004",
+    "domain": 4,
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una empresa compra y entrega a todos sus vendedores el mismo modelo de smartphone. La empresa conserva la propiedad y el control administrativo completo del equipo, pero permite que los empleados lo usen para redes sociales y aplicaciones personales. ¿Qué modelo de despliegue describe MEJOR este escenario?",
+    "options": [
+      "BYOD (Bring Your Own Device)",
+      "CYOD (Choose Your Own Device)",
+      "COPE (Corporate-Owned, Personally Enabled)",
+      "VDI (Virtual Desktop Infrastructure)"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "En COPE la organización compra, posee y administra el dispositivo, pero habilita su uso personal. En BYOD el dispositivo es del empleado; en CYOD el empleado elige de una lista de modelos aprobados (aquí todos reciben el mismo modelo sin elegir). VDI es una tecnología de escritorio virtual, no un modelo de despliegue móvil."
+  },
+  {
+    "id": "D4-005",
+    "domain": 4,
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un atacante capturó el handshake de una red WPA2-Personal y lo descifró sin conexión con un ataque de diccionario. La organización migrará a WPA3-Personal. ¿Qué característica de WPA3 mitiga MEJOR este tipo de ataque?",
+    "options": [
+      "TKIP (Temporal Key Integrity Protocol)",
+      "El 4-way handshake con PSK",
+      "SAE (Simultaneous Authentication of Equals)",
+      "WPS (Wi-Fi Protected Setup)"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "WPA3-Personal reemplaza el intercambio PSK de WPA2 por SAE (handshake Dragonfly), que resiste ataques de diccionario offline y ofrece forward secrecy. TKIP es un protocolo obsoleto de WPA, el 4-way handshake con PSK es precisamente lo que el atacante explotó y WPS tiene vulnerabilidades conocidas de fuerza bruta del PIN."
+  },
+  {
+    "id": "D4-006",
+    "domain": 4,
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un despacho jurídico quiere que cada empleado se autentique en la red inalámbrica con sus propias credenciales de directorio, que el acceso se revoque al dar de baja la cuenta y que se registre quién se conecta y cuándo. ¿Qué configuración cumple MEJOR estos requisitos?",
+    "options": [
+      "WPA3-Enterprise con 802.1X/EAP y un servidor RADIUS",
+      "WPA3-Personal con una passphrase larga y compleja",
+      "Filtrado de direcciones MAC en los access points",
+      "Un portal cautivo con una contraseña compartida que se rota mensualmente"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "WPA3-Enterprise con 802.1X usa un servidor AAA como RADIUS para autenticar a cada usuario contra el directorio, autorizarlo y registrar sus conexiones (accounting). WPA3-Personal y el portal cautivo con contraseña compartida no identifican a usuarios individuales, y el filtrado MAC es fácil de evadir con MAC spoofing y no ofrece accounting por usuario."
+  },
+  {
+    "id": "D4-007",
+    "domain": 4,
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un analista revisa los logs del web server de una aplicación interna y encuentra la siguiente solicitud:\n```\nPOST /login HTTP/1.1\nusername=admin'--&password=x\nHTTP/1.1 302 Found  Location: /dashboard\n```\nLa aplicación ya tiene validación en JavaScript del lado del cliente. ¿Qué control debe implementar el equipo de desarrollo para corregir MEJOR esta vulnerabilidad?",
+    "options": [
+      "Reforzar las expresiones regulares de la validación en JavaScript del navegador",
+      "Firmar digitalmente el código de la aplicación (code signing)",
+      "Validación de entrada del lado del servidor y consultas parametrizadas",
+      "Configurar las cookies de sesión con los atributos Secure y HttpOnly"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "El log muestra una SQL injection exitosa que evadió la autenticación; la defensa correcta es validar la entrada en el servidor y usar consultas parametrizadas. La validación en el cliente se omite fácilmente con un proxy o enviando la solicitud directamente. Code signing garantiza integridad y origen del código, y los atributos de cookies protegen la sesión, pero ninguno impide la inyección."
+  },
+  {
+    "id": "D4-008",
+    "domain": 4,
+    "objective": "4.1",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Durante una prueba de penetración, un script inyectado mediante XSS logró leer `document.cookie`, y además la cookie de sesión se observó en texto claro en una captura de tráfico HTTP. ¿Qué atributos debe agregar el desarrollador a la cookie de sesión para mitigar AMBOS hallazgos? (Elige DOS.)",
+    "options": [
+      "Path=/",
+      "Expires con una fecha muy lejana",
+      "Domain=.empresa.com",
+      "SameSite=None",
+      "Secure",
+      "HttpOnly"
+    ],
+    "answer": [
+      4,
+      5
+    ],
+    "explanation": "HttpOnly impide que JavaScript lea la cookie, mitigando su robo vía XSS, y Secure obliga a enviarla solo por HTTPS, evitando que viaje en texto claro. Una expiración lejana alarga la ventana de abuso, un Domain amplio la expone a más subdominios, SameSite=None debilita la protección contra CSRF y Path=/ no aporta protección."
+  },
+  {
+    "id": "D4-009",
+    "domain": 4,
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una empresa de software distribuye un instalador desde su sitio web. Los clientes necesitan comprobar que el archivo proviene realmente de la empresa y que no fue modificado después de su publicación. ¿Qué técnica cumple MEJOR este requisito?",
+    "options": [
+      "Análisis estático de código (SAST)",
+      "Sandboxing",
+      "Validación de entrada",
+      "Code signing"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "La firma de código usa un certificado digital del editor para garantizar autenticidad (origen) e integridad (no modificado) del ejecutable. SAST busca fallas en el código fuente durante el desarrollo, el sandboxing aísla la ejecución y la validación de entrada protege contra datos maliciosos; ninguno permite al cliente verificar el origen del archivo."
+  },
+  {
+    "id": "D4-010",
+    "domain": 4,
+    "objective": "4.1",
+    "type": "match",
+    "difficulty": 3,
+    "stem": "Relaciona cada objetivo de hardening con la técnica de endurecimiento MÁS apropiada para ese escenario. Cada técnica puede usarse una vez o ninguna.",
+    "items": [
+      "Servidor IaaS en la nube con el puerto RDP abierto a 0.0.0.0/0",
+      "Router de borde administrado actualmente por Telnet desde cualquier red",
+      "Switch de acceso con puertos libres en una sala de juntas abierta a visitantes",
+      "Cámara IP (IoT) instalada con la contraseña de fábrica",
+      "Workstation de usuario donde todos los empleados tienen privilegios de administrador local"
+    ],
+    "choices": [
+      "Deshabilitar puertos no utilizados y aplicar port security",
+      "Restringir la administración a SSH desde una red de gestión dedicada",
+      "Cambiar credenciales predeterminadas y aislar el dispositivo en una VLAN dedicada",
+      "Restringir los security groups para eliminar el acceso público a servicios de administración",
+      "Aplicar el principio de menor privilegio retirando derechos de administrador local"
+    ],
+    "answer": [
+      3,
+      1,
+      0,
+      2,
+      4
+    ],
+    "explanation": "Los puertos físicos expuestos se mitigan deshabilitándolos y con port security; Telnet transmite en claro y debe sustituirse por SSH limitado a una red de gestión; los dispositivos IoT suelen comprometerse por credenciales de fábrica y deben aislarse; en IaaS los security groups controlan la exposición a Internet; y en workstations retirar el administrador local reduce el impacto del malware."
+  },
+  {
+    "id": "D4-011",
+    "domain": 4,
+    "objective": "4.1",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Una empresa adopta BYOD y usará MDM. Los empleados exigen que su información personal no sea afectada, pero la empresa debe proteger los datos corporativos si un teléfono se pierde o el empleado deja la organización. ¿Qué capacidades de MDM cumplen MEJOR ambos requisitos? (Elige DOS.)",
+    "options": [
+      "Borrado remoto completo del dispositivo (full wipe)",
+      "Permitir sideloading de aplicaciones",
+      "Deshabilitar el bloqueo de pantalla para facilitar el soporte",
+      "Borrado remoto selectivo del contenedor corporativo",
+      "Contenerización (segmentación del almacenamiento corporativo)",
+      "Habilitar tethering por Bluetooth"
+    ],
+    "answer": [
+      3,
+      4
+    ],
+    "explanation": "La contenerización separa apps y datos corporativos de los personales, y el borrado selectivo elimina solo ese contenedor ante pérdida o salida del empleado. Un full wipe destruye también los datos personales, violando el requisito de BYOD; sideloading, quitar el bloqueo de pantalla y el tethering Bluetooth aumentan el riesgo en lugar de reducirlo."
+  },
+  {
+    "id": "D4-012",
+    "domain": 4,
+    "objective": "4.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "El equipo de seguridad recibe de un proveedor nuevo un ejecutable de utilidades y quiere observar su comportamiento (archivos que crea, conexiones de red, cambios de registro) antes de permitirlo en producción, sin riesgo para la red corporativa. ¿Qué técnica es la MÁS apropiada?",
+    "options": [
+      "Ejecutarlo en un sandbox aislado",
+      "Ejecutarlo en una workstation de producción con el antivirus actualizado",
+      "Someterlo a análisis estático de código (SAST)",
+      "Verificar únicamente su firma de código"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Un sandbox es un entorno aislado que permite ejecutar y observar el comportamiento del software sin afectar sistemas de producción. Ejecutarlo en producción expone la red aunque haya antivirus, SAST requiere código fuente y no observa comportamiento en ejecución, y una firma válida solo confirma el origen, no que el software sea benigno."
+  },
+  {
+    "id": "D4-013",
+    "domain": 4,
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un año después de comprar 40 switches a un revendedor no autorizado, la empresa descubre que el fabricante ya no publica parches para ese modelo y que algunos equipos tienen firmware no oficial. ¿Qué proceso de gestión de activos debió prevenir MEJOR esta situación?",
+    "options": [
+      "Disposal/decommissioning",
+      "Enumeración de activos",
+      "Retención de datos",
+      "Adquisición/procurement"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Durante la adquisición se deben evaluar proveedores confiables, la cadena de suministro y el soporte del fabricante durante el ciclo de vida previsto. El decomisionamiento ocurre al final de la vida útil, la enumeración descubre activos ya desplegados y la retención de datos define cuánto tiempo se conserva la información."
+  },
+  {
+    "id": "D4-014",
+    "domain": 4,
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una base de datos con información de clientes no tiene un responsable definido: nadie aprueba las solicitudes de acceso ni decide su nivel de clasificación. ¿Qué rol debe asignarse para resolver MEJOR este problema?",
+    "options": [
+      "Data custodian",
+      "Data processor",
+      "Data owner",
+      "Usuario final"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "El data owner (normalmente un ejecutivo o responsable de negocio) es quien rinde cuentas por los datos, define su clasificación y aprueba el acceso. El custodian implementa y opera los controles (respaldos, permisos) según las decisiones del owner, el processor trata datos por cuenta de otro y el usuario final solo los consume."
+  },
+  {
+    "id": "D4-015",
+    "domain": 4,
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empresa aplica exactamente los mismos controles (cifrado, DLP y retención de 10 años) a todos sus archivos, incluidos menús de la cafetería y comunicados públicos. Los costos de almacenamiento y licencias se dispararon. ¿Qué acción permitiría MEJOR aplicar controles proporcionales al valor de la información?",
+    "options": [
+      "Eliminar el DLP y depender solo del cifrado",
+      "Reducir el periodo de retención de todos los archivos a un año",
+      "Implementar un esquema de clasificación de datos y asignar controles según cada nivel",
+      "Mover todos los archivos a almacenamiento en frío en la nube"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "La clasificación (por ejemplo, pública, interna, confidencial, restringida) permite asignar controles acordes a la sensibilidad y valor de cada activo, evitando sobreproteger información pública. Las demás opciones recortan controles o costos de forma indiscriminada, lo que podría dejar sin protección o sin cumplimiento la información sensible."
+  },
+  {
+    "id": "D4-016",
+    "domain": 4,
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un escaneo de descubrimiento de red identificó 37 hosts activos que no aparecen en la CMDB de la organización. ¿Cuál es la implicación de seguridad PRINCIPAL de este hallazgo?",
+    "options": [
+      "Los activos no inventariados consumen direcciones IP del pool de DHCP",
+      "La CMDB debe migrarse a una plataforma en la nube",
+      "Los hosts deben destruirse físicamente de inmediato",
+      "Los activos no inventariados probablemente no reciben parches ni monitoreo, lo que amplía la superficie de ataque"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Lo que no se conoce no se puede proteger: los activos no inventariados (shadow IT o dispositivos rogue) quedan fuera de la gestión de parches, de las baselines y del monitoreo. El consumo de IPs es un problema operativo menor, migrar la CMDB no corrige el hallazgo y destruir hosts sin investigar es desproporcionado; lo correcto es enumerarlos, identificar a su propietario e incorporarlos o retirarlos."
+  },
+  {
+    "id": "D4-017",
+    "domain": 4,
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "En los últimos seis meses desaparecieron varias laptops corporativas y nadie puede determinar a quién estaban asignadas. ¿Qué medida ayudaría MÁS a mejorar la rendición de cuentas sobre estos activos?",
+    "options": [
+      "Emitir certificados de destrucción para cada laptop",
+      "Aplicar borrado criptográfico a todas las laptops",
+      "Definir una política de retención de datos de siete años",
+      "Etiquetar los activos, registrar su asignación a un usuario responsable y realizar auditorías periódicas de inventario"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "El asset tracking (etiquetas, inventario y asignación a un propietario) establece quién es responsable de cada equipo y permite detectar faltantes con rapidez. Los certificados de destrucción y el borrado criptográfico corresponden al decomisionamiento, y la retención de datos no tiene relación con la custodia física de los equipos."
+  },
+  {
+    "id": "D4-018",
+    "domain": 4,
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una organización quiere reasignar internamente laptops con discos SSD a otro departamento. Los discos contenían información confidencial de recursos humanos y deben poder reutilizarse. ¿Qué método de sanitización es el MÁS apropiado?",
+    "options": [
+      "Desmagnetización (degaussing) del SSD",
+      "Formateo rápido del disco y reinstalación del sistema operativo",
+      "Sobrescritura de un solo paso con ceros usando una herramienta diseñada para HDD",
+      "Borrado criptográfico o el comando de secure erase/sanitize del fabricante del SSD"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "En SSD, el wear leveling y el overprovisioning impiden que la sobrescritura tradicional alcance todas las celdas; el borrado criptográfico o el secure erase/sanitize del firmware sí sanitizan todo el medio y permiten reutilizarlo. El degaussing no afecta la memoria flash, y el formateo rápido solo elimina las referencias del sistema de archivos."
+  },
+  {
+    "id": "D4-019",
+    "domain": 4,
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una empresa contrata a un proveedor externo para destruir 200 discos duros retirados. El auditor de cumplimiento solicitará evidencia de que cada disco fue destruido adecuadamente. ¿Qué debe exigir la empresa al proveedor?",
+    "options": [
+      "Un certificado de destrucción con los números de serie de los discos",
+      "Un reporte de escaneo de vulnerabilidades",
+      "Un acuerdo de nivel de servicio (SLA) de soporte técnico",
+      "Una copia de la política de retención de datos del proveedor"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "El certificado de destrucción documenta qué activos se destruyeron, cuándo y con qué método, y sirve como evidencia ante auditorías. Un reporte de vulnerabilidades, un SLA de soporte o la política de retención del proveedor no demuestran la destrucción de los medios."
+  },
+  {
+    "id": "D4-020",
+    "domain": 4,
+    "objective": "4.2",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "El servidor de contabilidad de una empresa llegó al fin de su vida útil y será decomisionado. La regulación fiscal local exige conservar los registros contables durante cinco años. ¿Qué debe hacer el equipo de TI PRIMERO, antes de sanitizar los discos?",
+    "options": [
+      "Solicitar al proveedor de destrucción un certificado de destrucción",
+      "Verificar los requisitos de retención y archivar los datos que deban conservarse en un repositorio aprobado",
+      "Desmagnetizar los discos para eliminar cualquier dato remanente",
+      "Eliminar el servidor de la CMDB para cerrar el registro del activo"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Antes de sanitizar, el decomisionamiento debe considerar la retención de datos (obligaciones legales, regulatorias o un legal hold); de lo contrario se destruiría información que debe conservarse. El certificado se obtiene después de la destrucción, desmagnetizar antes de archivar provocaría pérdida irreversible, y la CMDB se actualiza al final del proceso."
+  },
+  {
+    "id": "D4-021",
+    "domain": 4,
+    "objective": "4.2",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Una agencia gubernamental retira discos duros mecánicos (HDD) que almacenaron información clasificada. La política prohíbe que los discos salgan de las instalaciones en estado utilizable. ¿Qué métodos son los MÁS apropiados? (Elige DOS.)",
+    "options": [
+      "Trituración física (shredding)",
+      "Eliminar los archivos y vaciar la papelera de reciclaje",
+      "Reinstalar el sistema operativo",
+      "Desmagnetización (degaussing)",
+      "Eliminar y recrear las particiones",
+      "Formateo rápido"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explanation": "La trituración destruye físicamente el disco, y la desmagnetización borra los dominios magnéticos de un HDD y lo deja inservible, ambos adecuados para datos clasificados. El formateo rápido, borrar archivos, reinstalar el SO o recrear particiones dejan datos recuperables con herramientas forenses."
+  },
+  {
+    "id": "D4-022",
+    "domain": 4,
+    "objective": "4.2",
+    "type": "match",
+    "difficulty": 3,
+    "stem": "Relaciona cada medio que se va a retirar o reutilizar con el método de sanitización/destrucción MÁS apropiado. Cada método puede usarse más de una vez.",
+    "items": [
+      "Lote de cientos de cintas magnéticas con datos confidenciales que deben sanitizarse rápidamente en sitio y entregarse íntegras (sin triturar) a un reciclador certificado",
+      "HDD funcional que se donará a una escuela local",
+      "Expedientes impresos de nómina",
+      "SSD funcional de una laptop que se reasignará a otro empleado",
+      "SSD dañado que ya no enciende y contiene datos de clientes"
+    ],
+    "choices": [
+      "Sobrescritura (wiping) con herramienta certificada",
+      "Borrado criptográfico / secure erase del firmware",
+      "Desmagnetización (degaussing)",
+      "Destrucción física (trituración, pulverizado, incineración o pulpeo)"
+    ],
+    "answer": [
+      2,
+      0,
+      3,
+      1,
+      3
+    ],
+    "explanation": "Un HDD que se reutilizará fuera de la organización se sanitiza con sobrescritura, conservando su funcionalidad; un SSD reutilizable requiere borrado criptográfico o secure erase por el wear leveling. Un lote grande de cintas magnéticas que debe entregarse íntegro se sanitiza de forma rápida y masiva con desmagnetización (la sobrescritura cinta por cinta sería impráctica y la trituración no está permitida), el papel se tritura o se convierte en pulpa, y un SSD que no enciende no admite comandos de borrado, por lo que debe destruirse físicamente."
+  },
+  {
+    "id": "D4-023",
+    "domain": 4,
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un escáner de vulnerabilidades reporta lo siguiente para un servidor:\n```\nHost: 10.20.5.14  OS detectado: Windows Server 2022\nCritical - CVE-2021-41773 Apache HTTP Server 2.4.49 Path Traversal\n```\nEl administrador confirma que el servidor solo ejecuta IIS y que Apache nunca se ha instalado. ¿Cómo debe clasificarse este hallazgo?",
+    "options": [
+      "Falso positivo",
+      "Falso negativo",
+      "Verdadero positivo",
+      "Verdadero negativo"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Un falso positivo ocurre cuando el escáner reporta una vulnerabilidad que en realidad no existe; aquí el software afectado ni siquiera está instalado. Un falso negativo es lo contrario (una vulnerabilidad real no detectada), un verdadero positivo sería una vulnerabilidad real reportada y un verdadero negativo es la ausencia correcta de hallazgos."
+  },
+  {
+    "id": "D4-024",
+    "domain": 4,
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un escaneo de vulnerabilidades no autenticado no reportó problemas en un servidor Linux. Una semana después, un pentester explotó en ese mismo servidor una versión vulnerable de una biblioteca local que no expone ningún puerto de red. ¿Qué cambio en el proceso de escaneo reduciría MEJOR este tipo de omisión en el futuro?",
+    "options": [
+      "Aumentar la frecuencia de los escaneos no autenticados",
+      "Realizar escaneos con credenciales (credentialed scans)",
+      "Escanear solo los puertos TCP más comunes para reducir el ruido",
+      "Ajustar el umbral del escáner para que solo reporte hallazgos con CVSS mayor a 9.0"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "El hallazgo omitido es un falso negativo: un escaneo no autenticado solo ve servicios expuestos en la red, mientras que uno con credenciales inspecciona el software y las bibliotecas instaladas localmente. Escanear más seguido de la misma forma no cambia la visibilidad, y limitar puertos o umbrales de severidad generaría todavía más falsos negativos."
+  },
+  {
+    "id": "D4-025",
+    "domain": 4,
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "El equipo de seguridad solo puede aplicar un parche de emergencia esta noche. El reporte del escáner muestra:\n```\nVuln-A  CVSS 9.8  Servidor de laboratorio aislado, sin conectividad de red, datos de prueba\nVuln-B  CVSS 8.1  Portal de pagos expuesto a Internet, exploit público disponible\nVuln-C  CVSS 6.5  Impresora interna en VLAN de oficinas\nVuln-D  CVSS 4.3  Servidor de intranet, divulgación de banner\n```\n¿Qué vulnerabilidad debe remediarse PRIMERO?",
+    "options": [
+      "Vuln-A",
+      "Vuln-B",
+      "Vuln-C",
+      "Vuln-D"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "La priorización no debe basarse solo en el puntaje CVSS base, sino en variables ambientales: exposición, valor del activo, disponibilidad de exploits e impacto para la organización. Vuln-B afecta un sistema crítico expuesto a Internet con exploit público, mientras que Vuln-A, pese a su CVSS más alto, está en un sistema aislado con datos de prueba, y Vuln-C y Vuln-D tienen menor severidad y exposición."
+  },
+  {
+    "id": "D4-026",
+    "domain": 4,
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un analista necesita referenciar de forma inequívoca una vulnerabilidad específica, conocida públicamente, al comunicarse con varios proveedores y equipos. ¿Qué debe usar?",
+    "options": [
+      "El identificador CVE",
+      "El puntaje CVSS",
+      "El benchmark de SCAP",
+      "El formato STIX"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "CVE (Common Vulnerabilities and Exposures) asigna un identificador único a cada vulnerabilidad conocida públicamente, por ejemplo CVE-2024-12345. CVSS mide su severidad, pero varias vulnerabilidades pueden compartir el mismo puntaje; SCAP es un conjunto de estándares para automatizar evaluaciones y STIX es un formato para intercambiar inteligencia de amenazas."
+  },
+  {
+    "id": "D4-027",
+    "domain": 4,
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un servidor de base de datos está valuado en $200,000. El análisis determina que la explotación de una vulnerabilidad no parcheada causaría la pérdida del 25% del valor del activo (exposure factor). ¿Cuál es la single loss expectancy (SLE)?",
+    "options": [
+      "$50,000",
+      "$25,000",
+      "$200,000",
+      "$800,000"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "SLE = valor del activo (AV) × exposure factor (EF) = $200,000 × 0.25 = $50,000. $200,000 supondría un EF del 100%, $800,000 resulta de dividir en lugar de multiplicar y $25,000 no corresponde a ningún cálculo válido con estos datos."
+  },
+  {
+    "id": "D4-028",
+    "domain": 4,
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un hospital depende de un sistema de imagenología heredado con una vulnerabilidad crítica. El fabricante quebró y no existe parche, y reemplazar el sistema tomará 18 meses. ¿Cuál es la MEJOR respuesta mientras tanto?",
+    "options": [
+      "Ignorar el hallazgo, ya que no existe parche disponible",
+      "Apagar el sistema de inmediato hasta tener el reemplazo",
+      "Aislar el sistema mediante segmentación, aplicar controles compensatorios y documentar una excepción aprobada formalmente",
+      "Contratar un seguro cibernético como única medida y cerrar el hallazgo"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Cuando no es posible parchear, se reduce el riesgo con segmentación y controles compensatorios (restricción de acceso, monitoreo reforzado) y se documenta una excepción aprobada por la dirección con una fecha de revisión. Ignorar el hallazgo deja el riesgo sin tratar, apagar el sistema afecta la atención de pacientes y el seguro solo transfiere el impacto financiero sin reducir la probabilidad de explotación."
+  },
+  {
+    "id": "D4-029",
+    "domain": 4,
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "El CISO quiere detectar con anticipación si credenciales de empleados o bases de datos de clientes robadas de la empresa se están ofreciendo a la venta en foros clandestinos. ¿Qué fuente de inteligencia es la MÁS adecuada?",
+    "options": [
+      "Monitoreo de la dark web",
+      "Un ISAC del sector",
+      "Un escaneo de vulnerabilidades con credenciales",
+      "Una auditoría de procesos internos"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "El monitoreo de la dark web (directamente o mediante un servicio especializado) busca credenciales y datos de la organización en mercados y foros clandestinos. Un ISAC comparte inteligencia sectorial entre organizaciones pares, pero no se enfoca en los datos específicos de la empresa; un escaneo de vulnerabilidades y una auditoría de procesos evalúan debilidades internas, no la exposición de datos ya robados."
+  },
+  {
+    "id": "D4-030",
+    "domain": 4,
+    "objective": "4.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una fintech quiere ofrecer pagos monetarios, de forma continua, a investigadores independientes que reporten vulnerabilidades válidas en su aplicación móvil, con un alcance y reglas de participación publicados. ¿Qué programa describe MEJOR esta iniciativa?",
+    "options": [
+      "Responsible disclosure program sin recompensas",
+      "Bug bounty",
+      "Penetration test anual contratado",
+      "Auditoría de sistemas"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Un bug bounty ofrece recompensas, normalmente económicas, a investigadores externos por vulnerabilidades válidas dentro de un alcance definido. Un programa de responsible disclosure establece un canal para reportar vulnerabilidades de forma coordinada, pero no necesariamente paga; un pentest lo realiza un equipo contratado en un periodo acotado y una auditoría evalúa el cumplimiento de controles."
+  },
+  {
+    "id": "D4-031",
+    "domain": 4,
+    "objective": "4.3",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Un administrador aplicó el parche para una vulnerabilidad crítica en 120 servidores. Antes de cerrar el ticket de remediación, ¿qué actividades de validación debe realizar? (Elige DOS.)",
+    "options": [
+      "Re-escanear los servidores para confirmar que la vulnerabilidad ya no aparece",
+      "Deshabilitar el plugin del escáner que detectó la vulnerabilidad",
+      "Aumentar la tolerancia al riesgo de la organización",
+      "Verificar manualmente en una muestra de servidores la versión instalada o que la vulnerabilidad ya no es explotable",
+      "Registrar una excepción para los servidores parcheados",
+      "Contratar un seguro cibernético para cubrir el riesgo residual"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explanation": "La validación de la remediación incluye el re-escaneo y la verificación (manual o con una prueba dirigida) de que el control realmente funcionó. El seguro y las excepciones son opciones de respuesta, no de validación; cambiar la tolerancia al riesgo no confirma nada, y deshabilitar el plugin solo ocultaría el hallazgo."
+  },
+  {
+    "id": "D4-032",
+    "domain": 4,
+    "objective": "4.3",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Una empresa desarrolla una aplicación web propia. Quiere identificar vulnerabilidades en su código fuente antes de compilarlo y también en la aplicación en ejecución dentro del entorno de staging, simulando ataques externos. ¿Qué técnicas debe implementar? (Elige DOS.)",
+    "options": [
+      "Análisis dinámico de aplicaciones (DAST)",
+      "Package monitoring de dependencias de terceros",
+      "Code signing",
+      "Análisis estático de código (SAST)",
+      "Auditoría de procesos",
+      "Escaneo de vulnerabilidades de infraestructura con credenciales"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explanation": "SAST analiza el código fuente sin ejecutarlo, y DAST prueba la aplicación en ejecución enviando entradas maliciosas como lo haría un atacante. Package monitoring detecta vulnerabilidades en bibliotecas de terceros, no en el código propio; code signing garantiza integridad, el escaneo de infraestructura se centra en el sistema operativo y los servicios, y una auditoría de procesos no prueba el software."
+  },
+  {
+    "id": "D4-033",
+    "domain": 4,
+    "objective": "4.3",
+    "type": "match",
+    "difficulty": 3,
+    "stem": "Como analista de vulnerabilidades, asigna a cada hallazgo la acción MÁS apropiada considerando CVSS y el contexto del entorno.",
+    "items": [
+      "CVSS 5.3, divulgación de información en servidor de intranet, sin exploit público conocido",
+      "El escáner reporta una vulnerabilidad de IIS en un host Linux que solo ejecuta nginx (verificado manualmente)",
+      "CVSS 9.8, RCE explotada activamente en el mundo, en servidor web expuesto a Internet",
+      "CVSS 8.1 en sistema SCADA heredado sin parche del fabricante, ya segmentado y con controles compensatorios aprobados por el comité de riesgos",
+      "CVSS 7.5 en concentrador VPN accesible desde Internet con exploit público disponible"
+    ],
+    "choices": [
+      "Remediar de inmediato (cambio de emergencia)",
+      "Remediar en el siguiente ciclo regular de parches",
+      "Documentar excepción con revisión periódica",
+      "Cerrar como falso positivo y ajustar el escáner"
+    ],
+    "answer": [
+      1,
+      3,
+      0,
+      2,
+      0
+    ],
+    "explanation": "Las vulnerabilidades explotables en sistemas expuestos a Internet (servidor web con explotación activa y VPN con exploit público) requieren remediación urgente. Un hallazgo de severidad media en un sistema interno sin exploit puede esperar al ciclo regular; el SCADA sin parche y ya mitigado corresponde a una excepción documentada, y un hallazgo sobre software inexistente es un falso positivo que debe cerrarse y afinarse."
+  },
+  {
+    "id": "D4-034",
+    "domain": 4,
+    "objective": "4.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Durante una investigación, un analista intenta reconstruir la secuencia de un ataque con logs del firewall, del controlador de dominio y de un servidor web agregados en el SIEM, pero los eventos aparecen en un orden ilógico: el inicio de sesión ocurre \"antes\" de la conexión que lo originó. ¿Cuál es la causa MÁS probable?",
+    "options": [
+      "El SIEM no tiene suficiente almacenamiento para archivar los logs",
+      "El firewall usa SNMPv2 en lugar de SNMPv3",
+      "Los logs no están cifrados en tránsito",
+      "Los dispositivos no tienen sincronizados sus relojes mediante NTP"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "La correlación en un SIEM depende de marcas de tiempo consistentes; si los relojes no están sincronizados con NTP, los eventos de distintas fuentes aparecen desordenados. La falta de almacenamiento provocaría pérdida de logs, no un orden incorrecto; la versión de SNMP y el cifrado en tránsito afectan la seguridad del transporte, no la exactitud de los timestamps."
+  },
+  {
+    "id": "D4-035",
+    "domain": 4,
+    "objective": "4.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un analista sospecha que un host interno está exfiltrando datos. Necesita identificar con qué direcciones IP externas se comunicó el host, por qué puertos y cuántos bytes transfirió durante el último mes, pero la organización no almacena capturas completas de paquetes. ¿Qué fuente de datos es la MÁS útil?",
+    "options": [
+      "SNMP traps de los switches",
+      "Registros de NetFlow",
+      "Reportes del escáner de vulnerabilidades",
+      "Logs del antivirus del host"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "NetFlow registra metadatos de los flujos (IPs de origen y destino, puertos, protocolo, bytes y duración) sin almacenar el contenido, lo cual es ideal para analizar patrones de comunicación y volúmenes de exfiltración. Las SNMP traps notifican eventos de los dispositivos, el escáner identifica debilidades y el antivirus detecta malware, pero ninguno muestra quién habló con quién ni cuántos datos se transfirieron."
+  },
+  {
+    "id": "D4-036",
+    "domain": 4,
+    "objective": "4.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una regulación exige conservar los logs de seguridad durante un año y protegerlos contra modificación. El SIEM actual solo retiene 90 días en almacenamiento de alto rendimiento debido a su costo. ¿Qué solución cumple MEJOR el requisito?",
+    "options": [
+      "Aumentar los umbrales de alertas para generar menos eventos",
+      "Deshabilitar el registro de eventos de baja severidad en todos los sistemas",
+      "Exportar los logs mensualmente a la laptop del analista de turno",
+      "Archivar los logs en almacenamiento de bajo costo con protección WORM/inmutable y una política de retención de un año"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "El archiving traslada los logs antiguos a almacenamiento más económico, conservándolos durante el periodo requerido y protegiéndolos con controles de inmutabilidad (WORM). Ajustar umbrales o dejar de registrar eventos reduce la evidencia disponible, y guardar logs en una laptop no garantiza integridad, disponibilidad ni control de acceso."
+  },
+  {
+    "id": "D4-037",
+    "domain": 4,
+    "objective": "4.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un auditor pide al equipo de seguridad evaluar de forma automatizada 500 servidores contra los CIS Benchmarks y generar resultados en un formato estandarizado (XCCDF/OVAL) que diferentes herramientas puedan interpretar. ¿Qué debe usar el equipo?",
+    "options": [
+      "NetFlow",
+      "SNMP traps",
+      "Una solución DLP",
+      "Herramientas compatibles con SCAP"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "SCAP (Security Content Automation Protocol) agrupa estándares como XCCDF y OVAL para automatizar la evaluación de configuraciones y vulnerabilidades contra benchmarks en un formato interoperable. NetFlow analiza flujos de red, las SNMP traps notifican eventos de dispositivos y DLP previene la fuga de datos; ninguno evalúa configuraciones contra un benchmark."
+  },
+  {
+    "id": "D4-038",
+    "domain": 4,
+    "objective": "4.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empresa con fuerza de ventas remota necesita monitorear de forma continua los procesos, cambios de archivos y eventos de seguridad de sus laptops, incluso cuando no están conectadas a la VPN corporativa, y enviar la telemetría al SIEM cuando recuperen conexión. ¿Qué enfoque es el MÁS adecuado?",
+    "options": [
+      "Monitoreo agentless mediante consultas WMI desde el centro de datos",
+      "Monitoreo agentless mediante polling SNMP",
+      "Monitoreo basado en agentes instalados en cada laptop",
+      "Escaneos de vulnerabilidades programados desde la red corporativa"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Un agente local recopila telemetría detallada de forma continua, aun sin conexión, y la envía cuando el equipo vuelve a estar en línea. Las técnicas agentless (WMI o SNMP) y los escaneos desde la red corporativa requieren que el equipo sea alcanzable en ese momento, por lo que no cubren laptops fuera de la VPN."
+  },
+  {
+    "id": "D4-039",
+    "domain": 4,
+    "objective": "4.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "El SOC recibe más de 4,000 alertas diarias y los analistas comenzaron a ignorarlas. Un análisis muestra lo siguiente:\n```\nRegla: \"Multiple failed logons\"  Umbral: 3 fallos/24 h\nAlertas (7 días): 26,412   Confirmadas como incidente: 2\nOrigen principal: cuentas de servicio con contraseña expirada\n```\n¿Qué acción mejorará MEJOR la eficacia del monitoreo sin perder visibilidad de ataques reales?",
+    "options": [
+      "Deshabilitar por completo la regla de inicios de sesión fallidos",
+      "Afinar la regla (alert tuning): ajustar el umbral y la ventana de tiempo, y corregir o excluir de forma controlada las cuentas de servicio con contraseña expirada",
+      "Contratar más analistas para revisar todas las alertas manualmente",
+      "Reducir el umbral a un solo fallo para no omitir ningún ataque"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "El alert tuning reduce los falsos positivos ajustando umbrales, ventanas de tiempo y excepciones controladas, y corrige la causa raíz (cuentas de servicio mal configuradas), lo que combate la fatiga de alertas sin perder la detección de fuerza bruta. Deshabilitar la regla elimina visibilidad, contratar más personal no resuelve el ruido y reducir el umbral generaría todavía más falsos positivos."
+  },
+  {
+    "id": "D4-040",
+    "domain": 4,
+    "objective": "4.4",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una empresa de comercio electrónico necesita detectar y bloquear automáticamente los correos salientes y las cargas a servicios en la nube que contengan números de tarjeta de crédito de clientes. ¿Qué herramienta cumple MEJOR este requisito?",
+    "options": [
+      "Antivirus basado en firmas",
+      "Data Loss Prevention (DLP)",
+      "NetFlow",
+      "Escáner de vulnerabilidades"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "DLP inspecciona el contenido de los datos en movimiento (y en reposo o en uso) buscando patrones sensibles, como números de tarjeta, y puede bloquear, cifrar o alertar según la política. El antivirus detecta malware, NetFlow solo registra metadatos de tráfico sin examinar el contenido y el escáner de vulnerabilidades identifica debilidades en los sistemas."
+  },
+  {
+    "id": "D4-041",
+    "domain": 4,
+    "objective": "4.4",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "El antivirus de una workstation de contabilidad genera una alerta por un troyano detectado en un archivo adjunto que el usuario ya abrió. ¿Qué acciones son las MÁS apropiadas como parte de la respuesta a la alerta y su validación? (Elige DOS.)",
+    "options": [
+      "Después de la limpieza, re-escanear el equipo y revisar el SIEM para confirmar que no hay actividad maliciosa residual",
+      "Cerrar la alerta como falso positivo porque el antivirus ya la detectó",
+      "Reenviar el archivo adjunto a todo el departamento para advertirles",
+      "Poner en cuarentena el archivo malicioso y aislar la workstation de la red",
+      "Deshabilitar la regla del antivirus que generó la alerta para evitar interrupciones",
+      "Eliminar los logs del equipo para liberar espacio antes del análisis"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explanation": "La cuarentena contiene la amenaza y evita su propagación, y la validación posterior (re-escaneo y revisión de telemetría) confirma que la remediación fue efectiva. Deshabilitar la regla o borrar logs reduce la visibilidad y destruye evidencia, cerrar la alerta sin investigar ignora que el usuario ya abrió el archivo y reenviarlo propagaría el malware."
+  },
+  {
+    "id": "D4-042",
+    "domain": 4,
+    "objective": "4.4",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Relaciona cada necesidad de monitoreo con la herramienta MÁS apropiada. Cada herramienta puede usarse una vez o ninguna.",
+    "items": [
+      "Detectar números de tarjeta de crédito en correos salientes y bloquear su envío",
+      "Identificar hosts con parches faltantes y versiones de software con CVE conocidos",
+      "Recibir una notificación inmediata, iniciada por el propio switch, cuando falla una de sus fuentes de poder",
+      "Correlacionar eventos del firewall, Active Directory y servidores para generar alertas centralizadas",
+      "Analizar qué hosts se comunican entre sí y con qué volumen, sin capturar el contenido de los paquetes"
+    ],
+    "choices": [
+      "SIEM",
+      "DLP",
+      "SNMP traps",
+      "NetFlow",
+      "Escáner de vulnerabilidades",
+      "Antivirus"
+    ],
+    "answer": [
+      1,
+      4,
+      2,
+      0,
+      3
+    ],
+    "explanation": "DLP inspecciona contenido sensible en movimiento; el SIEM agrega y correlaciona logs de múltiples fuentes; las SNMP traps son mensajes no solicitados que el dispositivo envía al ocurrir un evento; NetFlow resume los flujos de tráfico sin su contenido; y el escáner de vulnerabilidades identifica parches faltantes y CVE. El antivirus detecta malware en endpoints, pero no cubre ninguna de estas necesidades."
+  },
+  {
+    "id": "D4-101",
+    "domain": 4,
+    "objective": "4.5",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un administrador necesita bloquear el tráfico HTTPS hacia el servidor 10.0.5.20, pero después de aplicar la siguiente ACL el servidor sigue recibiendo conexiones en el puerto 443:\n```\n10 permit tcp any any eq 443\n20 deny   tcp any host 10.0.5.20 eq 443\n30 deny   ip any any\n```\n¿Qué debe hacer el administrador para corregir el problema?",
+    "options": [
+      "Cambiar la regla 30 por un permit ip any any para que el tráfico se evalúe completo",
+      "Mover la regla 20 por encima de la regla 10",
+      "Agregar una regla de implicit deny al final de la ACL",
+      "Cambiar el protocolo de la regla 20 de TCP a UDP"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Las ACL se evalúan de arriba hacia abajo y se aplica la primera coincidencia; la regla 10 permite todo el 443 antes de que se evalúe la regla 20, por lo que la regla más específica debe ir primero. Cambiar la regla 30 a permit debilitaría la ACL, ya existe un deny explícito al final y HTTPS usa TCP, no UDP."
+  },
+  {
+    "id": "D4-102",
+    "domain": 4,
+    "objective": "4.5",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una empresa va a publicar un servidor web accesible desde Internet. El equipo de seguridad quiere que, si el servidor se ve comprometido, el atacante no tenga acceso directo a la red interna. ¿Dónde debe ubicarse el servidor?",
+    "options": [
+      "En la misma VLAN que los servidores de base de datos internos",
+      "Detrás del NAC, dentro de la red corporativa",
+      "En la red interna, protegido únicamente por un IPS en modo pasivo",
+      "En una screened subnet entre el firewall externo y el firewall interno"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Una screened subnet (antes llamada DMZ) aloja servicios públicos y los aísla de la red interna mediante reglas de firewall, limitando el movimiento lateral si el servidor es comprometido. Ubicarlo en la red interna o junto a las bases de datos expone activos críticos, y un IPS pasivo solo detecta, no segmenta."
+  },
+  {
+    "id": "D4-103",
+    "domain": 4,
+    "objective": "4.5",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un IPS basado únicamente en firmas no detectó un ataque que explotaba una vulnerabilidad recién descubierta, para la cual el fabricante aún no publica firma. ¿Qué capacidad debe habilitar el equipo de seguridad para MEJORAR la detección de este tipo de ataques?",
+    "options": [
+      "Actualizar diariamente la base de firmas del IPS",
+      "Cambiar el IPS a modo pasivo (IDS) para reducir falsos positivos",
+      "Análisis de anomalías respecto a una línea base de tráfico normal",
+      "Aumentar el tiempo de retención de los logs del IPS"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "La detección basada en anomalías/tendencias compara la actividad con una línea base y puede alertar sobre comportamiento inusual aunque no exista firma, lo que ayuda contra ataques nuevos. Actualizar firmas no sirve si la firma no existe, pasar a modo pasivo reduce la capacidad de bloqueo y la retención de logs no mejora la detección."
+  },
+  {
+    "id": "D4-104",
+    "domain": 4,
+    "objective": "4.5",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una organización filtra la navegación web mediante un proxy centralizado en su centro de datos. Muchos empleados ahora trabajan desde casa con laptops corporativas y se conectan directamente a Internet sin VPN. ¿Cuál es la MEJOR forma de mantener el filtrado web y la categorización de contenido para estos usuarios?",
+    "options": [
+      "Desplegar un web filter basado en agente en cada endpoint",
+      "Agregar más reglas de bloqueo por URL en el proxy centralizado",
+      "Habilitar el escaneo de URL en el gateway de correo electrónico",
+      "Configurar reglas de firewall en el perímetro del centro de datos"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Un filtro web basado en agente aplica la política en el propio endpoint, sin importar desde qué red se conecte el usuario. Los cambios en el proxy centralizado o en el firewall del centro de datos no afectan al tráfico que no pasa por ellos, y el escaneo de URL del correo no filtra la navegación."
+  },
+  {
+    "id": "D4-105",
+    "domain": 4,
+    "objective": "4.5",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un administrador de Linux quiere asegurar que, aunque el proceso del servidor web sea comprometido, este solo pueda acceder a los archivos y puertos definidos explícitamente en una política del sistema operativo. Las auditorías muestran que SELinux está instalado pero solo registra violaciones sin bloquearlas. ¿Qué debe hacer el administrador?",
+    "options": [
+      "Aplicar un Group Policy Object que restrinja el servicio web",
+      "Asignar permisos 777 al directorio del sitio para evitar errores de acceso",
+      "Desinstalar SELinux y depender solo de los permisos DAC tradicionales",
+      "Cambiar SELinux de modo permissive a modo enforcing"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "SELinux implementa control de acceso obligatorio (MAC); en modo permissive solo registra violaciones, mientras que en modo enforcing las bloquea según la política. Group Policy es una herramienta de Windows/Active Directory, los permisos 777 debilitan la seguridad y depender solo de DAC elimina el confinamiento del proceso."
+  },
+  {
+    "id": "D4-106",
+    "domain": 4,
+    "objective": "4.5",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Un auditor encontró que la red de administración aún usa Telnet, FTP y LDAP sin cifrar. El equipo debe sustituirlos por protocolos seguros equivalentes. ¿Qué protocolos y puertos deben implementarse? (Elige TRES.)",
+    "options": [
+      "SSH sobre TCP 22",
+      "SFTP sobre TCP 22",
+      "LDAPS sobre TCP 636",
+      "TFTP sobre UDP 69",
+      "SNMPv2c sobre UDP 161",
+      "HTTP sobre TCP 8080"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "SSH reemplaza a Telnet, SFTP (que corre sobre SSH) reemplaza a FTP y LDAPS (LDAP sobre TLS, puerto 636) cifra las consultas de directorio. TFTP y SNMPv2c no ofrecen cifrado y HTTP en 8080 sigue siendo texto claro."
+  },
+  {
+    "id": "D4-107",
+    "domain": 4,
+    "objective": "4.5",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Relaciona cada requisito de seguridad con la capacidad empresarial que lo cumple MEJOR. Cada capacidad se usa una sola vez.",
+    "items": [
+      "Detectar a un usuario que de pronto descarga 50 veces más archivos de lo habitual a las 3 a.m.",
+      "Evitar que cualquier equipo resuelva dominios conocidos de malware y phishing",
+      "Alertar cuando cambie el hash de los binarios críticos del sistema en los servidores",
+      "Bloquear correos salientes que contengan números de tarjeta de crédito",
+      "Revisar parches y antivirus de un dispositivo antes de permitirle conectarse a la red",
+      "Detectar comportamiento malicioso en una estación de trabajo y aislarla remotamente"
+    ],
+    "choices": [
+      "File integrity monitoring (FIM)",
+      "Data loss prevention (DLP)",
+      "Network access control (NAC)",
+      "EDR",
+      "User behavior analytics (UBA)",
+      "DNS filtering"
+    ],
+    "answer": [
+      4,
+      5,
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "UBA detecta desviaciones del comportamiento normal del usuario; el DNS filtering impide resolver dominios maliciosos; FIM alerta sobre cambios en archivos críticos; DLP inspecciona y bloquea datos sensibles en tránsito; NAC valida la postura del dispositivo antes del acceso; y EDR monitorea endpoints y permite contenerlos (aislarlos)."
+  },
+  {
+    "id": "D4-108",
+    "domain": 4,
+    "objective": "4.5",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Los clientes de una empresa siguen recibiendo correos falsificados que aparentan venir de su dominio. SPF y DKIM están configurados correctamente, y el registro DMARC es el siguiente:\n```\n_dmarc.empresa.com.  IN TXT  \"v=DMARC1; p=none; rua=mailto:dmarc@empresa.com\"\n```\nLos reportes agregados confirman que todo el correo legítimo pasa la validación. ¿Qué debe hacer el administrador para reducir MÁS eficazmente la suplantación?",
+    "options": [
+      "Rotar las claves privadas de DKIM",
+      "Cambiar la política de DMARC a p=reject",
+      "Agregar el mecanismo +all al registro SPF",
+      "Habilitar DLP saliente en el gateway de correo"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Con p=none DMARC solo monitorea y reporta; una vez validado que el correo legítimo pasa, p=reject (o p=quarantine) indica a los receptores que rechacen los mensajes que fallen la alineación. Rotar claves DKIM no detiene la suplantación, +all autorizaría a cualquier servidor a enviar en nombre del dominio y el DLP saliente no influye en correos que no salen de la empresa."
+  },
+  {
+    "id": "D4-109",
+    "domain": 4,
+    "objective": "4.6",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Recursos Humanos notifica que un administrador de sistemas fue despedido y está saliendo del edificio en este momento. ¿Qué debe hacer el equipo de gestión de identidades PRIMERO?",
+    "options": [
+      "Deshabilitar sus cuentas y revocar sus accesos y sesiones activas",
+      "Eliminar su buzón de correo y sus archivos personales",
+      "Programar una revisión de attestation para el próximo trimestre",
+      "Restablecer su contraseña y enviarla a su gerente"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "En el de-provisioning de una salida, especialmente de una cuenta privilegiada, la prioridad es deshabilitar las cuentas y revocar accesos de inmediato. Eliminar datos puede destruir información necesaria para retención o investigación, una attestation trimestral es demasiado tardía y compartir una contraseña con el gerente viola el principio de cuentas individuales."
+  },
+  {
+    "id": "D4-110",
+    "domain": 4,
+    "objective": "4.6",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empresa quiere que sus empleados accedan a una aplicación SaaS de un proveedor usando sus credenciales corporativas. El proveedor actuará como service provider y aceptará aserciones XML firmadas emitidas por el identity provider de la empresa a través del navegador. ¿Qué tecnología cumple MEJOR este requisito?",
+    "options": [
+      "LDAP",
+      "OAuth",
+      "SAML",
+      "RADIUS"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "SAML es un estándar de federación basado en XML en el que un identity provider emite aserciones firmadas que el service provider confía para habilitar SSO web. LDAP es un protocolo de directorio, OAuth es un marco de autorización delegada basado en tokens (no aserciones XML) y RADIUS se usa para autenticación de acceso a red."
+  },
+  {
+    "id": "D4-111",
+    "domain": 4,
+    "objective": "4.6",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una aplicación móvil de productividad necesita leer el calendario de un usuario alojado en otro servicio en la nube. El usuario debe autorizar el acceso en una pantalla de consentimiento, y la aplicación nunca debe conocer su contraseña; en su lugar recibirá un access token con alcance limitado. ¿Qué estándar se describe?",
+    "options": [
+      "SAML",
+      "LDAP",
+      "Kerberos",
+      "OAuth"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "OAuth permite la autorización delegada: el usuario otorga consentimiento y la aplicación recibe un access token con scopes limitados, sin manejar la contraseña. SAML se orienta a SSO web mediante aserciones, LDAP es para consultas de directorio y Kerberos usa tickets dentro de un dominio, no consentimiento delegado a terceros."
+  },
+  {
+    "id": "D4-112",
+    "domain": 4,
+    "objective": "4.6",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una política indica que el acceso al sistema de nómina solo se concede si el usuario pertenece al departamento de Finanzas, usa un dispositivo administrado por la empresa y se conecta desde México. ¿Qué modelo de control de acceso se está aplicando?",
+    "options": [
+      "Role-based access control (RBAC)",
+      "Attribute-based access control (ABAC)",
+      "Discretionary access control (DAC)",
+      "Mandatory access control (MAC)"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "ABAC evalúa múltiples atributos del sujeto, del recurso y del entorno (departamento, estado del dispositivo, ubicación) para decidir el acceso. RBAC se basa solo en el rol asignado, DAC deja la decisión al propietario del recurso y MAC usa etiquetas de clasificación y niveles de autorización."
+  },
+  {
+    "id": "D4-113",
+    "domain": 4,
+    "objective": "4.6",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un pipeline de CI/CD necesita desplegar recursos en la nube. El equipo de seguridad no quiere que exista ningún secreto almacenado a largo plazo: las credenciales deben generarse en el momento en que inicia cada job, ser válidas solo durante su ejecución y expirar automáticamente al terminar. ¿Qué solución cumple MEJOR este requisito?",
+    "options": [
+      "Ephemeral credentials emitidas para cada ejecución",
+      "Password vaulting con rotación cada 90 días",
+      "Una cuenta de servicio con una API key guardada en variables de entorno",
+      "SSO basado en LDAP para la cuenta del pipeline"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Las ephemeral credentials se crean bajo demanda, tienen una vida muy corta y se destruyen al terminar la tarea, por lo que no queda ningún secreto persistente que robar. El password vaulting protege y rota secretos pero estos siguen existiendo a largo plazo, una API key en variables de entorno es un secreto estático y LDAP no resuelve el problema de credenciales de larga duración."
+  },
+  {
+    "id": "D4-114",
+    "domain": 4,
+    "objective": "4.6",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Antes de crear la cuenta de un nuevo empleado remoto, el área de TI realiza una videollamada en la que el candidato muestra su identificación oficial, y los datos se comparan con el expediente de Recursos Humanos. Solo después se emiten sus credenciales. ¿Qué proceso se está realizando?",
+    "options": [
+      "Attestation",
+      "Federation",
+      "Identity proofing",
+      "De-provisioning"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Identity proofing es la verificación de que una persona es realmente quien dice ser antes de emitirle una identidad o credenciales. La attestation es la revisión periódica de que los accesos existentes siguen siendo apropiados, la federación establece confianza entre dominios de identidad y el de-provisioning es la remoción de accesos."
+  },
+  {
+    "id": "D4-115",
+    "domain": 4,
+    "objective": "4.6",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "La política de contraseñas exige cambio cada 60 días y recuerda las últimas 10 contraseñas. Un auditor descubre que varios usuarios cambian su contraseña 11 veces seguidas el mismo día para volver a usar su contraseña favorita. ¿Qué ajuste evitaría MEJOR este comportamiento?",
+    "options": [
+      "Aumentar los requisitos de complejidad de la contraseña",
+      "Reducir el periodo de expiración a 30 días",
+      "Exigir el uso de un password manager",
+      "Configurar una edad mínima de contraseña (minimum password age)"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "La edad mínima de contraseña impide cambiarla de nuevo hasta que pase cierto tiempo, lo que hace impráctico recorrer el historial para reutilizar una contraseña anterior. Mayor complejidad o expiración más corta no impiden el ciclo, y un password manager es buena práctica pero no bloquea técnicamente la reutilización."
+  },
+  {
+    "id": "D4-116",
+    "domain": 4,
+    "objective": "4.6",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "¿Cuáles de las siguientes combinaciones constituyen autenticación multifactor real? (Elige DOS.)",
+    "options": [
+      "Contraseña y PIN",
+      "Smart card y PIN",
+      "Huella dactilar y reconocimiento facial",
+      "Contraseña y preguntas de seguridad",
+      "Token de hardware con OTP y contraseña",
+      "Soft token OTP en el teléfono y notificación push en el mismo teléfono"
+    ],
+    "answer": [
+      1,
+      4
+    ],
+    "explanation": "La MFA requiere factores de categorías distintas: smart card (algo que tienes) + PIN (algo que sabes) y token de hardware (algo que tienes) + contraseña (algo que sabes). Contraseña + PIN y contraseña + preguntas son dos factores de conocimiento, huella + rostro son dos factores biométricos y el soft token y el push en el mismo teléfono son ambos algo que tienes."
+  },
+  {
+    "id": "D4-117",
+    "domain": 4,
+    "objective": "4.6",
+    "type": "multi",
+    "difficulty": 3,
+    "stem": "Una auditoría reveló dos hallazgos: (1) las contraseñas de las cuentas privilegiadas compartidas están en una hoja de cálculo en un recurso compartido, y (2) los administradores tienen membresía permanente en el grupo Domain Admins aunque solo la necesitan ocasionalmente. ¿Qué herramientas de PAM atienden MEJOR estos hallazgos? (Elige DOS.)",
+    "options": [
+      "Password vaulting",
+      "Just-in-time (JIT) permissions",
+      "SSO mediante SAML",
+      "Time-of-day restrictions",
+      "Federación con un proveedor externo",
+      "Discretionary access control (DAC)"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "El password vaulting almacena, rota y controla el check-out auditado de credenciales privilegiadas, eliminando la hoja de cálculo; los permisos JIT otorgan privilegios elevados solo cuando se necesitan y por tiempo limitado, eliminando la membresía permanente. SSO y federación simplifican la autenticación pero no gestionan privilegios, las restricciones horarias no quitan los privilegios permanentes y DAC delega decisiones al propietario."
+  },
+  {
+    "id": "D4-118",
+    "domain": 4,
+    "objective": "4.6",
+    "type": "match",
+    "difficulty": 1,
+    "stem": "Relaciona cada método de autenticación con el factor que representa.",
+    "items": [
+      "Lector de huella dactilar",
+      "PIN de 6 dígitos",
+      "Llave de seguridad FIDO2 USB",
+      "Acceso permitido solo si la geolocalización del dispositivo está dentro del campus",
+      "Passphrase",
+      "Escaneo de iris"
+    ],
+    "choices": [
+      "Something you know",
+      "Something you have",
+      "Something you are",
+      "Somewhere you are"
+    ],
+    "answer": [
+      2,
+      0,
+      1,
+      3,
+      0,
+      2
+    ],
+    "explanation": "La huella y el iris son biométricos (something you are); el PIN y la passphrase son conocimiento (something you know); la llave de seguridad es un objeto físico (something you have); y la restricción por geolocalización corresponde a somewhere you are."
+  },
+  {
+    "id": "D4-119",
+    "domain": 4,
+    "objective": "4.7",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un equipo de infraestructura despliega todos sus servidores nuevos desde la misma plantilla de infraestructura como código, por lo que cada servidor queda con los mismos paquetes, puertos abiertos y ajustes de seguridad. ¿Qué beneficio de la automatización describe MEJOR este escenario?",
+    "options": [
+      "Employee retention",
+      "Reaction time",
+      "Workforce multiplier",
+      "Standard infrastructure configurations"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Desplegar desde una misma plantilla automatizada produce configuraciones de infraestructura estándar y consistentes, reduciendo errores manuales y desviaciones. La retención de empleados, el tiempo de reacción y el efecto multiplicador de personal son beneficios reales, pero no describen la uniformidad de las configuraciones."
+  },
+  {
+    "id": "D4-120",
+    "domain": 4,
+    "objective": "4.7",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "En la nube de una empresa, un script automatizado revisa cada despliegue y bloquea de inmediato la creación de cualquier bucket de almacenamiento con acceso público, aunque el desarrollador tenga permisos para crearlo. ¿Qué caso de uso de automatización se describe?",
+    "options": [
+      "Guard rails",
+      "Ticket creation",
+      "Continuous integration and testing",
+      "User provisioning"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Los guard rails son controles automatizados que impiden configuraciones inseguras o fuera de política aunque el usuario tenga permisos, manteniendo a los equipos dentro de límites seguros. La creación de tickets solo registra trabajo, CI/testing valida código en el pipeline y el user provisioning crea cuentas."
+  },
+  {
+    "id": "D4-121",
+    "domain": 4,
+    "objective": "4.7",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Los analistas del SOC pasan varios minutos por alerta abriendo manualmente un caso, copiando datos del SIEM y notificando al nivel 2 cuando la alerta es crítica. ¿Qué caso de uso de automatización resolvería MEJOR esta situación?",
+    "options": [
+      "Resource provisioning",
+      "Ticket creation y escalation automatizados",
+      "Security groups dinámicos",
+      "Enabling/disabling services"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Automatizar la creación de tickets con los datos de la alerta y el escalamiento según la severidad elimina el trabajo manual repetitivo del SOC. El aprovisionamiento de recursos, los security groups y la habilitación de servicios son casos de uso válidos, pero no atienden el flujo de gestión de alertas descrito."
+  },
+  {
+    "id": "D4-122",
+    "domain": 4,
+    "objective": "4.7",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una organización automatizó por completo la desactivación de cuentas de empleados que salen mediante una sola plataforma de orquestación. Durante una caída de dicha plataforma, que duró tres días, las cuentas de varios exempleados permanecieron activas porque no existía un proceso alterno. ¿Qué consideración de la automatización se pasó por alto?",
+    "options": [
+      "Technical debt",
+      "Cost",
+      "Single point of failure",
+      "Complexity"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Depender de una única plataforma sin respaldo ni proceso manual alterno convierte a esa plataforma en un single point of failure. La deuda técnica, el costo y la complejidad son consideraciones válidas, pero el problema descrito es la falta de redundancia ante la falla de un componente."
+  },
+  {
+    "id": "D4-123",
+    "domain": 4,
+    "objective": "4.7",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Hace dos años, un analista creó decenas de scripts de respuesta rápidamente, sin documentación ni pruebas, y usando una API que el fabricante ya declaró obsoleta. Ahora cualquier cambio rompe otros procesos y nadie del equipo actual entiende cómo funcionan. ¿Qué consideración describe MEJOR esta situación?",
+    "options": [
+      "Single point of failure",
+      "Scaling in a secure manner",
+      "Employee retention",
+      "Technical debt"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "La deuda técnica es el costo futuro acumulado por soluciones rápidas, sin documentar o basadas en componentes obsoletos, que se vuelven difíciles y costosas de mantener. No se describe una dependencia única que haya fallado, ni un problema de escalamiento, y la retención de empleados es un beneficio de la automatización, no un riesgo."
+  },
+  {
+    "id": "D4-124",
+    "domain": 4,
+    "objective": "4.7",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un SOC con solo tres analistas logra atender el mismo volumen de alertas que antes requería quince personas, gracias a playbooks de SOAR que enriquecen y cierran automáticamente las alertas de bajo riesgo. ¿Qué beneficio de la automatización se ilustra?",
+    "options": [
+      "Workforce multiplier",
+      "Enforcing baselines",
+      "Guard rails",
+      "Ongoing supportability"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Workforce multiplier significa que la automatización permite que un equipo pequeño rinda como uno mucho mayor. Enforcing baselines se refiere a mantener configuraciones de referencia, los guard rails son un caso de uso preventivo y la ongoing supportability es una consideración (un posible costo), no un beneficio."
+  },
+  {
+    "id": "D4-125",
+    "domain": 4,
+    "objective": "4.7",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Un CISO prepara la justificación para adquirir una plataforma SOAR. Los problemas actuales son: los analistas renuncian por agotamiento debido a tareas repetitivas de triage, y aislar un equipo infectado tarda en promedio 45 minutos. ¿Qué beneficios de la automatización debe destacar el CISO? (Elige DOS.)",
+    "options": [
+      "Employee retention",
+      "Technical debt",
+      "Reaction time",
+      "Single point of failure",
+      "Cost",
+      "Complexity"
+    ],
+    "answer": [
+      0,
+      2
+    ],
+    "explanation": "Eliminar tareas repetitivas reduce el agotamiento y mejora la retención de empleados, y automatizar el aislamiento acelera el tiempo de reacción ante incidentes. La deuda técnica, el single point of failure, el costo y la complejidad son consideraciones o riesgos de la automatización, no beneficios."
+  },
+  {
+    "id": "D4-126",
+    "domain": 4,
+    "objective": "4.8",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Relaciona cada acción con la fase del proceso de respuesta a incidentes de CompTIA en la que se realiza.",
+    "items": [
+      "Restaurar los servidores desde respaldos limpios y monitorearlos de cerca",
+      "Mover el equipo comprometido a una VLAN de cuarentena",
+      "Realizar una reunión post-incidente y actualizar los playbooks",
+      "Elaborar el plan de respuesta y preparar el jump kit",
+      "Revisar la alerta del SIEM, confirmar que es un incidente real y determinar su alcance",
+      "Reinstalar el sistema operativo y eliminar la cuenta backdoor creada por el atacante"
+    ],
+    "choices": [
+      "Preparation",
+      "Analysis",
+      "Containment",
+      "Eradication",
+      "Recovery",
+      "Lessons learned"
+    ],
+    "answer": [
+      4,
+      2,
+      5,
+      0,
+      1,
+      3
+    ],
+    "explanation": "Preparation crea planes y herramientas; Analysis confirma y dimensiona el incidente; Containment limita su propagación (cuarentena); Eradication elimina la causa y los artefactos del atacante; Recovery devuelve los sistemas a operación y los vigila; y Lessons learned mejora el proceso después del incidente."
+  },
+  {
+    "id": "D4-127",
+    "domain": 4,
+    "objective": "4.8",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un analista confirmó que tres equipos de Contabilidad están cifrados por ransomware y que el malware intenta propagarse por SMB. El gerente del área exige que se restauren los respaldos de inmediato para retomar operaciones. ¿Qué debe hacer el analista SIGUIENTE?",
+    "options": [
+      "Restaurar los respaldos más recientes en los tres equipos",
+      "Programar una reunión de lessons learned",
+      "Aislar los equipos afectados de la red",
+      "Reinstalar el sistema operativo en los tres equipos"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Tras la detección y el análisis, la siguiente fase es la contención, para evitar que el ransomware siga propagándose. Restaurar (recovery) o reinstalar (eradication) antes de contener puede provocar reinfección, y lessons learned ocurre al final del proceso."
+  },
+  {
+    "id": "D4-128",
+    "domain": 4,
+    "objective": "4.8",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "La dirección quiere validar el plan de respuesta a incidentes con un costo mínimo y sin ningún impacto en los sistemas de producción. Los participantes se reunirán en una sala para discutir, paso a paso, cómo responderían a un escenario hipotético. ¿Qué tipo de prueba se describe?",
+    "options": [
+      "Simulation",
+      "Tabletop exercise",
+      "Penetration test",
+      "Failover test"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Un tabletop exercise es un ejercicio de discusión en el que los participantes recorren verbalmente su respuesta a un escenario, sin tocar sistemas. Una simulación ejecuta acciones más realistas, una prueba de penetración ataca sistemas reales y una prueba de failover cambia la operación a sistemas alternos."
+  },
+  {
+    "id": "D4-129",
+    "domain": 4,
+    "objective": "4.8",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una empresa eliminó un troyano de varios servidores, los restauró y cerró el incidente. Dos semanas después, el mismo troyano reapareció en los mismos servidores. Se descubrió que el atacante había entrado a través de un concentrador VPN sin parchar que nunca se identificó. ¿Qué actividad, realizada correctamente, habría evitado MÁS probablemente la reinfección?",
+    "options": [
+      "Root cause analysis",
+      "Threat hunting",
+      "Legal hold",
+      "Tabletop exercise"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "El root cause analysis identifica el vector inicial (la VPN sin parchar) para que pueda corregirse durante la erradicación y evitar que el incidente se repita. El threat hunting busca amenazas no detectadas pero no garantiza encontrar la causa raíz del incidente ya atendido, el legal hold preserva evidencia y un tabletop exercise valida procesos, no corrige vulnerabilidades."
+  },
+  {
+    "id": "D4-130",
+    "domain": 4,
+    "objective": "4.8",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Tras recibir inteligencia de amenazas sobre un grupo que abusa de tareas programadas para persistir, un analista formula una hipótesis y busca proactivamente indicios de esa técnica en los endpoints, aunque ninguna herramienta ha generado alertas. ¿Qué actividad está realizando?",
+    "options": [
+      "Vulnerability scanning",
+      "Penetration testing",
+      "Incident containment",
+      "Threat hunting"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "El threat hunting es la búsqueda proactiva, basada en hipótesis e inteligencia, de adversarios que evadieron los controles de detección. El escaneo de vulnerabilidades busca debilidades conocidas, la prueba de penetración las explota de forma autorizada y la contención ocurre cuando ya existe un incidente confirmado."
+  },
+  {
+    "id": "D4-131",
+    "domain": 4,
+    "objective": "4.8",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "El departamento jurídico informa que la empresa enfrentará una demanda relacionada con un exempleado. La política de retención borra automáticamente los correos con más de 180 días de antigüedad, y algunos mensajes relevantes están por alcanzar ese límite. ¿Qué debe hacerse PRIMERO?",
+    "options": [
+      "Iniciar el proceso de e-discovery y entregar los correos a los abogados",
+      "Documentar la chain of custody de los buzones",
+      "Aplicar un legal hold a los buzones involucrados",
+      "Realizar la acquisition forense del equipo del exempleado"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "El legal hold suspende la eliminación normal de datos potencialmente relevantes para un litigio y debe aplicarse antes de que la política de retención los destruya. El e-discovery (identificar, recopilar y entregar la información), la chain of custody y la adquisición forense son actividades posteriores que dependen de que los datos se hayan preservado."
+  },
+  {
+    "id": "D4-132",
+    "domain": 4,
+    "objective": "4.8",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Durante un juicio, el abogado defensor logra que se excluya un disco duro como evidencia porque no existe un registro de quién lo manejó, cuándo y con qué propósito desde que fue recolectado hasta que llegó al laboratorio. ¿Qué faltó en el proceso forense?",
+    "options": [
+      "Legal hold",
+      "Chain of custody",
+      "Order of volatility",
+      "E-discovery"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "La chain of custody documenta cada transferencia y manejo de la evidencia para demostrar que no fue alterada. El legal hold preserva datos ante litigios, el orden de volatilidad define qué recolectar primero y el e-discovery es el proceso de identificar y entregar información electrónica en un proceso legal."
+  },
+  {
+    "id": "D4-133",
+    "domain": 4,
+    "objective": "4.8",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un analista llega a un servidor encendido que se sospecha está comprometido. Cuenta con herramientas para adquirir cualquiera de los siguientes elementos. Siguiendo el orden de volatilidad, ¿qué debe adquirir PRIMERO?",
+    "options": [
+      "El contenido de la memoria RAM",
+      "El archivo de paginación (swap/pagefile)",
+      "Una imagen bit a bit del disco duro",
+      "Los respaldos archivados en cinta"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Según el orden de volatilidad, se recolecta primero lo que se pierde más rápido: la RAM desaparece al apagar el equipo y cambia constantemente. El archivo de paginación y el disco son menos volátiles porque persisten en almacenamiento, y los respaldos archivados son los menos volátiles."
+  },
+  {
+    "id": "D4-134",
+    "domain": 4,
+    "objective": "4.8",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un analista forense creó una imagen del disco de una laptop sospechosa. Para el reporte necesita demostrar que la copia es idéntica al original y que no ha sido modificada. ¿Qué debe hacer MEJOR?",
+    "options": [
+      "Cifrar la imagen con AES-256",
+      "Comprimir la imagen para reducir su tamaño",
+      "Tomar capturas de pantalla del proceso de copiado",
+      "Comparar los hashes SHA-256 de ambos medios"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Comparar hashes criptográficos (por ejemplo, SHA-256) del original y de la copia demuestra la integridad de la evidencia, ya que cualquier cambio produciría un hash diferente. El cifrado protege la confidencialidad pero no prueba que la copia sea idéntica, la compresión no aporta integridad y las capturas de pantalla no verifican el contenido."
+  },
+  {
+    "id": "D4-135",
+    "domain": 4,
+    "objective": "4.8",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Un técnico va a adquirir evidencia de un disco duro retirado de una estación de trabajo comprometida. ¿Qué acciones preservan MEJOR la integridad de la evidencia? (Elige DOS.)",
+    "options": [
+      "Conectar el disco mediante un write blocker por hardware",
+      "Arrancar el equipo sospechoso para ejecutar un escaneo antivirus completo",
+      "Desfragmentar el disco para facilitar la recuperación de archivos",
+      "Crear una imagen forense bit a bit y realizar el análisis sobre la copia",
+      "Copiar los archivos relevantes arrastrándolos a una memoria USB",
+      "Analizar directamente el disco original para ahorrar tiempo"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explanation": "El write blocker impide cualquier escritura en el medio original, y trabajar sobre una imagen bit a bit (verificada con hash) preserva el original intacto. Arrancar el equipo, desfragmentar o analizar el original modifican datos y metadatos, y copiar archivos por arrastre omite el espacio no asignado y altera marcas de tiempo."
+  },
+  {
+    "id": "D4-136",
+    "domain": 4,
+    "objective": "4.9",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un analista revisa los siguientes registros del firewall perimetral:\n```\n2026-10-12 02:14:01 DENY  TCP 203.0.113.45:51022 -> 198.51.100.10:21\n2026-10-12 02:14:01 DENY  TCP 203.0.113.45:51023 -> 198.51.100.10:22\n2026-10-12 02:14:01 DENY  TCP 203.0.113.45:51024 -> 198.51.100.10:23\n2026-10-12 02:14:02 DENY  TCP 203.0.113.45:51025 -> 198.51.100.10:25\n2026-10-12 02:14:02 ALLOW TCP 203.0.113.45:51026 -> 198.51.100.10:443\n2026-10-12 02:14:02 DENY  TCP 203.0.113.45:51027 -> 198.51.100.10:445\n```\n¿Qué actividad es la MÁS probable?",
+    "options": [
+      "Un ataque DDoS contra el servidor web",
+      "Un escaneo de puertos de reconocimiento",
+      "Un ataque de fuerza bruta contra SSH",
+      "Exfiltración de datos a través de HTTPS"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Una sola IP intentando conectarse en segundos a muchos puertos distintos del mismo destino es el patrón típico de un escaneo de puertos. Un DDoS involucraría muchas fuentes o un gran volumen hacia un servicio, la fuerza bruta mostraría intentos repetidos al mismo puerto 22 y no se observa transferencia de datos hacia el exterior."
+  },
+  {
+    "id": "D4-137",
+    "domain": 4,
+    "objective": "4.9",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un analista revisa los registros de seguridad de un controlador de dominio Windows:\n```\n10:02:11-10:08:40  EventID 4625  An account failed to log on       Account: svc_backup  Source: 10.10.4.77  (312 eventos)\n10:08:52          EventID 4624  An account was successfully logged on  Account: svc_backup  LogonType: 3  Source: 10.10.4.77\n10:08:52          EventID 4672  Special privileges assigned to new logon  Account: svc_backup\n```\n¿Qué conclusión es la MÁS precisa?",
+    "options": [
+      "Un ataque de fuerza bruta logró acceder a una cuenta con privilegios",
+      "Un ataque de password spraying contra múltiples cuentas del dominio",
+      "La cuenta fue bloqueada correctamente por la política de lockout",
+      "Un escaneo de vulnerabilidades autenticado se ejecutó sin errores"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Cientos de fallos (4625) contra una misma cuenta desde la misma IP, seguidos de un inicio de sesión exitoso (4624) con privilegios especiales (4672), indican una fuerza bruta exitosa sobre una cuenta privilegiada. El password spraying prueba pocas contraseñas contra muchas cuentas, el 4624 demuestra que la cuenta no quedó bloqueada y un escaneo autenticado legítimo no generaría cientos de fallos."
+  },
+  {
+    "id": "D4-138",
+    "domain": 4,
+    "objective": "4.9",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "El IDS, ubicado detrás del balanceador de carga que realiza la terminación TLS, genera la siguiente alerta para el servidor web de la tienda en línea:\n```\n[**] [1:2006445:9] ET WEB_SERVER Possible SQL Injection Attempt [**]\n[Priority: 1] 10/13-23:41:07 10.20.0.5:49812 -> 10.20.1.15:80\nX-Forwarded-For: 198.18.7.22\nGET /productos.php?id=7'%20OR%201=1--\n```\nEl analista necesita determinar si la inyección tuvo éxito y qué información se expuso. ¿Qué fuente de datos debe revisar SIGUIENTE?",
+    "options": [
+      "Los registros del firewall perimetral",
+      "Los registros del servidor DHCP",
+      "Los registros de la aplicación web y de la base de datos",
+      "El reporte del último escaneo de vulnerabilidades"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Los logs de la aplicación y de la base de datos muestran cómo se procesó la solicitud, los códigos de respuesta, las consultas ejecutadas y el volumen de datos devuelto, lo que permite confirmar si la inyección tuvo éxito. El firewall solo mostraría una conexión permitida al puerto 443, DHCP no aporta información sobre la solicitud y un escaneo de vulnerabilidades indica debilidades potenciales, no si fueron explotadas."
+  },
+  {
+    "id": "D4-139",
+    "domain": 4,
+    "objective": "4.9",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un usuario reporta un correo sospechoso que aparenta venir del director general. El analista quiere conocer la ruta real que siguió el mensaje, los servidores por los que pasó y los resultados de SPF/DKIM. ¿Qué fuente de datos debe revisar?",
+    "options": [
+      "El dashboard de DLP",
+      "Los registros del firewall perimetral",
+      "Los encabezados (metadata) del mensaje",
+      "El reporte de escaneo de vulnerabilidades"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Los encabezados del correo son metadatos que incluyen los campos Received, la IP de origen y los resultados de autenticación SPF/DKIM/DMARC. El dashboard de DLP se enfoca en fuga de datos, el firewall no muestra la ruta de retransmisión del mensaje y un escaneo de vulnerabilidades no tiene relación con el correo."
+  },
+  {
+    "id": "D4-140",
+    "domain": 4,
+    "objective": "4.9",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "El EDR reporta el siguiente evento de creación de proceso en la estación de trabajo de una usuaria de Compras, minutos después de que abrió un adjunto llamado Cotizacion_Oct.docm:\n```\nParentImage: C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE\nImage:       C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\nCommandLine: powershell.exe -nop -w hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoA...\nUser:        CORP\\mlopez\n```\n¿Qué es lo MÁS probable que haya ocurrido?",
+    "options": [
+      "Microsoft Office ejecutó una actualización automática legítima",
+      "Una macro maliciosa lanzó un comando de PowerShell oculto y codificado",
+      "La usuaria ejecutó un script administrativo autorizado",
+      "Un exploit de kernel escaló privilegios a SYSTEM"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Word como proceso padre de PowerShell, con ventana oculta (-w hidden), sin perfil (-nop) y un comando codificado en Base64 (-enc) tras abrir un .docm, es un indicador clásico de una macro maliciosa. Las actualizaciones de Office no se ejecutan así, una usuaria de Compras no suele lanzar scripts administrativos desde Word y el proceso corre como el usuario, no como SYSTEM."
+  },
+  {
+    "id": "D4-141",
+    "domain": 4,
+    "objective": "4.9",
+    "type": "multi",
+    "difficulty": 3,
+    "stem": "Un analista sospecha que un equipo comprometido está exfiltrando datos mediante DNS tunneling: observa miles de consultas a subdominios largos y aleatorios de un mismo dominio externo. Necesita confirmar la actividad y conocer el contenido de las consultas. ¿Qué fuentes de datos son las MÁS útiles? (Elige DOS.)",
+    "options": [
+      "Registros de consultas del servidor DNS",
+      "Reporte del escaneo de vulnerabilidades",
+      "Packet captures del tráfico del equipo sospechoso",
+      "Dashboard de cumplimiento de parches",
+      "Registros de la aplicación de Recursos Humanos",
+      "Reporte automatizado de licencias de software"
+    ],
+    "answer": [
+      0,
+      2
+    ],
+    "explanation": "Los logs de consultas DNS muestran el volumen, la frecuencia y los nombres consultados, y las capturas de paquetes permiten ver el contenido completo de las consultas y respuestas para confirmar la exfiltración. Los escaneos de vulnerabilidades, el dashboard de parches, los logs de una aplicación no relacionada y los reportes de licencias no revelan tráfico DNS."
+  },
+  {
+    "id": "D4-142",
+    "domain": 4,
+    "objective": "4.9",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Relaciona cada necesidad de la investigación con la fuente de datos que la satisface MEJOR. Cada fuente se usa una sola vez.",
+    "items": [
+      "Reconstruir el payload exacto transferido durante una sesión sospechosa",
+      "Identificar al autor y la fecha de creación de un documento filtrado",
+      "Saber qué servidores tenían una CVE crítica sin parchar antes del incidente",
+      "Mostrar a la dirección, en tiempo real, los incidentes abiertos y sus indicadores",
+      "Recibir cada lunes un resumen de inicios de sesión fallidos generado por el SIEM"
+    ],
+    "choices": [
+      "Vulnerability scans",
+      "Packet captures",
+      "Dashboards",
+      "Automated reports",
+      "Metadata"
+    ],
+    "answer": [
+      1,
+      4,
+      0,
+      2,
+      3
+    ],
+    "explanation": "Las capturas de paquetes contienen el contenido completo del tráfico; los metadatos de un archivo revelan autor y fechas; los escaneos de vulnerabilidades documentan debilidades existentes; los dashboards muestran el estado en tiempo real; y los reportes automatizados entregan resúmenes periódicos programados."
+  }
+]

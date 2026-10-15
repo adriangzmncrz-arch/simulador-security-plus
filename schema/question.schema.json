@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "question.schema.json",
+  "title": "Pregunta del simulador Security+ SY0-701",
+  "description": "Cada archivo data/questions/domain-N.json es un arreglo de estas preguntas. Las reglas que cruzan campos (IDs únicos, dominio = prefijo del ID = primer dígito del objetivo, sufijo (Elige DOS.)/(Elige TRES.), índices en rango) las comprueba scripts/validate-questions.ts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "domain", "objective", "type", "difficulty", "stem", "answer", "explanation"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^D[1-5]-[0-9]{3}$" },
+    "domain": { "enum": [1, 2, 3, 4, 5] },
+    "objective": { "type": "string", "pattern": "^[1-5]\\.[1-9]$" },
+    "type": { "enum": ["single", "multi", "match"] },
+    "difficulty": { "enum": [1, 2, 3] },
+    "stem": { "$ref": "#/$defs/text" },
+    "options": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+    "items": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+    "choices": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+    "answer": { "type": "array", "minItems": 1, "items": { "type": "integer", "minimum": 0 } },
+    "explanation": { "$ref": "#/$defs/text" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "type": { "const": "single" } } },
+      "then": {
+        "required": ["options"],
+        "not": { "anyOf": [{ "required": ["items"] }, { "required": ["choices"] }] },
+        "properties": {
+          "options": { "type": "array", "minItems": 4, "maxItems": 4 },
+          "answer": { "type": "array", "minItems": 1, "maxItems": 1 }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "multi" } } },
+      "then": {
+        "required": ["options"],
+        "not": { "anyOf": [{ "required": ["items"] }, { "required": ["choices"] }] },
+        "properties": {
+          "options": { "type": "array", "minItems": 5, "maxItems": 6 },
+          "answer": { "type": "array", "minItems": 2, "maxItems": 3, "uniqueItems": true }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "match" } } },
+      "then": {
+        "required": ["items", "choices"],
+        "not": { "required": ["options"] },
+        "properties": {
+          "items": { "type": "array", "minItems": 4, "maxItems": 6 },
+          "choices": { "type": "array", "minItems": 3, "maxItems": 6 }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "text": { "type": "string", "minLength": 1, "pattern": "\\S" }
+  }
+}
