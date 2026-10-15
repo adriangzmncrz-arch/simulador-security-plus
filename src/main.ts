@@ -4,7 +4,7 @@ import { BY } from "./data";
 import { grade } from "./logic/grading";
 import { scaled } from "./logic/scoring";
 import { startTicker } from "./logic/timer";
-import { loadAttempts, loadSession, mergeAttempts, saveAttempts, saveSession } from "./storage";
+import { applyTheme, loadAttempts, loadSession, loadTheme, mergeAttempts, saveAttempts, saveSession } from "./storage";
 import { examActions, onExamChange, onExamKey, renderExam, updTimer } from "./views/exam";
 import { homeActions, renderHome } from "./views/home";
 import { resultActions, renderResult } from "./views/result";
@@ -44,7 +44,7 @@ const app: App = {
   lastResult: null,
   reviewFilter: "bad",
   notice: null,
-  theme: "system",
+  theme: loadTheme(),
 
   render() {
     const key = focusKey(document.activeElement), hadSheet = !!root.querySelector(".sheet");
@@ -102,4 +102,5 @@ document.addEventListener("keydown", e => onExamKey(app, e));
 window.addEventListener("pagehide", () => app.persist());
 document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") app.persist(); });
 
+applyTheme(app.theme);
 app.render();

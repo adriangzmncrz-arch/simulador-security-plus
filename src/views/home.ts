@@ -5,8 +5,29 @@ import { PASS, aggregate, band, barClass, latestResults, readiness, readinessChi
 import { fmtTime } from "../logic/timer";
 import { fmtDate, pct } from "../ui/format";
 import { esc } from "../ui/rich";
+import { applyTheme, downloadJSON, exportFileName, exportPayload, importAttempts, saveTheme } from "../storage";
 import { trendSvg } from "../ui/trend";
-import type { Action, App } from "../types";
+import type { Action, App, Theme } from "../types";
+
+export const DISCLAIMER = "Proyecto independiente, no afiliado ni avalado por CompTIA. CompTIA y Security+ son marcas registradas de CompTIA, Inc. Las preguntas son originales y no provienen del examen real.";
+const THEMES: [Theme, string][] = [["system", "Sistema"], ["light", "Claro"], ["dark", "Oscuro"]];
+const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+
+async function importFile(app: App, f: File): Promise<void> {
+  let text = "";
+  try { text = await f.text(); } catch { /* se reporta como JSON inválido */ }
+  const r = importAttempts(app.attempts, text);
+  if (!r.ok) app.notice = { ok: false, text: `No se pudo importar ${f.name}: ${r.error}` };
+  else {
+    app.setAttempts(r.attempts);
+    const parts = [r.added ? `${plural(r.added, "intento nuevo", "intentos nuevos")}` : "ningún intento nuevo"];
+    if (r.existing) parts.push(`${plural(r.existing, "ya estaba", "ya estaban")} en este navegador`);
+    if (r.invalid) parts.push(`${plural(r.invalid, "inválido ignorado", "inválidos ignorados")}`);
+    app.notice = { ok: true, text: `Importación completa: ${parts.join(", ")}.` };
+  }
+  app.render();
+  app.root.querySelector<HTMLElement>('[data-act="import"]')?.focus({ preventScroll: true });
+}
 
 export function renderHome(app: App): void {
   const { attempts, S } = app;
@@ -64,8 +85,14 @@ export function renderHome(app: App): void {
   } else h += `<p class="empty">Sin intentos todavía. Te sugiero empezar por el diagnóstico de 30 preguntas.</p>`;
   h += `<p class="small muted">Tu historial se guarda en este navegador.</p></section></div>`;
 
-  h += `<footer class="stack" style="gap:8px"><span>Preguntas originales escritas para el temario oficial SY0-701 (no son preguntas del examen real). El puntaje escalado es una estimación lineal: CompTIA no publica su fórmula.</span><span>Atajos durante el examen: A–F responder · ← → navegar · M marcar.</span>${attempts.length ? `<span><button class="ghost small" data-act="wipe">Borrar historial</button></span>` : ""}</footer>`;
+  h += `<footer class="stack" style="gap:8px"><span>Preguntas originales escritas para el temario oficial SY0-701 (no son preguntas del examen real). El puntaje escalado es una estimación lineal: CompTIA no publica su fórmula.</span><span>${DISCLAIMER}</span><span>Atajos durante el examen: A–F responder · ← → navegar · M marcar.</span>`;
+  h += `<div class="row" style="gap:8px 10px"><button class="ghost small" data-act="export" ${attempts.length ? "" : "disabled"}>Exportar progreso</button><button class="ghost small" data-act="import">Importar progreso</button><input type="file" id="importfile" accept="application/json,.json" hidden>${attempts.length ? `<span><button class="ghost small" data-act="wipe">Borrar historial</button></span>` : ""}<span class="row" style="gap:8px;margin-left:auto"><span id="themelbl">Tema</span><span class="tabs" role="group" aria-labelledby="themelbl">${THEMES.map(([k, l]) => `<button class="small ${app.theme === k ? "on" : ""}" data-act="theme" data-theme="${k}" aria-pressed="${app.theme === k}">${l}</button>`).join("")}</span></span></div>`;
+  if (app.notice) h += `<p class="small" role="status" style="color:var(--${app.notice.ok ? "ok" : "bad"})">${esc(app.notice.text)}</p>`;
+  h += `</footer>`;
+  app.notice = null;
   app.root.className = "wrap"; app.root.innerHTML = h;
+  const file = app.root.querySelector<HTMLInputElement>("#importfile")!;
+  file.onchange = () => { const f = file.files?.[0]; if (f) void importFile(app, f); };
   const pdom = app.root.querySelector<HTMLSelectElement>("#pdom")!, pobj = app.root.querySelector<HTMLSelectElement>("#pobj")!;
   const fillObj = () => { const d = pdom.value; pobj.innerHTML = `<option value="all">Todos</option>` + Object.keys(OBJ).filter(k => d === "all" || k[0] === d).map(k => `<option value="${k}">${k} ${OBJ[k]}</option>`).join(""); };
   pdom.onchange = fillObj; fillObj();
@@ -94,4 +121,13 @@ export const homeActions: Record<string, Action> = {
   },
   wipeyes: app => { app.setAttempts([]); app.render(); },
   wipeno: app => { app.render(); app.root.querySelector<HTMLElement>('[data-act="wipe"]')?.focus(); },
+  export: app => {
+    if (!app.attempts.length) return;
+    const name = exportFileName();
+    downloadJSON(name, exportPayload(app.attempts));
+    app.notice = { ok: true, text: `Progreso exportado: ${name} (${plural(app.attempts.length, "intento", "intentos")}).` };
+    app.render();
+  },
+  import: app => app.root.querySelector<HTMLInputElement>("#importfile")?.click(),
+  theme: (app, t) => { app.theme = t.dataset.theme as Theme; applyTheme(app.theme); saveTheme(app.theme); app.render(); },
 };
