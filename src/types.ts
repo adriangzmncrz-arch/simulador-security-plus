@@ -51,3 +51,36 @@ export type Session = {
 export type Latest = { last: Record<string, number>; seen: Record<string, number> };
 
 export type Agg = { c: number; n: number };
+
+export type View = "home" | "exam" | "result";
+export type ReviewFilter = "bad" | "flag" | "all";
+export type Theme = "system" | "light" | "dark";
+
+export type SessionConfig = { label: string; mode: Mode; qids: string[]; limit?: number; feedback?: boolean };
+
+/** Estado de la app y operaciones que comparten las vistas (implementado en main.ts). */
+export interface App {
+  root: HTMLElement;
+  view: View;
+  attempts: Attempt[];
+  S: Session | null;
+  sheet: "nav" | null;
+  confirmEnd: boolean;
+  lastResult: Attempt | null;
+  reviewFilter: ReviewFilter;
+  /** Mensaje de exportación/importación que se muestra una vez en el pie de la portada. */
+  notice: { text: string; ok: boolean } | null;
+  theme: Theme;
+  render(): void;
+  persist(): void;
+  startSession(cfg: SessionConfig): void;
+  openExam(): void;
+  finish(timeUp: boolean): void;
+  abandon(): void;
+  pauseToHome(): void;
+  goHome(): void;
+  openResult(a: Attempt): void;
+  setAttempts(list: Attempt[]): void;
+}
+
+export type Action = (app: App, el: HTMLElement) => void;

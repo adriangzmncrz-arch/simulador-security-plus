@@ -1,0 +1,28 @@
+/* Tokens copiados exactos de reference/simulador-referencia.html. */
+/* Layout: consola de examen — barra de estado fija arriba, una columna de lectura (~68ch) al centro, panel de navegación como hoja superpuesta. */
+:root{
+  --bg:#F3F5F8; --surface:#FFFFFF; --sunk:#E8ECF2; --line:#D3D9E3;
+  --ink:#141B26; --ink-2:#4A5568; --ink-3:#77839A;
+  --accent:#2944C7; --accent-ink:#FFFFFF; --accent-soft:#E3E8FB;
+  --flag:#A8620A; --flag-soft:#FBEFD9;
+  --ok:#1C7A4A; --ok-soft:#DDF2E6; --bad:#B4232F; --bad-soft:#F9E0E2; --mid:#9A6B00; --mid-soft:#F7EDCF;
+  --code-bg:#0F1724; --code-ink:#D7E0EE; --bar:#141B26; --bar-ink:#F3F5F8;
+  --f-display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0D1219; --surface:#151C26; --sunk:#1C2531; --line:#2A3544;
+  --ink:#E6EBF2; --ink-2:#A9B4C4; --ink-3:#7E8AA0;
+  --accent:#7D93FF; --accent-ink:#0B1020; --accent-soft:#1E2747;
+  --flag:#F0B44C; --flag-soft:#3A2C12;
+  --ok:#4CC88A; --ok-soft:#14301F; --bad:#FF7A84; --bad-soft:#3A1A1F; --mid:#E5C25A; --mid-soft:#34290F;
+  --code-bg:#070B11; --code-ink:#D7E0EE; --bar:#05080D; --bar-ink:#E6EBF2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0D1219; --surface:#151C26; --sunk:#1C2531; --line:#2A3544;
+  --ink:#E6EBF2; --ink-2:#A9B4C4; --ink-3:#7E8AA0;
+  --accent:#7D93FF; --accent-ink:#0B1020; --accent-soft:#1E2747;
+  --flag:#F0B44C; --flag-soft:#3A2C12;
+  --ok:#4CC88A; --ok-soft:#14301F; --bad:#FF7A84; --bad-soft:#3A1A1F; --mid:#E5C25A; --mid-soft:#34290F;
+  --code-bg:#070B11; --code-ink:#D7E0EE; --bar:#05080D; --bar-ink:#E6EBF2; color-scheme:dark}
