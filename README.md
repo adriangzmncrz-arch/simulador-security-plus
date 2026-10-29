@@ -29,6 +29,7 @@ Simulador de exámenes de práctica de **CompTIA Security+ SY0-701**, en españo
   | Repaso de errores | Las falladas en tu último intento de cada pregunta | Sin límite | Inmediata |
 
 - Marcar preguntas para revisión, hoja de navegación y pantalla de revisión antes de entregar, como en el examen real.
+- El orden de las opciones se baraja en cada intento, así que repetir un examen fijo no te deja memorizar letras.
 - Resultado por dominio y por objetivo, con botones para practicar los objetivos más débiles.
 - Proyección de tu puntaje con todo tu historial y tendencia de tus simulacros.
 - Sesión en curso que sobrevive a una recarga, exportar/importar progreso y tema claro, oscuro o del sistema.

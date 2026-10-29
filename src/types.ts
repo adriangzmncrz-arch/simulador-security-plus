@@ -31,6 +31,7 @@ export type Attempt = {
   res: Record<string, number>;
   ans: Record<string, unknown>;
   flags: string[];
+  order?: Record<string, number[]>; // orden en que se mostraron las opciones (ver Session.order)
 };
 
 export type Session = {
@@ -45,6 +46,8 @@ export type Session = {
   limit: number;
   feedback: boolean;
   ts: number;
+  /** Orden barajado de las opciones por pregunta: posición en pantalla → índice en el banco. */
+  order: Record<string, number[]>;
 };
 
 /** Resultado del último intento de cada pregunta y cuántas veces se ha visto. */

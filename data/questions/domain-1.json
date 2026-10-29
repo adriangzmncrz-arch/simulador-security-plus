@@ -151,9 +151,9 @@
     "difficulty": 3,
     "stem": "En una arquitectura Zero Trust, un usuario remoto solicita acceso a una aplicación interna. ¿Qué componente, ubicado en el data plane, intercepta la solicitud y permite, monitorea o termina la conexión según las instrucciones que recibe del control plane?",
     "options": [
-      "Policy Engine",
+      "Policy Engine (PE)",
       "Policy Enforcement Point (PEP)",
-      "Policy Administrator",
+      "Policy Administrator (PA)",
       "Implicit trust zone"
     ],
     "answer": [
@@ -364,10 +364,10 @@
     "difficulty": 3,
     "stem": "El CAB aprueba un cambio para renovar el certificado TLS de un balanceador de carga durante la maintenance window del sábado. Durante la implementación, el técnico nota que también hay un parche pendiente del sistema operativo del balanceador. ¿Qué debe hacer el técnico?",
     "options": [
-      "Aplicar el parche, ya que la maintenance window sigue abierta",
+      "Aplicar el parche de inmediato, ya que la maintenance window sigue abierta y el riesgo del parche es bajo",
       "Implementar solo el cambio aprobado y registrar una nueva solicitud de cambio para el parche",
       "Aplicar el parche y documentarlo después en el ticket original",
-      "Aplicar el parche solo si existe un backout plan para el certificado"
+      "Aplicar el parche solo si existe un backout plan probado tanto para el certificado como para el parche"
     ],
     "answer": [
       1
@@ -415,8 +415,8 @@
     "difficulty": 1,
     "stem": "Se completó con éxito un cambio que agregó un nuevo segmento de red y modificó las reglas del firewall. El ticket de cambio ya se cerró. ¿Qué debe hacer el equipo a continuación para cumplir con las buenas prácticas de change management?",
     "options": [
-      "Programar un penetration test externo",
-      "Ejecutar el backout plan para validar que funciona",
+      "Programar un penetration test externo del nuevo segmento antes de la siguiente auditoría",
+      "Ejecutar el backout plan en producción para validar que la reversión funciona correctamente",
       "Actualizar los diagramas de red y la documentación de políticas y procedimientos afectados",
       "Reiniciar todos los servidores del nuevo segmento"
     ],

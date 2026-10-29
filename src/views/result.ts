@@ -1,4 +1,5 @@
 import { BY, DOM, DOMAINS, LETTERS, OBJ } from "../data";
+import { orderOf } from "../logic/builders";
 import { answered } from "../logic/grading";
 import { PASS, TARGET, aggregate, band, barClass, neededForPass } from "../logic/scoring";
 import { fmtTime } from "../logic/timer";
@@ -48,9 +49,9 @@ function reviewCard(id: string, a: Attempt, list: string[]): string {
     }).join("") + `</div>`;
   } else {
     const sel: number[] = q.type === "multi" ? (Array.isArray(v) ? v : []) : (typeof v === "number" ? [v] : []);
-    h += `<div class="opts">` + q.options!.map((o, i) => {
-      const ok = q.answer.includes(i), me = sel.includes(i);
-      return `<label class="opt locked ${q.type === "multi" ? "multi" : ""} ${ok ? "right" : me ? "wrong" : ""}"><span class="key">${LETTERS[i]}</span><span class="txt">${esc(o)}${me ? ` <span class="small muted">· tu respuesta</span>` : ""}</span></label>`;
+    h += `<div class="opts">` + orderOf(q, (a.order || {})[id]).map((i, p) => {
+      const o = q.options![i], ok = q.answer.includes(i), me = sel.includes(i);
+      return `<label class="opt locked ${q.type === "multi" ? "multi" : ""} ${ok ? "right" : me ? "wrong" : ""}"><span class="key">${LETTERS[p]}</span><span class="txt">${esc(o)}${me ? ` <span class="small muted">· tu respuesta</span>` : ""}</span></label>`;
     }).join("") + `</div>`;
   }
   h += `<div class="explain ${s === 1 ? "ok" : "bad"}">${rich(q.explanation)}</div></article>`;

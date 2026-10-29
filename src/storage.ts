@@ -38,6 +38,7 @@ export function loadSession(): Session | null {
     flags: Array.isArray(s.flags) ? s.flags.filter(id => BY[id]) : [],
     revealed: s.revealed && typeof s.revealed === "object" ? s.revealed : {},
     elapsed: Number(s.elapsed) || 0, limit: Number(s.limit) || 0, feedback: !!s.feedback, ts: Number(s.ts) || Date.now(),
+    order: s.order && typeof s.order === "object" ? s.order : {},
   };
 }
 export const saveSession = (s: Session | null) => lsSet(LS_CUR, s);

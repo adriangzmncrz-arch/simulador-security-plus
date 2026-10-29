@@ -1,4 +1,5 @@
 import { BY, LETTERS, OBJ } from "../data";
+import { orderOf } from "../logic/builders";
 import { answered, grade, toggleMulti } from "../logic/grading";
 import { clock, fmtTime } from "../logic/timer";
 import { pct } from "../ui/format";
@@ -25,11 +26,11 @@ export function renderExam(app: App): void {
     const multi = q.type === "multi", need = q.answer.length;
     if (multi) h += `<p class="hint">Selecciona ${need}. Llevas ${Array.isArray(v) ? v.length : 0}.</p>`;
     h += `<div class="opts" role="${multi ? "group" : "radiogroup"}">`;
-    q.options!.forEach((o, i) => {
-      const sel = multi ? (Array.isArray(v) && v.includes(i)) : v === i;
+    orderOf(q, S.order[id]).forEach((i, p) => {
+      const o = q.options![i], sel = multi ? (Array.isArray(v) && v.includes(i)) : v === i;
       let cls = sel ? "sel" : "";
       if (rev) { const ok = q.answer.includes(i); cls = ok ? "right" : (sel ? "wrong" : ""); cls += " locked"; }
-      h += `<label class="opt ${multi ? "multi" : ""} ${cls}"><input type="${multi ? "checkbox" : "radio"}" name="q_${id}" id="o_${id}_${i}" data-oi="${i}" ${sel ? "checked" : ""} ${rev ? "disabled" : ""}><span class="key">${LETTERS[i]}</span><span class="txt">${esc(o)}</span></label>`;
+      h += `<label class="opt ${multi ? "multi" : ""} ${cls}"><input type="${multi ? "checkbox" : "radio"}" name="q_${id}" id="o_${id}_${i}" data-oi="${i}" ${sel ? "checked" : ""} ${rev ? "disabled" : ""}><span class="key">${LETTERS[p]}</span><span class="txt">${esc(o)}</span></label>`;
     });
     h += `</div>`;
   }
@@ -82,6 +83,7 @@ export function updTimer(app: App): void {
 
 function setAns(app: App, val: unknown): void { const S = app.S!; S.ans[S.qids[S.idx]] = val; app.persist(); }
 
+/** i es el índice de la opción en el banco, no su posición en pantalla. */
 function pickOption(app: App, i: number): void {
   const S = app.S!, id = S.qids[S.idx], q = BY[id];
   if (q.type === "match" || !q.options![i]) return;
@@ -142,7 +144,11 @@ export function onExamKey(app: App, e: KeyboardEvent): void {
     return;
   }
   const k = e.key.toUpperCase();
-  if (k.length === 1 && LETTERS.slice(0, 6).includes(k)) { pickOption(app, LETTERS.indexOf(k)); e.preventDefault(); }
+  if (k.length === 1 && LETTERS.slice(0, 6).includes(k)) {
+    const q = BY[S.qids[S.idx]], i = orderOf(q, S.order[S.qids[S.idx]])[LETTERS.indexOf(k)];
+    if (i != null) pickOption(app, i);
+    e.preventDefault();
+  }
   else if (e.key === "ArrowRight") { e.preventDefault(); if (!(S.feedback && !S.revealed[S.qids[S.idx]]) && S.idx < S.qids.length - 1) go(app, S.idx + 1); }
   else if (e.key === "ArrowLeft") { e.preventDefault(); if (S.idx > 0) go(app, S.idx - 1); }
   else if (k === "M") { app.root.querySelector<HTMLElement>('[data-act="flag"]')?.click(); }

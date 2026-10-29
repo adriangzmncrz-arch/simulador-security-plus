@@ -43,9 +43,9 @@
     "difficulty": 2,
     "stem": "Un hospital sufre el cifrado de sus servidores. La nota de rescate incluye un portal de \"atención al cliente\", un plazo de pago en criptomonedas y menciona un programa de afiliados que comparte las ganancias. ¿Qué actor de amenaza y motivación describen MEJOR este incidente?",
     "options": [
-      "Hacktivist con motivación filosófica/política",
+      "Hacktivist con motivación filosófica/política y de protesta",
       "Organized crime con motivación de ganancia financiera",
-      "Nation-state con motivación de espionaje",
+      "Nation-state con motivación de espionaje y de disrupción",
       "Unskilled attacker con motivación de caos"
     ],
     "answer": [
@@ -277,9 +277,9 @@
     "difficulty": 3,
     "stem": "Una empresa evalúa dos herramientas de administración remota. La opción 1 requiere instalar un agente persistente con privilegios en cada equipo. La opción 2 es agentless y se conecta mediante protocolos existentes del sistema operativo. Desde la perspectiva de superficie de ataque, ¿qué afirmación es la MÁS precisa?",
     "options": [
-      "La solución agentless elimina por completo las vulnerabilidades, ya que no se instala software",
-      "La solución client-based agrega en cada equipo un software que puede tener vulnerabilidades propias y debe parcharse y mantenerse en todos los endpoints",
-      "La solución client-based reduce la superficie de ataque porque el agente siempre cifra sus comunicaciones",
+      "La solución agentless elimina por completo las vulnerabilidades, ya que no se instala ningún software adicional en los endpoints",
+      "La solución client-based agrega en cada endpoint un software con vulnerabilidades propias que hay que parchar y mantener",
+      "La solución client-based reduce la superficie de ataque porque el agente siempre cifra sus comunicaciones con el servidor de gestión",
       "La solución agentless no puede ser explotada de forma remota porque no expone ningún servicio"
     ],
     "answer": [
@@ -385,9 +385,9 @@
     "difficulty": 2,
     "stem": "Un programa con privilegios verifica que el usuario tenga permiso sobre `/tmp/reporte.txt` y, milisegundos después, abre el archivo para escribir. Un atacante reemplaza el archivo por un enlace simbólico a `/etc/shadow` justo entre ambas operaciones. ¿Qué vulnerabilidad se está explotando?",
     "options": [
-      "Race condition de tipo time-of-check to time-of-use (TOC/TOU)",
-      "Malicious update",
-      "Memory injection",
+      "Race condition de tipo TOC/TOU",
+      "Malicious update del programa privilegiado",
+      "Memory injection en el proceso con privilegios",
       "Buffer overflow"
     ],
     "answer": [
@@ -511,10 +511,10 @@
     "difficulty": 3,
     "stem": "Se publica un CVE crítico para el firmware de los switches de núcleo de una empresa. Hace dos años el fabricante dejó de dar soporte a ese modelo y anunció que no publicará más actualizaciones. ¿Qué afirmación describe MEJOR la situación?",
     "options": [
-      "Es una vulnerabilidad de resource reuse propia de la infraestructura compartida",
-      "Es una vulnerabilidad de hardware end-of-life: la falla es conocida, pero nunca se corregirá y requiere controles compensatorios o reemplazo",
-      "Es una vulnerabilidad zero-day porque no existe un parche disponible",
-      "Es una misconfiguration que se corrige ajustando la configuración actual del switch"
+      "Es una vulnerabilidad de resource reuse, porque el firmware comparte memoria entre los procesos de administración y de datos",
+      "Es una vulnerabilidad de hardware end-of-life: la falla nunca se corregirá y requiere controles compensatorios o reemplazo",
+      "Es una vulnerabilidad zero-day porque no existe un parche disponible y el fabricante no lo publicará",
+      "Es una misconfiguration que se corrige ajustando la configuración actual del switch según las guías del fabricante para ese modelo"
     ],
     "answer": [
       1
@@ -763,8 +763,8 @@
     "difficulty": 2,
     "stem": "Un usuario se queja de lentitud. Al ejecutar `arp -a` en su equipo se observa:\n```\n192.168.1.1     00-1a-2b-3c-4d-5e   dynamic\n192.168.1.45    00-1a-2b-3c-4d-5e   dynamic\n```\nLa puerta de enlace legítima tiene la MAC 00-50-56-aa-bb-01. ¿Qué ataque es el MÁS probable?",
     "options": [
-      "DNS cache poisoning",
-      "Replay attack",
+      "DNS cache poisoning en el resolver local",
+      "Replay attack de tramas capturadas",
       "Amplified DDoS",
       "On-path attack mediante ARP poisoning"
     ],
@@ -835,8 +835,8 @@
     "difficulty": 2,
     "stem": "Tras comprometer una estación de trabajo, el atacante extrae hashes NTLM de la memoria con una herramienta como Mimikatz y, sin descifrarlos, los usa para autenticarse en servidores de archivos como administrador del dominio. ¿Qué ataque describe MEJOR esta actividad?",
     "options": [
-      "Downgrade attack",
-      "Brute force",
+      "Downgrade attack de NTLMv2 a NTLMv1",
+      "Brute force offline de los hashes",
       "Birthday attack",
       "Credential replay (pass-the-hash)"
     ],
@@ -1065,9 +1065,9 @@
     "stem": "Una empresa instala sensores IoT de climatización que tienen un firmware con poco soporte. Desea impedir que, si uno se ve comprometido, el atacante alcance los servidores de producción. ¿Qué mitigación es la MEJOR?",
     "options": [
       "Decomisionar todos los servidores de producción",
-      "Cifrar los discos de los servidores de producción",
-      "Colocar los sensores en una VLAN o segmento separado con reglas que solo permitan la comunicación con su servidor de gestión",
-      "Aplicar least privilege a las cuentas de los usuarios de climatización"
+      "Cifrar los discos de los servidores de producción con BitLocker y claves protegidas por TPM",
+      "Colocar los sensores en una VLAN separada que solo pueda comunicarse con su servidor de gestión",
+      "Aplicar least privilege a las cuentas de los usuarios que administran el sistema de climatización"
     ],
     "answer": [
       2
@@ -1100,9 +1100,9 @@
     "difficulty": 3,
     "stem": "La cuenta de servicio de la aplicación de respaldos es miembro de Domain Admins \"porque así lo recomendó el instalador\". La aplicación solo necesita leer los archivos de los servidores y escribir en el repositorio de respaldos. ¿Qué acción reduce MEJOR el riesgo?",
     "options": [
-      "Rotar la contraseña de la cuenta de servicio cada 30 días",
-      "Retirar la cuenta de Domain Admins y asignarle únicamente los derechos de respaldo y los permisos sobre el repositorio que necesita",
-      "Habilitar el monitoreo de los inicios de sesión de la cuenta en el SIEM",
+      "Rotar la contraseña de la cuenta de servicio cada 30 días y guardarla en un password vault cifrado con acceso restringido al equipo de respaldos",
+      "Retirar la cuenta de Domain Admins y darle solo los derechos de respaldo y los permisos que necesita sobre el repositorio",
+      "Habilitar en el SIEM el monitoreo de los inicios de sesión de la cuenta y alertar ante cualquier uso fuera del horario de respaldo",
       "Cifrar el repositorio de respaldos con AES-256"
     ],
     "answer": [
@@ -1118,10 +1118,10 @@
     "difficulty": 1,
     "stem": "Un servidor de archivos con datos de clientes será retirado definitivamente. ¿Qué acción garantiza MEJOR que no se expongan datos ni queden accesos residuales?",
     "options": [
-      "Deshabilitar el antivirus para acelerar el apagado final",
+      "Deshabilitar el antivirus y los agentes de monitoreo para acelerar el apagado final del servidor y evitar falsos positivos en el SIEM",
       "Sanitizar o destruir los discos según el procedimiento y eliminar sus cuentas, registros DNS y reglas de firewall asociadas",
-      "Hacer un formateo rápido de los discos y donar el equipo",
-      "Desconectarlo de la red y guardarlo en la bodega de TI"
+      "Hacer un formateo rápido de los discos, reinstalar el sistema operativo y donar el equipo a una escuela con su licencia vigente",
+      "Desconectarlo de la red y guardarlo en la bodega de TI con una etiqueta de equipo retirado"
     ],
     "answer": [
       1
@@ -1197,11 +1197,11 @@
     "difficulty": 2,
     "stem": "Un sistema SCADA heredado controla una línea de producción crítica. El fabricante cerró y no existen parches; reemplazarlo tomará 18 meses. ¿Qué DOS mitigaciones son las MÁS adecuadas mientras tanto? (Elige DOS.)",
     "options": [
-      "Permitir el acceso remoto directo desde Internet para el personal de mantenimiento",
-      "Conservar las credenciales predeterminadas para facilitar el soporte técnico",
+      "Permitir el acceso remoto directo desde Internet para que el personal de mantenimiento del fabricante dé soporte",
+      "Conservar las credenciales predeterminadas para facilitar el soporte técnico del proveedor",
       "Deshabilitar el registro de eventos para reducir la carga del sistema",
       "Monitorear continuamente el tráfico y los eventos del sistema para detectar anomalías",
-      "Aislarlo en un segmento de red dedicado con reglas que solo permitan el tráfico estrictamente necesario",
+      "Aislarlo en un segmento dedicado que solo permita el tráfico estrictamente necesario",
       "Aplicar los parches más recientes publicados por el fabricante"
     ],
     "answer": [

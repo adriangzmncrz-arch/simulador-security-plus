@@ -75,3 +75,20 @@ export function missedSet(latest: Latest, rnd: Rnd = mulberry32(seedNow())): str
   const { last } = latest;
   return shuffle(Object.keys(last).filter(id => last[id] < 1), rnd);
 }
+
+/** Un orden barajado de opciones para cada pregunta single o multi de la lista. */
+export function optionOrders(ids: string[], rnd: Rnd, by: Record<string, Question> = BY): Record<string, number[]> {
+  const out: Record<string, number[]> = {};
+  for (const id of ids) {
+    const q = by[id];
+    if (q?.options) out[id] = shuffle(q.options.map((_, i) => i), rnd);
+  }
+  return out;
+}
+
+/** Orden guardado si es una permutación válida de las opciones actuales; si no, el orden del banco. */
+export function orderOf(q: Question, order: unknown): number[] {
+  const n = q.options?.length ?? 0;
+  if (Array.isArray(order) && order.length === n && [...order].sort((a, b) => a - b).every((x, i) => x === i)) return order;
+  return Array.from({ length: n }, (_, i) => i);
+}

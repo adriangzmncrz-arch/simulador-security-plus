@@ -46,6 +46,13 @@ describe("loadSession", () => {
     expect(out.idx).toBe(1);
     expect(out.flags).toEqual([q3]);
     expect(out.elapsed).toBe(30);
+    expect(out.order).toEqual({});
+  });
+  it("conserva el orden barajado de las opciones", () => {
+    const order = { [q1]: [2, 0, 3, 1] };
+    const s = { label: "Examen 1", mode: "exam", qids: [q1], ans: {}, flags: [], revealed: {}, idx: 0, elapsed: 0, limit: 0, feedback: false, ts: 1, order };
+    vi.stubGlobal("localStorage", fakeStorage({ [LS_CUR]: JSON.stringify(s) }));
+    expect(loadSession()!.order).toEqual(order);
   });
   it("devuelve null si no queda ninguna pregunta o el modo no es válido", () => {
     vi.stubGlobal("localStorage", fakeStorage({ [LS_CUR]: JSON.stringify({ mode: "exam", qids: ["D9-999"], idx: 0 }) }));

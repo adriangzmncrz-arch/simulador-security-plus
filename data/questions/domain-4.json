@@ -8,9 +8,9 @@
     "stem": "Hace seis meses, una organización estableció una secure baseline basada en CIS Benchmarks para sus servidores Windows y la desplegó mediante GPO. Un auditor interno descubre que varios servidores tienen servicios habilitados que no forman parte de la baseline y que la baseline no refleja recomendaciones nuevas publicadas por el fabricante. ¿Qué actividad del ciclo de vida de la baseline se descuidó MÁS probablemente?",
     "options": [
       "Mantener la baseline (revisar periódicamente el cumplimiento y actualizarla)",
-      "Establecer la baseline (definir la configuración segura inicial)",
+      "Establecer la baseline (definir y aprobar la configuración segura inicial)",
       "Desplegar la baseline (aplicarla a los sistemas objetivo)",
-      "Adquirir la baseline (procurement del estándar de configuración)"
+      "Adquirir la baseline (procurement del estándar de configuración del fabricante)"
     ],
     "answer": [
       0
@@ -278,9 +278,9 @@
     "stem": "Una empresa aplica exactamente los mismos controles (cifrado, DLP y retención de 10 años) a todos sus archivos, incluidos menús de la cafetería y comunicados públicos. Los costos de almacenamiento y licencias se dispararon. ¿Qué acción permitiría MEJOR aplicar controles proporcionales al valor de la información?",
     "options": [
       "Eliminar el DLP y depender solo del cifrado",
-      "Reducir el periodo de retención de todos los archivos a un año",
+      "Reducir a un año el periodo de retención de todos los archivos, sin importar su contenido",
       "Implementar un esquema de clasificación de datos y asignar controles según cada nivel",
-      "Mover todos los archivos a almacenamiento en frío en la nube"
+      "Mover todos los archivos a almacenamiento en frío en la nube con cifrado del proveedor"
     ],
     "answer": [
       2
@@ -295,10 +295,10 @@
     "difficulty": 2,
     "stem": "Un escaneo de descubrimiento de red identificó 37 hosts activos que no aparecen en la CMDB de la organización. ¿Cuál es la implicación de seguridad PRINCIPAL de este hallazgo?",
     "options": [
-      "Los activos no inventariados consumen direcciones IP del pool de DHCP",
-      "La CMDB debe migrarse a una plataforma en la nube",
+      "Los activos no inventariados consumen direcciones IP del pool de DHCP y pueden agotarlo",
+      "La CMDB debe migrarse a una plataforma en la nube que descubra los activos de forma automática",
       "Los hosts deben destruirse físicamente de inmediato",
-      "Los activos no inventariados probablemente no reciben parches ni monitoreo, lo que amplía la superficie de ataque"
+      "Probablemente no reciben parches ni monitoreo, lo que amplía la superficie de ataque"
     ],
     "answer": [
       3
@@ -313,10 +313,10 @@
     "difficulty": 1,
     "stem": "En los últimos seis meses desaparecieron varias laptops corporativas y nadie puede determinar a quién estaban asignadas. ¿Qué medida ayudaría MÁS a mejorar la rendición de cuentas sobre estos activos?",
     "options": [
-      "Emitir certificados de destrucción para cada laptop",
-      "Aplicar borrado criptográfico a todas las laptops",
-      "Definir una política de retención de datos de siete años",
-      "Etiquetar los activos, registrar su asignación a un usuario responsable y realizar auditorías periódicas de inventario"
+      "Emitir un certificado de destrucción para cada laptop al terminar su vida útil, firmado por el proveedor",
+      "Aplicar borrado criptográfico a todas las laptops antes de reasignarlas a otro empleado o departamento",
+      "Definir una política de retención de datos de siete años para los archivos almacenados en las laptops corporativas",
+      "Etiquetar los activos, registrar a qué usuario responsable se asignan y auditar el inventario periódicamente"
     ],
     "answer": [
       3
@@ -367,9 +367,9 @@
     "difficulty": 3,
     "stem": "El servidor de contabilidad de una empresa llegó al fin de su vida útil y será decomisionado. La regulación fiscal local exige conservar los registros contables durante cinco años. ¿Qué debe hacer el equipo de TI PRIMERO, antes de sanitizar los discos?",
     "options": [
-      "Solicitar al proveedor de destrucción un certificado de destrucción",
+      "Solicitar al proveedor de destrucción un certificado de destrucción con los números de serie de los discos retirados",
       "Verificar los requisitos de retención y archivar los datos que deban conservarse en un repositorio aprobado",
-      "Desmagnetizar los discos para eliminar cualquier dato remanente",
+      "Desmagnetizar los discos para eliminar cualquier dato remanente antes de entregarlos al proveedor de reciclaje",
       "Eliminar el servidor de la CMDB para cerrar el registro del activo"
     ],
     "answer": [
@@ -525,9 +525,9 @@
     "difficulty": 3,
     "stem": "Un hospital depende de un sistema de imagenología heredado con una vulnerabilidad crítica. El fabricante quebró y no existe parche, y reemplazar el sistema tomará 18 meses. ¿Cuál es la MEJOR respuesta mientras tanto?",
     "options": [
-      "Ignorar el hallazgo, ya que no existe parche disponible",
-      "Apagar el sistema de inmediato hasta tener el reemplazo",
-      "Aislar el sistema mediante segmentación, aplicar controles compensatorios y documentar una excepción aprobada formalmente",
+      "Ignorar el hallazgo en los siguientes escaneos, ya que no existe un parche disponible del fabricante ni lo habrá",
+      "Apagar el sistema de inmediato y operar con procesos manuales durante los 18 meses hasta tener el reemplazo",
+      "Aislarlo mediante segmentación, aplicar controles compensatorios y documentar una excepción aprobada",
       "Contratar un seguro cibernético como única medida y cerrar el hallazgo"
     ],
     "answer": [
@@ -580,11 +580,11 @@
     "stem": "Un administrador aplicó el parche para una vulnerabilidad crítica en 120 servidores. Antes de cerrar el ticket de remediación, ¿qué actividades de validación debe realizar? (Elige DOS.)",
     "options": [
       "Re-escanear los servidores para confirmar que la vulnerabilidad ya no aparece",
-      "Deshabilitar el plugin del escáner que detectó la vulnerabilidad",
+      "Deshabilitar el plugin del escáner que detectó la vulnerabilidad para que no vuelva a reportarse",
       "Aumentar la tolerancia al riesgo de la organización",
-      "Verificar manualmente en una muestra de servidores la versión instalada o que la vulnerabilidad ya no es explotable",
+      "Verificar en una muestra de servidores la versión instalada o que la falla ya no es explotable",
       "Registrar una excepción para los servidores parcheados",
-      "Contratar un seguro cibernético para cubrir el riesgo residual"
+      "Contratar un seguro cibernético para cubrir el riesgo residual de los servidores parcheados"
     ],
     "answer": [
       0,
@@ -687,9 +687,9 @@
     "stem": "Una regulación exige conservar los logs de seguridad durante un año y protegerlos contra modificación. El SIEM actual solo retiene 90 días en almacenamiento de alto rendimiento debido a su costo. ¿Qué solución cumple MEJOR el requisito?",
     "options": [
       "Aumentar los umbrales de alertas para generar menos eventos",
-      "Deshabilitar el registro de eventos de baja severidad en todos los sistemas",
-      "Exportar los logs mensualmente a la laptop del analista de turno",
-      "Archivar los logs en almacenamiento de bajo costo con protección WORM/inmutable y una política de retención de un año"
+      "Deshabilitar el registro de eventos de baja severidad en todos los sistemas para que el almacenamiento actual alcance un año",
+      "Exportar los logs mensualmente a la laptop del analista de turno y comprimirlos para ahorrar espacio",
+      "Archivar los logs en almacenamiento de bajo costo, inmutable (WORM), con retención de un año"
     ],
     "answer": [
       3
@@ -704,9 +704,9 @@
     "difficulty": 2,
     "stem": "Un auditor pide al equipo de seguridad evaluar de forma automatizada 500 servidores contra los CIS Benchmarks y generar resultados en un formato estandarizado (XCCDF/OVAL) que diferentes herramientas puedan interpretar. ¿Qué debe usar el equipo?",
     "options": [
-      "NetFlow",
-      "SNMP traps",
-      "Una solución DLP",
+      "Exportación de NetFlow al SIEM",
+      "SNMP traps enviadas a la consola de monitoreo",
+      "Una solución DLP con políticas predefinidas",
       "Herramientas compatibles con SCAP"
     ],
     "answer": [
@@ -740,10 +740,10 @@
     "difficulty": 3,
     "stem": "El SOC recibe más de 4,000 alertas diarias y los analistas comenzaron a ignorarlas. Un análisis muestra lo siguiente:\n```\nRegla: \"Multiple failed logons\"  Umbral: 3 fallos/24 h\nAlertas (7 días): 26,412   Confirmadas como incidente: 2\nOrigen principal: cuentas de servicio con contraseña expirada\n```\n¿Qué acción mejorará MEJOR la eficacia del monitoreo sin perder visibilidad de ataques reales?",
     "options": [
-      "Deshabilitar por completo la regla de inicios de sesión fallidos",
-      "Afinar la regla (alert tuning): ajustar el umbral y la ventana de tiempo, y corregir o excluir de forma controlada las cuentas de servicio con contraseña expirada",
-      "Contratar más analistas para revisar todas las alertas manualmente",
-      "Reducir el umbral a un solo fallo para no omitir ningún ataque"
+      "Deshabilitar por completo la regla de inicios de sesión fallidos para eliminar el ruido",
+      "Afinar la regla (alert tuning): ajustar umbral y ventana, y excluir de forma controlada las cuentas de servicio",
+      "Contratar más analistas para revisar manualmente todas las alertas, incluidas las de las cuentas de servicio con contraseña expirada",
+      "Reducir el umbral a un solo fallo en cualquier ventana de tiempo para no omitir ningún ataque contra las cuentas"
     ],
     "answer": [
       1
@@ -1099,7 +1099,7 @@
     "difficulty": 3,
     "stem": "La política de contraseñas exige cambio cada 60 días y recuerda las últimas 10 contraseñas. Un auditor descubre que varios usuarios cambian su contraseña 11 veces seguidas el mismo día para volver a usar su contraseña favorita. ¿Qué ajuste evitaría MEJOR este comportamiento?",
     "options": [
-      "Aumentar los requisitos de complejidad de la contraseña",
+      "Aumentar los requisitos de longitud y complejidad de la contraseña",
       "Reducir el periodo de expiración a 30 días",
       "Exigir el uso de un password manager",
       "Configurar una edad mínima de contraseña (minimum password age)"
@@ -1226,10 +1226,10 @@
     "difficulty": 1,
     "stem": "Los analistas del SOC pasan varios minutos por alerta abriendo manualmente un caso, copiando datos del SIEM y notificando al nivel 2 cuando la alerta es crítica. ¿Qué caso de uso de automatización resolvería MEJOR esta situación?",
     "options": [
-      "Resource provisioning",
+      "Resource provisioning automático de instancias",
       "Ticket creation y escalation automatizados",
       "Security groups dinámicos",
-      "Enabling/disabling services"
+      "Enabling/disabling services según el horario"
     ],
     "answer": [
       1
@@ -1553,10 +1553,10 @@
     "difficulty": 3,
     "stem": "El IDS, ubicado detrás del balanceador de carga que realiza la terminación TLS, genera la siguiente alerta para el servidor web de la tienda en línea:\n```\n[**] [1:2006445:9] ET WEB_SERVER Possible SQL Injection Attempt [**]\n[Priority: 1] 10/13-23:41:07 10.20.0.5:49812 -> 10.20.1.15:80\nX-Forwarded-For: 198.18.7.22\nGET /productos.php?id=7'%20OR%201=1--\n```\nEl analista necesita determinar si la inyección tuvo éxito y qué información se expuso. ¿Qué fuente de datos debe revisar SIGUIENTE?",
     "options": [
-      "Los registros del firewall perimetral",
+      "Los registros del firewall perimetral y del proxy web de salida",
       "Los registros del servidor DHCP",
       "Los registros de la aplicación web y de la base de datos",
-      "El reporte del último escaneo de vulnerabilidades"
+      "El reporte del último escaneo de vulnerabilidades de la aplicación"
     ],
     "answer": [
       2

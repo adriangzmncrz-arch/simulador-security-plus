@@ -1,6 +1,7 @@
 import "./styles/tokens.css";
 import "./styles/app.css";
 import { BY } from "./data";
+import { mulberry32, optionOrders, seedNow } from "./logic/builders";
 import { grade } from "./logic/grading";
 import { scaled } from "./logic/scoring";
 import { startTicker } from "./logic/timer";
@@ -62,7 +63,7 @@ const app: App = {
   },
   persist() { if (app.S) saveSession(app.S); },
   startSession(cfg) {
-    app.S = { label: cfg.label, mode: cfg.mode, qids: cfg.qids, ans: {}, flags: [], revealed: {}, idx: 0, elapsed: 0, limit: cfg.limit || 0, feedback: !!cfg.feedback, ts: Date.now() };
+    app.S = { label: cfg.label, mode: cfg.mode, qids: cfg.qids, ans: {}, flags: [], revealed: {}, idx: 0, elapsed: 0, limit: cfg.limit || 0, feedback: !!cfg.feedback, ts: Date.now(), order: optionOrders(cfg.qids, mulberry32(seedNow())) };
     app.persist(); app.confirmEnd = false; app.openExam();
   },
   openExam() { app.view = "exam"; app.render(); startTick(); window.scrollTo(0, 0); },
@@ -75,7 +76,7 @@ const app: App = {
     const a: Attempt = {
       id: "a_" + Date.now(), ts: Date.now(), label: S.label, mode: S.mode, n: S.qids.length, score: Math.round(sum * 1000) / 1000,
       scaled: exam ? scaled(sum / S.qids.length) : null, elapsed: S.limit ? Math.min(S.elapsed, S.limit) : S.elapsed,
-      limit: S.limit, timeUp: !!timeUp, res, ans: S.ans, flags: S.flags,
+      limit: S.limit, timeUp: !!timeUp, res, ans: S.ans, flags: S.flags, order: S.order,
     };
     app.lastResult = a; app.S = null; saveSession(null); app.sheet = null; app.confirmEnd = false; app.reviewFilter = "bad";
     app.setAttempts(mergeAttempts(app.attempts, [a]));

@@ -45,8 +45,8 @@
     "options": [
       "Aumenta el configuration drift porque cada servidor se configura manualmente",
       "Un error o cambio malicioso en una plantilla se replica de forma idéntica en todos los entornos desplegados",
-      "Se pierde la capacidad de auditar quién modificó la configuración",
-      "Obliga a mantener los entornos en una red air-gapped"
+      "Se pierde la capacidad de auditar quién modificó la configuración, porque los cambios ya no son manuales ni quedan registrados por persona",
+      "Obliga a mantener todos los entornos de producción en una red air-gapped sin acceso al repositorio de código"
     ],
     "answer": [
       1
@@ -81,7 +81,7 @@
     "options": [
       "Eliminar la autenticación entre componentes, porque todos pertenecen a la misma aplicación",
       "Aceptar que el compromiso de un microservicio compromete siempre toda la aplicación",
-      "Usar una sola credencial compartida para que todos los servicios accedan a la base de datos",
+      "Usar una sola credencial compartida para que todos los servicios accedan a la base de datos de forma uniforme y sencilla",
       "Proteger la comunicación entre servicios con autenticación y cifrado, ya que aumentan los endpoints expuestos"
     ],
     "answer": [
@@ -117,8 +117,8 @@
     "options": [
       "La SDN impide aplicar segmentación lógica entre cargas de trabajo",
       "El compromiso del controlador SDN centralizado podría permitir reconfigurar toda la red",
-      "Cada switch debe configurarse manualmente, lo que aumenta los errores",
-      "El data plane deja de reenviar tráfico cuando se aplican políticas"
+      "Cada switch debe configurarse manualmente desde su consola, lo que aumenta los errores humanos",
+      "El data plane deja de reenviar tráfico cuando se aplican políticas nuevas desde el controlador centralizado"
     ],
     "answer": [
       1
@@ -133,9 +133,9 @@
     "difficulty": 2,
     "stem": "Un arquitecto compara containers con máquinas virtuales para alojar aplicaciones de varios clientes en el mismo host. ¿Cuál es la implicación de seguridad MÁS relevante de los containers?",
     "options": [
-      "Cada container incluye su propio kernel, lo que lo hace más aislado que una VM",
-      "Comparten el kernel del sistema operativo host, por lo que una vulnerabilidad en el kernel puede afectar a todos",
-      "No pueden escanearse en busca de vulnerabilidades antes del despliegue",
+      "Cada container incluye su propio kernel, lo que lo hace más aislado que una VM tradicional sobre un hypervisor",
+      "Comparten el kernel del host, así que una vulnerabilidad en él puede afectar a todos",
+      "No pueden escanearse en busca de vulnerabilidades antes del despliegue porque sus imágenes son inmutables",
       "Requieren hardware físico dedicado para cada container"
     ],
     "answer": [
@@ -169,9 +169,9 @@
     "difficulty": 3,
     "stem": "Un brazo robótico de una línea de ensamble es controlado por un RTOS que se ejecuta en hardware embebido. El equipo de seguridad propone instalar un agente de monitoreo en el controlador y el fabricante lo rechaza. ¿Cuál es la razón MÁS probable?",
     "options": [
-      "Un RTOS no puede conectarse a ninguna red, por lo que el agente no reportaría eventos",
-      "Un RTOS es inmune al malware por diseño, así que el agente es innecesario",
-      "El agente consumiría recursos de cómputo y podría afectar los tiempos de respuesta deterministas que el RTOS debe garantizar",
+      "Un RTOS no puede conectarse a ninguna red, por lo que el agente no reportaría eventos a la consola central",
+      "Un RTOS es inmune al malware por diseño, así que el agente sería innecesario en el controlador",
+      "El agente consumiría recursos y podría alterar los tiempos de respuesta deterministas del RTOS",
       "Los agentes de monitoreo solo funcionan en cargas de trabajo serverless"
     ],
     "answer": [
@@ -187,10 +187,10 @@
     "difficulty": 3,
     "stem": "Una empresa contrata un proveedor SaaS de nómina como parte de su estrategia de transferencia de riesgo. Meses después, una brecha en el proveedor expone datos de los empleados de la empresa. ¿Cuál afirmación es CORRECTA?",
     "options": [
-      "La transferencia de riesgo eliminó por completo el riesgo, por lo que la empresa no tiene obligaciones",
+      "La transferencia de riesgo eliminó por completo el riesgo, por lo que la empresa no tiene obligaciones ante los empleados",
       "El proveedor asume toda la responsabilidad legal y la empresa no debe notificar a los afectados",
       "En SaaS el cliente es responsable de aplicar parches a la aplicación del proveedor",
-      "La empresa sigue siendo responsable de sus datos ante los empleados y los reguladores, aunque haya transferido parte del impacto por contrato"
+      "La empresa sigue siendo responsable de sus datos ante empleados y reguladores; solo transfirió parte del impacto"
     ],
     "answer": [
       3
@@ -208,8 +208,8 @@
       "Exceso de capacidad de cómputo dedicada al cifrado",
       "Credenciales predeterminadas o codificadas en el firmware (hardcoded)",
       "Disponibilidad limitada o nula de actualizaciones de firmware",
-      "Integración nativa con el SIEM y el EDR corporativos",
-      "Soporte obligatorio de 802.1X con certificados de cliente"
+      "Integración nativa con el SIEM y el EDR corporativos sin configuración adicional",
+      "Soporte obligatorio de 802.1X con certificados de cliente emitidos por la CA interna"
     ],
     "answer": [
       1,
@@ -228,8 +228,8 @@
       "Mantener políticas de seguridad y visibilidad consistentes entre ambos entornos",
       "Desaparece la necesidad de una matriz de responsabilidad compartida",
       "Integrar de forma segura la gestión de identidades y la conectividad entre on-premises y la nube",
-      "Los datos nunca transitan entre los entornos, por lo que no requieren cifrado",
-      "El proveedor de nube asume la seguridad de los servidores on-premises"
+      "Los datos nunca transitan entre los entornos, por lo que no requieren cifrado en tránsito ni at rest",
+      "El proveedor de nube asume la seguridad de los servidores on-premises conectados a la nube"
     ],
     "answer": [
       0,
@@ -441,10 +441,10 @@
     "stem": "Una organización implementa control de acceso a la red basado en 802.1X. ¿Cuáles son los TRES componentes que participan en el proceso de autenticación? (Elige TRES.)",
     "options": [
       "Supplicant (el dispositivo o software cliente)",
-      "Jump server",
-      "Puerto SPAN",
+      "Jump server (el equipo de administración intermedio)",
+      "Puerto SPAN (la copia del tráfico del switch)",
       "Authentication server (por ejemplo, RADIUS)",
-      "Load balancer",
+      "Load balancer (el que reparte las solicitudes)",
       "Authenticator (el switch o access point)"
     ],
     "answer": [
@@ -613,10 +613,10 @@
     "difficulty": 1,
     "stem": "El equipo de seguridad observa intentos de inicio de sesión en la aplicación de recursos humanos desde países donde la empresa no tiene operaciones ni empleados. ¿Qué control reduce MEJOR este riesgo?",
     "options": [
-      "Data sovereignty",
+      "Data sovereignty sobre los datos de recursos humanos",
       "Geographic restrictions basadas en geolocalización de IP",
-      "Data masking",
-      "Hashing de las credenciales"
+      "Data masking de los campos sensibles que muestra la aplicación de RR. HH.",
+      "Hashing con salt de las credenciales de los empleados en el directorio"
     ],
     "answer": [
       1
@@ -650,8 +650,8 @@
     "stem": "El equipo de QA necesita una copia de la base de datos de producción con datos realistas para pruebas. Los datos deben conservar su formato (por ejemplo, un RFC sigue pareciendo un RFC), pero NO debe existir ninguna forma de recuperar los valores reales a partir de la copia. ¿Qué método es el MÁS adecuado?",
     "options": [
       "Static data masking que sustituya los valores sensibles de forma irreversible",
-      "Tokenization con una bóveda de tokens accesible para QA",
-      "Cifrado AES de las columnas sensibles con la clave entregada a QA",
+      "Tokenization con una bóveda de tokens a la que solo tenga acceso el equipo de QA",
+      "Cifrado AES de las columnas sensibles con la clave entregada a QA por un canal seguro",
       "Hashing SHA-256 de las columnas sensibles"
     ],
     "answer": [
@@ -667,10 +667,10 @@
     "difficulty": 3,
     "stem": "Durante una revisión de arquitectura, un gerente pregunta por la diferencia entre tokenization y encryption. ¿Cuál afirmación es CORRECTA?",
     "options": [
-      "Un token no tiene relación matemática con el dato original, por lo que no puede revertirse con un algoritmo ni una clave",
-      "La tokenización usa una clave simétrica para transformar el dato y puede revertirse con esa clave",
+      "Un token no tiene relación matemática con el dato original, así que no se revierte con un algoritmo ni una clave",
+      "La tokenización usa una clave simétrica para transformar el dato y puede revertirse con esa misma clave desde cualquier sistema",
       "El cifrado produce un resultado irreversible, al igual que el hashing",
-      "La tokenización y el cifrado son equivalentes, pero la tokenización requiere más cómputo"
+      "La tokenización y el cifrado son equivalentes, pero la tokenización requiere más cómputo al procesar cada transacción"
     ],
     "answer": [
       0
@@ -828,10 +828,10 @@
     "difficulty": 3,
     "stem": "A las 14:37 un error de aplicación corrompió varias tablas de una base de datos transaccional. El último respaldo completo es de las 02:00. El negocio requiere restaurar los datos al estado exacto previo al error. ¿Qué capacidad lo permite MEJOR?",
     "options": [
-      "Journaling de las transacciones para aplicarlas sobre el último respaldo hasta antes del error",
-      "Restaurar el snapshot tomado a las 02:00",
-      "Activar la réplica síncrona del sitio secundario",
-      "Restaurar un respaldo completo almacenado offsite"
+      "Journaling de transacciones, aplicadas sobre el último respaldo hasta justo antes del error",
+      "Restaurar el snapshot del volumen tomado a las 02:00 junto con el respaldo completo de esa noche",
+      "Activar la réplica síncrona del sitio secundario y promoverla como la nueva base de datos principal",
+      "Restaurar el respaldo completo más reciente almacenado offsite en una cinta cifrada"
     ],
     "answer": [
       0
@@ -846,10 +846,10 @@
     "difficulty": 3,
     "stem": "Una empresa replica en tiempo real sus servidores de archivos a un sitio secundario y considera que ya no necesita respaldos tradicionales. ¿Cuál es el problema PRINCIPAL de este enfoque ante un ataque de ransomware?",
     "options": [
-      "La replicación copia también los archivos cifrados o corruptos al sitio secundario, por lo que se requieren copias versionadas u offline",
-      "La replicación solo protege datos en tránsito y no datos at rest",
-      "La replicación solo puede realizarse hacia un cold site",
-      "La replicación en tiempo real aumenta el RTO a varias semanas"
+      "La replicación también copia los archivos cifrados al sitio secundario; se necesitan copias versionadas u offline",
+      "La replicación solo protege los datos en tránsito entre sitios y no los datos at rest en el almacenamiento secundario",
+      "La replicación solo puede configurarse hacia un cold site, que no tiene datos listos para operar",
+      "La replicación en tiempo real aumenta el RTO a varias semanas porque el sitio secundario debe sincronizarse por completo"
     ],
     "answer": [
       0

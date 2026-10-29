@@ -54,10 +54,10 @@
     "difficulty": 2,
     "stem": "Durante una auditoría interna se pregunta quién debe decidir la clasificación de la base de datos de clientes de la división de ventas y aprobar qué grupos pueden acceder a ella. ¿Quién tiene esta responsabilidad?",
     "options": [
-      "El data custodian que administra el servidor de base de datos",
+      "El data custodian que administra y respalda el servidor de base de datos",
       "El data processor externo que aloja la aplicación de CRM",
-      "El data owner, normalmente el ejecutivo de negocio responsable de esos datos",
-      "El analista del SOC que monitorea los accesos a la base de datos"
+      "El data owner, el ejecutivo de negocio responsable de esos datos",
+      "El analista del SOC que monitorea y revisa los accesos a la base de datos"
     ],
     "answer": [
       2
@@ -139,9 +139,9 @@
     "options": [
       "Un usuario solicita cambiar el fondo de pantalla de su equipo",
       "La organización se fusiona con otra empresa y adopta un nuevo modelo de negocio",
-      "Un empleado olvida su contraseña y solicita un restablecimiento",
+      "Un empleado olvida su contraseña y solicita un restablecimiento a la mesa de ayuda",
       "Entra en vigor una nueva regulación nacional de protección de datos que aplica a la empresa",
-      "El proveedor del sistema operativo publica los parches mensuales habituales"
+      "El proveedor del sistema operativo publica los parches mensuales habituales para las estaciones de trabajo"
     ],
     "answer": [
       1,
@@ -403,9 +403,9 @@
     "stem": "La BIA establece un RTO de 4 horas para la aplicación de facturación. El servidor de base de datos no tiene redundancia y el contrato con el fabricante indica un MTTR de 8 horas para reemplazar componentes. ¿Cuál es la conclusión MÁS adecuada?",
     "options": [
       "El RPO debe aumentarse a 8 horas para alinearlo con el MTTR",
-      "La arquitectura actual no puede cumplir el RTO; se requiere alta disponibilidad o un reemplazo más rápido",
-      "Un MTBF alto garantiza que la falla no ocurrirá, por lo que el RTO es irrelevante",
-      "El RTO se cumple porque el MTTR solo mide el tiempo entre fallas"
+      "La arquitectura no puede cumplir el RTO; requiere alta disponibilidad o un reemplazo más rápido",
+      "Un MTBF alto garantiza que la falla no ocurrirá durante la vida útil, por lo que el RTO es irrelevante",
+      "El RTO se cumple porque el MTTR solo mide el tiempo promedio entre fallas, no el de reparación del componente"
     ],
     "answer": [
       1
@@ -547,8 +547,8 @@
     "difficulty": 2,
     "stem": "Durante la selección de un proveedor de MSSP, una integrante del comité evaluador revela que su esposo es ejecutivo de ventas de uno de los licitantes. ¿Cuál es la MEJOR acción?",
     "options": [
-      "Permitir que continúe si firma un NDA con el licitante",
-      "Descalificar automáticamente al licitante relacionado",
+      "Permitir que continúe en el comité si firma un NDA con el licitante",
+      "Descalificar de inmediato al licitante relacionado y reiniciar la licitación",
       "Pedir al licitante un descuento a cambio de la relación",
       "Documentar la declaración y excluirla de la evaluación de ese proceso"
     ],
@@ -565,10 +565,10 @@
     "difficulty": 2,
     "stem": "Un proveedor SaaS no permite que sus clientes ejecuten pruebas de penetración contra su plataforma. ¿Cuáles de los siguientes elementos puede solicitar el cliente para obtener garantía sobre los controles del proveedor? (Elige DOS.)",
     "options": [
-      "Un memorandum of understanding (MOU) firmado",
+      "Un memorandum of understanding (MOU) firmado por ambas partes al inicio de la relación",
       "La acceptable use policy del propio cliente",
       "Un reporte SOC 2 Type II emitido por un auditor independiente",
-      "El whitepaper de marketing del proveedor",
+      "El whitepaper de marketing del proveedor sobre su arquitectura de seguridad",
       "Evidencia de las auditorías internas del proveedor y sus planes de remediación"
     ],
     "answer": [
@@ -586,9 +586,9 @@
     "stem": "El equipo de seguridad quiere realizar una prueba de penetración contra una aplicación alojada por un proveedor que se integra con la red interna de la empresa. ¿Qué debe hacer PRIMERO?",
     "options": [
       "Obtener autorización por escrito del proveedor y acordar las rules of engagement",
-      "Ejecutar un escaneo no autenticado para delimitar el alcance",
+      "Ejecutar un escaneo no autenticado de la aplicación para delimitar el alcance de la prueba",
       "Notificar a los clientes del proveedor sobre la prueba",
-      "Realizar reconocimiento pasivo y después reconocimiento activo"
+      "Realizar reconocimiento pasivo y después reconocimiento activo sobre la aplicación del proveedor"
     ],
     "answer": [
       0
@@ -603,10 +603,10 @@
     "difficulty": 2,
     "stem": "En el tercer año de un contrato, la empresa descubre que su proveedor de nómina cambió de proveedor de hosting sin avisar. ¿Qué práctica habría detectado este cambio con MAYOR probabilidad?",
     "options": [
-      "La due diligence realizada durante la selección del proveedor",
+      "La due diligence exhaustiva realizada durante la selección del proveedor y la firma del contrato",
       "Vendor monitoring continuo, incluidos cuestionarios y revisiones periódicas",
       "El NDA firmado al inicio de la relación",
-      "El statement of work (SOW) del proyecto de implementación"
+      "El statement of work (SOW) firmado para el proyecto de implementación inicial"
     ],
     "answer": [
       1
@@ -621,10 +621,10 @@
     "difficulty": 1,
     "stem": "Una empresa necesita recopilar de forma estandarizada información sobre los controles de seguridad de sus 40 proveedores críticos. ¿Qué herramienta es la MÁS adecuada?",
     "options": [
-      "Rules of engagement",
-      "Un questionnaire (cuestionario) de evaluación",
+      "Unas rules of engagement (RoE)",
+      "Un questionnaire de evaluación",
       "Un business partners agreement (BPA)",
-      "Un work order (WO)"
+      "Un work order (WO) por proveedor"
     ],
     "answer": [
       1
@@ -751,9 +751,9 @@
     "difficulty": 3,
     "stem": "Una nueva ley de protección de datos obliga a la empresa a responder solicitudes de acceso de los data subjects en un plazo de 30 días. La empresa no sabe en qué sistemas almacena datos personales. ¿Qué debe hacer PRIMERO?",
     "options": [
-      "Elaborar un data inventory que identifique qué datos personales existen y dónde se almacenan",
-      "Reducir los plazos de la política de retención de datos",
-      "Comprar una solución de DLP y bloquear la salida de datos personales",
+      "Elaborar un data inventory de los datos personales y de dónde se almacenan",
+      "Reducir los plazos de la política de retención de datos personales en todos los sistemas",
+      "Comprar una solución de DLP y bloquear la salida de datos personales por correo y web",
       "Cifrar todas las bases de datos de la organización"
     ],
     "answer": [
@@ -808,8 +808,8 @@
     "stem": "Un pentester inicia la fase de reconocimiento y no debe interactuar directamente con los sistemas del objetivo. ¿Cuáles de las siguientes actividades son reconocimiento PASIVO? (Elige DOS.)",
     "options": [
       "Revisar ofertas de empleo y redes sociales de la empresa",
-      "Hacer un ping sweep del rango de IP público",
-      "Realizar banner grabbing en los servidores web",
+      "Hacer un ping sweep del rango de IP público de la empresa",
+      "Realizar banner grabbing en los servidores web expuestos a Internet",
       "Ejecutar un escaneo de puertos con Nmap",
       "Consultar registros WHOIS y DNS públicos del dominio"
     ],
@@ -899,8 +899,8 @@
     "difficulty": 2,
     "stem": "Un cliente corporativo importante exige que una parte sin relación con la empresa verifique sus controles de seguridad; no acepta evaluaciones realizadas por el personal propio. ¿Qué debe contratar la empresa?",
     "options": [
-      "Una auditoría interna de cumplimiento",
-      "Una auditoría independiente de terceros (independent third-party audit)",
+      "Una auditoría interna",
+      "Una third-party audit independiente",
       "Un acknowledgement firmado por el director general",
       "Una self-assessment del área de seguridad"
     ],
@@ -963,10 +963,10 @@
     "difficulty": 1,
     "stem": "Un usuario recibe un correo de soporte@micros0ft-help.com que dice: \"Su cuenta será suspendida en 1 hora. Haga clic aquí para verificar su contraseña\". ¿Cuáles son los indicadores de phishing MÁS claros en este mensaje? (Elige DOS.)",
     "options": [
-      "El pie de página incluye una dirección postal",
+      "El pie de página incluye una dirección postal y un enlace para darse de baja",
       "La urgencia y la amenaza de suspender la cuenta",
       "El dominio del remitente imita a uno legítimo con un carácter sustituido",
-      "El mensaje se recibió un martes por la mañana",
+      "El mensaje se recibió un martes por la mañana, en horario laboral",
       "El correo usa formato HTML"
     ],
     "answer": [
@@ -983,8 +983,8 @@
     "difficulty": 2,
     "stem": "Varios usuarios reportaron el mismo correo sospechoso con el botón de reporte. El analista del SOC confirma que el enlace descarga malware. ¿Qué debe hacer a continuación para limitar MÁS el impacto?",
     "options": [
-      "Programar una capacitación sobre phishing para el próximo trimestre",
-      "Eliminar el mensaje solo de los buzones de quienes lo reportaron",
+      "Programar para el próximo trimestre una capacitación sobre phishing dirigida a todos los empleados",
+      "Eliminar el mensaje solo de los buzones de quienes lo reportaron y pedirles que cambien su contraseña",
       "Buscar y eliminar todas las copias del mensaje de los buzones y bloquear el remitente y la URL",
       "Responder a cada usuario agradeciendo el reporte y cerrar el ticket"
     ],
@@ -1003,7 +1003,7 @@
     "options": [
       "En cambiar a una sola campaña anual para reducir la fatiga",
       "En suspender las campañas porque la tasa de clics ya es aceptable",
-      "En sancionar a los usuarios que hicieron clic durante la campaña inicial",
+      "En sancionar a los usuarios que hicieron clic durante la campaña inicial de simulación",
       "En capacitar e incentivar a los usuarios para que reporten los mensajes sospechosos"
     ],
     "answer": [

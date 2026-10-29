@@ -14,6 +14,7 @@
    - `multi`: 5–6 opciones, 2 o 3 respuestas, y el stem termina en "(Elige DOS.)" o "(Elige TRES.)".
    - `match`: 4–6 `items`, 3–6 `choices`, sin `options`.
    - `difficulty`: 1 (recordar), 2 (aplicar) o 3 (analizar un escenario).
+   - Que la longitud no delate la respuesta: la correcta no debe ser casi siempre la opción más larga ni la más detallada. Da a los distractores un nivel de detalle parecido. No importa en qué posición la pongas: la app baraja las opciones en cada intento.
 7. **IDs.** Usa el siguiente número libre del dominio (`D3-051`, `D3-052`…). No cambies los IDs existentes: el historial de las personas depende de ellos.
 
 ## Antes de abrir el pull request

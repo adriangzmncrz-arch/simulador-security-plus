@@ -1,11 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { BANK, BY, DOMAINS } from "../../src/data";
 import {
-  QUOTA30, QUOTA90, byDomain, fixedExam, missedSet, mulberry32, pbqFirst, practiceSet, shuffle, smartPick, weightedExam,
+  QUOTA30, QUOTA90, byDomain, fixedExam, missedSet, mulberry32, optionOrders, orderOf, pbqFirst, practiceSet, shuffle, smartPick, weightedExam,
 } from "../../src/logic/builders";
 import { latestResults } from "../../src/logic/scoring";
 import reference from "../fixtures/reference-exams.json";
-import { attempt } from "./helpers";
+import { attempt, match, multi, single } from "./helpers";
 
 const sum = (q: Record<number, number>) => Object.values(q).reduce((a, b) => a + b, 0);
 const empty = { last: {}, seen: {} };
@@ -108,5 +108,25 @@ describe("smartPick y armados aleatorios", () => {
     const [a, b, c] = byDomain(4);
     const latest = latestResults([attempt({ [a]: 0, [b]: 0.5, [c]: 0 }), attempt({ [c]: 1 })]);
     expect(new Set(missedSet(latest, mulberry32(1)))).toEqual(new Set([a, b]));
+  });
+});
+
+describe("orden de las opciones", () => {
+  const by = { [single.id]: single, [multi.id]: multi, [match.id]: match };
+  it("optionOrders da una permutación por pregunta con opciones y omite las match", () => {
+    const o = optionOrders([single.id, multi.id, match.id], mulberry32(9), by);
+    expect(Object.keys(o).sort()).toEqual([single.id, multi.id].sort());
+    expect([...o[single.id]].sort()).toEqual([0, 1, 2, 3]);
+    expect([...o[multi.id]].sort()).toEqual([0, 1, 2, 3, 4]);
+  });
+  it("baraja de verdad: la respuesta no queda siempre en la misma posición", () => {
+    const pos = new Set<number>();
+    for (let s = 1; s <= 40; s++) pos.add(optionOrders([single.id], mulberry32(s), by)[single.id].indexOf(single.answer[0]));
+    expect(pos.size).toBe(4);
+  });
+  it("orderOf usa el orden guardado solo si es una permutación válida", () => {
+    expect(orderOf(single, [3, 1, 0, 2])).toEqual([3, 1, 0, 2]);
+    for (const bad of [undefined, null, "x", [0, 1, 2], [0, 1, 2, 2], [0, 1, 2, 4], [0, 1, 2, 3, 4]])
+      expect(orderOf(single, bad)).toEqual([0, 1, 2, 3]);
   });
 });
